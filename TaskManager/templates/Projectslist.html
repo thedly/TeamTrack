@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block maincontent %}
+<h1>Projects List</h1>
+	
+	{% for project in object_list %}
+    <li>
+        <a href="{% url projectsdetail project.id  %}">{{ project }}</a>
+    </li>
+    {% endfor %}
+{% endblock maincontent %}

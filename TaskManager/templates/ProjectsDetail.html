@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block maincontent %}
+<h1>Projects detail</h1>
+{{ object.Title }}
+{{ object.IsCompleted }}
+{{ object.StartDate }}
+{{ object.EndDate }}
+
+{% for task in Tasks %}
+	<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task }}</a><hr>
+{% endfor %}
+
+{% if object.IsCompleted == False %}
+<a href="{% url 'createtasks' %}">Create Task</a>
+{% else %}
+<h2>This project has been closed</h2>
+{% endif %}
+{% endblock maincontent %}

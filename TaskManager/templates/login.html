@@ -1,0 +1,11 @@
+<span id="authentication_error">{% if messages %}{% for message in messages %}{{ message }}{% endfor %}{% endif %}</span>
+
+<form action="{% url 'authenticateuser' %}" method="POST">{% csrf_token %}
+{{ LoginForm.as_p }}
+{% if request.GET.next %}
+<input type="text" name="next" value="{{ request.GET.next }}">
+{% else %}
+<input type="text" name="next" value="{% url 'home' %}">
+{% endif %}
+<button type="submit">Login</button>
+</form>

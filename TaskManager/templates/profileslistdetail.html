@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block maincontent %}
+{{ object.id }}
+{{ object.username }}
+
+<div style="width:960px;height:842px;background:green;">
+
+
+<h2>Personal details</h2>
+<table class="outerTbl">
+	<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+	<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+</table>
+<h2>Technical skills</h2>
+<table class="outerTbl">
+	<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+	<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+</table>
+<h2>Experience</h2>
+
+<table class="outerTbl">
+<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+	<tr>
+		<td>
+			hello
+		</td>
+		<td>
+			world
+		</td>
+	</tr>
+</table>
+
+<h2>Currently working on </h2>
+
+{% for task in DevelopersTask %}
+	<a href="{% url 'taskdetail' task.id %}">{{ task.TaskTitle }}</a> as developer project: <a href="{% url 'projectsdetail' task.ProjectId.id %}">{{ task.ProjectId.Title }}</a> <br>
+{% endfor %}
+<hr>
+{% for task in DesignersTask %}
+	<a href="{% url 'taskdetail' task.id %}">{{ task.TaskTitle }}</a> as designer project: <a href="{% url 'projectsdetail' task.ProjectId.id %}">{{ task.ProjectId.Title }}</a> <br>
+{% endfor %}
+</div>
+
+{% endblock maincontent %} 

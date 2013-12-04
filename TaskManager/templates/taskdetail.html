@@ -1,0 +1,238 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/jquery.stickynotes.css" %}">
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery-ui-1.7.2.custom.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.stickynotes.js" %}"></script>
+<script type="text/javascript" charset="utf-8">
+			var edited = function(note) {
+				alert("Edited note with id " + note.id + ", new text is: " + note.text);
+			}
+			var created = function(note) {
+				alert("Created note with id " + note.id + ", text is: " + note.text);
+			}
+			
+			var deleted = function(note) {
+				alert("Deleted note with id " + note.id + ", text is: " + note.text);
+			}
+			
+			var moved = function(note) {
+				alert("Moved note with id " + note.id + ", text is: " + note.text +" to position x: "+ note.pos_x +" y:"+note.pos_y);
+			}	
+			
+			var resized = function(note) {
+				alert("Resized note with id " + note.id + ", text is: " + note.text);
+			}			
+			$(document).ready(function() {
+			
+			$("#menu").css("margin-top",($(window).height()/2)-($("#menu").height()/2))
+			//$("section").height($(window).height())
+			$(window).scroll(function(){
+				if(window.pageYOffset >= $("#Gen").offset().top && window.pageYOffset < $("#Des").offset().top)
+				{
+					button_deactivate()
+					button_activate("gen_button")
+				}
+				else
+				if(window.pageYOffset >= $("#Des").offset().top && window.pageYOffset < $("#Dev").offset().top)
+				{
+					button_deactivate()
+					button_activate("des_button")
+				}
+				else
+				if(window.pageYOffset >= $("#Dev").offset().top && window.pageYOffset < $("#QA").offset().top)
+				{
+					button_deactivate()
+					button_activate("dev_button")
+				}
+				else
+				if(window.pageYOffset >= $("#QA").offset().top && window.pageYOffset < $("#Notes").offset().top)
+				{
+					button_deactivate()
+					button_activate("qa_button")
+				}
+				else
+				if(window.pageYOffset >= $("#Notes").offset().top)
+				{
+					button_deactivate()
+					button_activate("notes_button")
+				}
+				else
+				{
+					button_deactivate()
+				}				 
+			})
+			
+			
+			
+			
+			function button_deactivate()
+			  {
+			    $(".navigation_buttons").css({
+				'position':'relative',
+				'top':'0px',     
+				'color':'black',
+				'background': '#2f2f2f',
+			        'box-shadow':'0px 3px 5px #000',
+			        '-moz-box-shadow':'0px 3px 5px #000',
+			        '-webkit-box-shadow':'0px 3px 5px #000',
+				'background':'#2f2f2f',
+				'text-align':'center',
+				'display':'block',
+				'border':'none'
+			        })
+			  }
+			
+			  function button_activate(identity)
+			  {
+			    $("#"+identity).css({
+			    'position':'relative',
+			    'top':'3px',
+			    'color':'white',
+			    'box-shadow':'none',
+			    '-moz-box-shadow':'none',
+			    '-webkit-box-shadow':'none',
+			    'background': '#5f5f5f'
+			    })
+			  }
+			  
+			   $("#gen_button").click(function(){
+			    $("html,body").animate({scrollTop:$("#Gen").offset().top+1},1000)
+			  })
+			 $("#des_button").click(function(){
+			    $("html,body").animate({scrollTop:$("#Des").offset().top+1},1000)
+			  })
+			  
+			  $("#dev_button").click(function(){
+			    $("html,body").animate({scrollTop:$("#Dev").offset().top+1},1000)
+			  })
+			  
+			  $("#qa_button").click(function(){
+			    $("html,body").animate({scrollTop:$("#QA").offset().top+1},1000)
+			  })
+			  
+			  $("#notes_button").click(function(){
+			    $("html,body").animate({scrollTop:$("#Notes").offset().top+1},1000)
+			  })
+			
+				var options = {
+					notes:[{"id":1,
+					      "text":"Test Internet Explorer",
+						  "pos_x": 50,
+						  "pos_y": 50,	
+						  "width": 200,							
+						  "height": 200,													
+					    }]
+					,resizable: true
+					,controls: true 
+					,editCallback: edited
+					,createCallback: created
+					,deleteCallback: deleted
+					,moveCallback: moved					
+					,resizeCallback: resized					
+					
+				};
+				$("#notes").stickyNotes(options);
+				
+				/*$(".minimize",this).click(function(){
+					$(this).next().slideToggle()
+				})*/
+				$(".clicktomail").click(function(){
+					var h =500;
+					var w = 500;
+					var left = (screen.width/2)-(w/2);
+  					var top = (screen.height/2)-(h/2);
+  					return window.open('{% url 'mail' %}','Mail', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+				})
+				
+			});
+		</script>
+<div id="menu">
+			<div class="navigation_buttons" id="gen_button">GEN</div>
+			<div class="navigation_buttons" id="des_button">DES</div>
+			<div class="navigation_buttons" id="dev_button">DEV</div>
+			<div class="navigation_buttons" id="qa_button">QA</div>
+			<div class="navigation_buttons" id="notes_button">Notes</div>
+		</div>
+<div id="OuterDiv">
+
+		<a href="{% url 'taskupdate' Tasks_detail.id  %}">Edit task</a>
+
+<section id="Gen">
+<div class="minimize"><h3>General</h3></div>
+	<div class="minimizingDiv">
+		
+		
+		
+		
+		<div class="outerBox">
+			<h3>Project details</h3>
+			<p>{{ Tasks_detail.ProjectId.Title }}</p>
+		</div>
+		
+		<div class="outerBox">
+		
+			{% for track in TaskTrack %}
+				<h5>{{ track.taskid.TaskTitle }}</h5>
+				<h5>{{ track.status }}</h5>
+				<h5>{{ track.owner }}</h5>
+				<h5>{{ track.date }}</h5>
+			{% endfor %}
+		
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.TaskTitle }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Description }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Requirement }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Owner }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Designer }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Developer }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.Status }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.StartDate }}</p>
+			<h3>Task</h3>
+			<p>{{ Tasks_detail.EndDate }}</p>
+		</div>
+		
+		
+		
+		
+		
+		
+	</div>
+</section>
+
+
+<section id="Des">
+<div class="minimize"><h3>Design</h3></div>
+	<div class="minimizingDiv">
+		<span class="clicktomail">open window</span>
+	</div>
+</section>
+
+<section id="Dev">
+<div class="minimize"><h3>Development</h3></div>
+	<div class="minimizingDiv"><h1>Hello world</h1></div>
+</section>
+<section id="QA">
+<div class="minimize"><h3>QA</h3></div>
+	<div class="minimizingDiv"></div>
+</section>
+<section id="Notes">
+
+	<div class="minimize"><h3>Notes</h3></div>
+	<div  class="minimizingDiv">
+	<div id="notes" height="500"></div>
+	</div>
+
+</section>
+
+
+</div>
+
+		

@@ -1,0 +1,31 @@
+<!doctype>
+{% load static %}
+<html>
+	<head>
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+	<script>
+		$(document).ready(function(){
+			$("#OuterDiv").css({"min-height":$(window).height()})
+		})
+	</script>
+	{% block extraHeaders %}
+	{% endblock %}
+	</head>
+	<body>
+		<div id="OuterDiv">
+			<div id="menus"><span>welcome {{ request.user }}</span>
+				<span><a href="{% url 'userlogout' %}">Logout</a></span>
+			</div>
+			<div id="header">
+				<span><a href="{% url 'projects' %}">Projects</a></span>
+				<span><a href="{% url 'reports' %}">Reports</a></span>
+				<span><a href="{% url 'updatesfortoday' %}">Updates</a></span>
+				<span><a href="{% url 'profileslist' %}">Profiles</a></span>
+			</div>
+			{% block maincontent %}
+			{% endblock maincontent %}
+			
+		</div>
+	</body>
+</html>

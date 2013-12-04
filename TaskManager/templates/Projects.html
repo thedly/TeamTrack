@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block maincontent %}
+Projects
+<ul>
+	<li>
+		<span><a href="{% url 'createprojects' %}">Create Project</a></span>	
+	</li>
+	<li>
+		<span><a href="{% url 'ongoingprojects' %}">Ongoing Projects</a></span>
+	</li>
+	<li>
+		<span><a href="{% url 'completedprojects' %}">Completed Projects</a></span>
+	</li>
+</ul>
+{% endblock maincontent %}

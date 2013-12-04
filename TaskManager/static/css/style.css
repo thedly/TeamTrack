@@ -1,0 +1,144 @@
+body
+{
+	margin:0;
+	background:#F0EFE7;
+}
+#header
+{
+	width:100%;
+	height:50px;
+	padding:20px;
+	text-align:center;
+}
+#header span
+{
+	margin-right:25px;
+	margin-left:25px;
+}
+#OuterDiv
+{
+	width:960px;
+	margin:auto;
+	background:#FCFCFA;
+	
+}
+
+.clicktomail:hover
+{
+	text-decoration:underline;
+	cursor:pointer;
+}
+#MainHeader
+{
+	text-align:center;
+}
+#MainHeader h1
+{
+	color:#0388A6;
+	background: url("../images/texture.png") repeat;
+	height:100px;
+	font-size:50px;
+}
+
+#SearchBarDiv
+{
+	text-align:center;
+}
+#MainSearchBar
+{
+	width:500px;
+	height:50px;
+	border-radius: 10px;
+	margin:auto;
+	font-size:25px;
+}
+#searchsubmit
+{
+	width:50px;
+	height:55px;
+	border:none;
+	background: url('../images/remote_search_small.png') no-repeat;
+	position:absolute;	
+	border-radius:15px;
+}
+
+#searchsubmit img
+{
+	width:50px;
+}
+
+#OuterDiv h3 
+{
+	background:rgba(223, 221, 213, 0.33);
+}
+
+.nomargin
+{
+	margin:0;
+} 
+
+.minimizingDiv,.minimize
+{
+	margin:0;
+}
+
+#menu
+{
+	width:100px;
+	height:500px;
+	position:fixed;
+	float:left;
+	margin-left:10px;
+}
+
+
+.navigation_buttons
+{
+	width:100%;
+	height:65px;
+	margin-top:5px;
+	font-size:12px;
+	background: #2f2f2f;
+	text-align: center;
+	font-weight:bold;
+	display: block;
+	border-radius:5px;
+	box-shadow: 0px 3px 5px #000;
+	-moz-box-shadow: 0px 3px 5px #000;
+	-webkit-box-shadow: 0px 3px 5px #000;
+}
+
+#OnlineUsersDiv
+{
+	width:200px;
+	height:500px;
+	overflow:auto;
+	position:fixed;
+	right:0;
+	top:0;
+	background:rgba(223, 221, 213, 0.33);
+}
+.OnlineUsers
+{
+	width:100%;
+	height:50px;
+	background:#c0c0c0;
+}
+
+.outerTbl
+{
+	width:800px;
+	margin:auto;
+	border:thin black solid;
+	text-align:center;
+}
+
+.outerTbl td
+{
+	border:thin black solid;
+}
+
+.outerBox p
+{
+	font-size:14px;
+}

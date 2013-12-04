@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block maincontent %}
+			
+<h1>profiles list</h1>
+
+{% for profile in Profiles_list %}
+	{{ profile.username }}
+	<a href="{% url 'profileslistdetail' profile.id %}">View profile</a>
+	<a href="{% url 'updatesfortoday' %}">updates</a>
+{% endfor %}
+{% endblock maincontent %}

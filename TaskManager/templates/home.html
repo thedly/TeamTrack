@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extraHeaders %}
+	<script src="{% static "js/socket.io.js" %}"></script>
+	<script>
+	  var socket = io.connect('http://localhost:8080');
+	  socket.emit('clientdetails', { "name": "{{ request.user }}","id":"{{ request.user.id }}","email":"{{ request.user.email }}" });
+	  socket.on('clients',function(data){
+		console.log(data)
+		data.forEach(function(obj){
+			$("#OnlineUsersDiv").append("<div class='OnlineUsers' id='"+obj.id+"'>"+obj.name+"</div>")
+	 	 })
+	  })
+	  
+	  
+	</script>
+{% endblock %}
+
+{% block maincontent %}
+			<div id="OnlineUsersDiv">
+				
+			</div>
+			<div id="MainHeader">
+			<h1>TEAM TRACK</h1>
+			</div>
+			<div id="SearchBarDiv">
+				<form method="get" action="{% url 'searchresults' %}">
+					{{ SearchForm.as_table }}
+					<button type="submit" id="searchsubmit"></button>
+				</form>
+				
+			</div>
+{% endblock maincontent %}

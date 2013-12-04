@@ -1,0 +1,69 @@
+{% load static %}
+<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+<script>
+	$(function(){
+		var parseddata = $.parseJSON($("#userobj").text());
+		$("#SelectUsersTo").click(function(){
+			var userarr = [];
+			$.each($("#id_UsersTo").val(),function(skey,svalue){
+				$(parseddata).each(function(key,value){
+					if(Number(svalue)==Number(value.id))
+					{
+						userarr.push(value.name+"<"+value.email+">")	
+					}
+				})
+			})
+			$("#id_To").val(userarr)
+		})
+		
+		$("#SelectUsersCc").click(function(){
+			var userarr = [];
+			$.each($("#id_UsersCc").val(),function(skey,svalue){
+				$(parseddata).each(function(key,value){
+					if(Number(svalue)==Number(value.id))
+					{
+						userarr.push(value.name+"<"+value.email+">")	
+					}
+				})
+			})
+			$("#id_Cc").val(userarr)
+		})
+		
+	})
+</script>
+
+<h1>Mail</h1>
+	<pre id="userobj" style="display:none">
+		[
+		{% for user in Users %}
+		{
+			"id":{{ user.id }},"email": "{{ user.email }}","name":"{{ user.username }}"
+		}
+		{% if not forloop.last %}
+		,
+		{% endif %}
+		{% endfor %}	
+		]
+	</pre>
+
+<form method="post" action="/TaskManager/sendMail/">
+<table>
+	<tr>
+		<td>{{ MailForm.To }}</td>
+	</tr>
+	<tr>
+		<td>{{ MailForm.UsersTo }}</td>
+		<td><button id="SelectUsersTo">Confirm</button></td>
+	</tr>
+	<tr>
+		<td>{{ MailForm.Cc }}</td>
+	</tr>
+	<tr>
+		<td>{{ MailForm.UsersCc }}</td>
+		<td><button id="SelectUsersCc">Confirm</button></td>
+	</tr>
+	<tr>
+	</tr>
+</table>
+<button type="submit">Submit</button>
+</form>

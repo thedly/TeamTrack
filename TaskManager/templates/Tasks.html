@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block maincontent %}
+Tasks
+<ul>
+	<li>
+		<span><a href="{% url 'projectslist' %}">View All Projects</a></span>
+	</li>
+	<li>
+		<span><a href="{% url 'createprojects' %}">Create Project</a></span>	
+	</li>
+	<li>
+		<span><a href="{% url 'ongoingprojects' %}">Ongoing Projects</a></span>
+	</li>
+	<li>
+		<span><a href="{% url 'completedprojects' %}">Completed Projects</a></span>
+	</li>
+</ul>
+
+{% endblock maincontent %}
