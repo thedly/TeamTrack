@@ -18,3 +18,10 @@ class MailForm(forms.Form):
     UsersCc = forms.ModelChoiceField(label='',queryset = User.objects.all(),widget=forms.SelectMultiple(attrs={'class':'varcharData'}))
     Subject = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Subject'}))
     Message = forms.CharField(label='',widget=forms.Textarea(attrs={'class':'varcharData','placeholder':'Message'}))
+    
+class AddClientForm(forms.Form):
+    Name = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Name'}))
+    Email = forms.EmailField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Email'}))
+    ContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'integerData','placeholder':'Contact NUmber'}))
+    AlternateContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'integerData','placeholder':'Alternate number'}))
+    

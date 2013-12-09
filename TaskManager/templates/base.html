@@ -18,10 +18,14 @@
 				<span><a href="{% url 'userlogout' %}">Logout</a></span>
 			</div>
 			<div id="header">
+				<span><a href="{% url 'home' %}">Home</a></span>
 				<span><a href="{% url 'projects' %}">Projects</a></span>
 				<span><a href="{% url 'reports' %}">Reports</a></span>
-				<span><a href="{% url 'updatesfortoday' %}">Updates</a></span>
 				<span><a href="{% url 'profileslist' %}">Profiles</a></span>
+				<span><a href="{% url 'CalenderEvents' %}">Calendar</a></span>
+				<p><form method="get" action="{% url 'searchresults' %}"><input name="Search" type="text" placeholder="Search for profiles,projects & tasks" style="width:300px">
+<button type="submit" >Search</button>
+</form></p>
 			</div>
 			{% block maincontent %}
 			{% endblock maincontent %}

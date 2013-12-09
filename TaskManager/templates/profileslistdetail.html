@@ -1,70 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
+{% block extraHeaders %}
+<script src="{% static "js/jquery.min.js" %}"></script>
+<script src="{% static "js/jquery.raty.min.js" %}"></script>
+<script>
+	$(document).ready(function(){
+		$('#star').raty({ 
+			score: 3,
+			path: '{% static 'images' %}' 
+		});
+	})
+</script>
+{% endblock extraHeaders %}
+
 {% block maincontent %}
 {{ object.id }}
 {{ object.username }}
 
-<div style="width:960px;height:842px;background:green;">
 
 
-<h2>Personal details</h2>
-<table class="outerTbl">
-	<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-	<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-</table>
-<h2>Technical skills</h2>
-<table class="outerTbl">
-	<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-	<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-</table>
-<h2>Experience</h2>
-
-<table class="outerTbl">
-<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-	<tr>
-		<td>
-			hello
-		</td>
-		<td>
-			world
-		</td>
-	</tr>
-</table>
-
+<a href="{% url 'ViewResume' %}">View Resume</a>
+<div id="star" data-score="1"></div>
 <h2>Currently working on </h2>
 
 {% for task in DevelopersTask %}

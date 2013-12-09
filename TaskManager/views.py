@@ -2,7 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse
 from haystack.query import SearchQuerySet
-from TaskManager.models import Projects,Tasks,TaskTrack
+from TaskManager.models import Projects,Tasks,TaskTrack,Client,WeeklyUpdates
 from django.contrib.auth.models import User
 from django.template import RequestContext
 from TaskManager.forms import LoginForm,SearchForm
@@ -14,9 +14,11 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView,UpdateView
-from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm,MailForm
+from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm,MailForm,AddClientForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage,send_mass_mail
+from reportlab.pdfgen import canvas
+
 import logging
 log = logging.getLogger(__name__)
 
@@ -96,7 +98,11 @@ class ProjectsCreate(CreateView):
     model = Projects
     template_name='CreateProjects.html'
 
-
+class AddClientView(CreateView):
+    model = Client
+    template_name = 'AddClient.html'
+    
+    
 class TasksView(TemplateView):
     template_name = 'Tasks.html'
 
@@ -138,13 +144,30 @@ class ProfileDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProfileDetailView, self).get_context_data(**kwargs)
         context['DevelopersTask'] = Tasks.objects.filter(Developer=self.kwargs['pk'])
-        context['DesignersTask'] = Tasks.objects.filter(Designer=self.kwargs['pk'])
         return context
 
+class CalenderView(TemplateView):
+    template_name='calender.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(CalenderView, self).get_context_data(**kwargs)
+        context['WeeklyUpdates'] = WeeklyUpdates.objects.all()
+        context['Projects'] = Projects.objects.all()
+        return context
+    
 def SearchResults(request):
     searchform = SearchForm()
     sqs = SearchQuerySet().models(User,Projects,Tasks).load_all().auto_query(request.GET['Search'])
     return render_to_response('searchresults.html',{'object_list':sqs,'searchform':searchform},RequestContext(request))
+
+def pdf_view(request):
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'inline; filename="C:/Users/tejas/Desktop/Kivy-latest.pdf"'
+    p = canvas.Canvas(response)
+    p.drawString(100, 100, "Hello world.")
+    p.showPage()
+    #p.save()
+    return response
 
 
 def authenticateUser(request):

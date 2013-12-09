@@ -1,6 +1,6 @@
 <h1>Edit task</h1>
 
 <form action="" method="POST">{% csrf_token %}
-	{{ Tasks_update }}
+	{{ form.as_p }}
 	<button type="submit">Update</button>
 </form>

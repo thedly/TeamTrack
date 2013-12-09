@@ -5,12 +5,14 @@
 	<script>
 	  var socket = io.connect('http://localhost:8080');
 	  socket.emit('clientdetails', { "name": "{{ request.user }}","id":"{{ request.user.id }}","email":"{{ request.user.email }}" });
-	  socket.on('clients',function(data){
-		console.log(data)
-		data.forEach(function(obj){
-			$("#OnlineUsersDiv").append("<div class='OnlineUsers' id='"+obj.id+"'>"+obj.name+"</div>")
-	 	 })
-	  })
+	  
+	  
+		  socket.on('clients',function(data){
+			    $("#OnlineUsersDiv").append("<div class='OnlineUsers' id='"+data.id+"'>"+data.name+"</div>")
+			    
+		  })
+	  
+	  
 	  
 	  
 	</script>

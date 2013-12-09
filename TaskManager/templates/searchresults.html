@@ -1,26 +1,19 @@
 {% extends "base.html" %}
 {% block maincontent %}
-<form method="get" action="">
-{{ searchform.as_p }}
-<button type="submit">Search</button>
-</form>
 
 <h2>search results</h2>
 {% if object_list %}
-	{% regroup object_list|dictsort:"verbose_name" by verbose_name as grouped_objects %}
-	{% for objs in grouped_objects %}
-	<h4>{{ objs.grouper }}</h4>
-		{% for obj in object_list %}
-			{% if objs.grouper == "User" %}
-				<p><a href="{% url 'profileslistdetail' obj.id %}">{{ obj.username }}</a>&nbsp&nbsp&nbsp<a href="{% url 'updatesfortoday' %}">updates</a></p>
-			{% endif %}
-			{% if objs.grouper == "Projects" %}
-				<p><a href="{% url 'projectsdetail' obj.id  %}">{{ obj.Title }}</a></p>	
-			{% endif %}
-			{% if objs.grouper == "Tasks" %}
-				<p><a href="{% url 'taskdetail' obj.id %}">{{ obj.TaskTitle }}</p>
-			{% endif %}
-	{% endfor %}
+
+	{% for obj in object_list %}
+	{% if obj.username %}
+	<p><a href="{% url 'profileslistdetail' obj.id %}">{{ obj.username }}</a></p>
+	{% endif %}
+	{% if obj.Title %}
+	<p><a href="{% url 'projectsdetail' obj.id  %}">{{ obj.Title }}</a></p>	
+	{% endif %}
+	{% if obj.TaskTitle %}
+	<p><a href="{% url 'taskdetail' obj.id %}">{{ obj.TaskTitle }}</p>
+	{% endif %}
 	{% endfor %}
 	
 	
