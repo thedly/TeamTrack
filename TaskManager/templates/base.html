@@ -2,7 +2,7 @@
 {% load static %}
 <html>
 	<head>
-	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" href="{% static "css/style.css" %}" media="screen and (min-device-width:1360px)">
 	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
 	<script>
 		$(document).ready(function(){
@@ -13,23 +13,38 @@
 	{% endblock %}
 	</head>
 	<body>
+		<div id="menus">
+			<div class="menuBtnHolder">
+				<div class="menuAlign" id="mainBaseHeader"><a href="{% url 'home' %}">TEAM TRACK</a></div>
+				<div class="menuAlign" id="BaseSearchBarDiv">
+					<form method="get" action="{% url 'searchresults' %}">
+						<input id="BaseSearchBar" name="Search" type="text" placeholder="Search for profiles,projects & tasks">
+						<button id="BaseSearchsubmit" type="submit" ></button>
+					</form>
+				</div>
+				<div class="menuAlign" id="userWelcome">
+					<span>welcome {{ request.user }}</span>
+					<span><a href="{% url 'userlogout' %}">Logout</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="navmenus">
+			<div class="navBtnHolder">
+				
+				<a href="{% url 'projects' %}"><div class="menuBtnSmall">Projects</div></a>
+				<a href="{% url 'profileslist' %}"><div class="menuBtnSmall">Profiles</div></a>
+				<a href="{% url 'CalenderEvents' %}"><div class="menuBtnSmall">Calendar</div></a>
+			</div>
+		</div>
 		<div id="OuterDiv">
-			<div id="menus"><span>welcome {{ request.user }}</span>
-				<span><a href="{% url 'userlogout' %}">Logout</a></span>
-			</div>
-			<div id="header">
-				<span><a href="{% url 'home' %}">Home</a></span>
-				<span><a href="{% url 'projects' %}">Projects</a></span>
-				<span><a href="{% url 'reports' %}">Reports</a></span>
-				<span><a href="{% url 'profileslist' %}">Profiles</a></span>
-				<span><a href="{% url 'CalenderEvents' %}">Calendar</a></span>
-				<p><form method="get" action="{% url 'searchresults' %}"><input name="Search" type="text" placeholder="Search for profiles,projects & tasks" style="width:300px">
-<button type="submit" >Search</button>
-</form></p>
-			</div>
+			
+			
+			<div id="mainContentHolder">
 			{% block maincontent %}
 			{% endblock maincontent %}
+			</div>
 			
 		</div>
 	</body>
+	<footer>Copyrights 2013 Achumen Technologies Pvt Ltd.</footer>
 </html>

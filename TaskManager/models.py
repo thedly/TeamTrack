@@ -3,6 +3,16 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
+class ExtendedUser(User):
+    birthdate = models.DateField()
+    rating = models.IntegerField()
+    def __unicode__(self):
+        return "%s"%self.username
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('profileslistdetail',[self.id])
+
 class Client(models.Model):
     Name = models.CharField(max_length=150)
     Email = models.EmailField()
@@ -20,8 +30,8 @@ class Projects(models.Model):
     Title = models.CharField(max_length=100)
     IsCompleted = models.BooleanField(default=False)
     Client = models.ForeignKey(Client,default=1)
-    StartDate = models.DateField(auto_now=True)
-    EndDate = models.DateField()
+    StartDate = models.DateTimeField(auto_now=True)
+    EndDate = models.DateTimeField()
     
     def __unicode__(self):
         return "%s"%self.Title
@@ -41,11 +51,11 @@ class Tasks(models.Model):
     TaskTitle = models.CharField(max_length=100)
     Description = models.TextField()
     Requirement = models.TextField()
-    Owner = models.ForeignKey(User,related_name='Owner')
-    Developer = models.ForeignKey(User,related_name='Developer')
+    Owner = models.ForeignKey(ExtendedUser,related_name='Owner')
+    Developer = models.ForeignKey(ExtendedUser,related_name='Developer')
     Status = models.ForeignKey(TaskStatus)
-    StartDate = models.DateField(auto_now=True)
-    EndDate = models.DateField()
+    StartDate = models.DateTimeField(auto_now=True)
+    EndDate = models.DateTimeField()
     
     def __unicode__(self):
         return self.TaskTitle
@@ -62,7 +72,7 @@ class TaskTrack(models.Model):
     taskid = models.ForeignKey(Tasks)
     status = models.ForeignKey(TaskStatus)
     date = models.DateTimeField(auto_now=True)
-    owner = models.ForeignKey(User)
+    owner = models.ForeignKey(ExtendedUser)
     
     def __unicode__(self):
         return self.status
@@ -73,7 +83,7 @@ class WeeklyUpdates(models.Model):
     taskid = models.ForeignKey(Tasks)
     status = models.ForeignKey(TaskStatus)
     date = models.DateTimeField(auto_now=True)
-    owner = models.ForeignKey(User)
+    owner = models.ForeignKey(ExtendedUser)
     
     def __unicode__(self):
         return self.status

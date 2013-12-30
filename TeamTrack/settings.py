@@ -9,6 +9,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+EMAIL_SUBJECT_PREFIX = 'Tejas:'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tj.werewolf@gmail.com'
+EMAIL_HOST_PASSWORD = '###8904429443'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

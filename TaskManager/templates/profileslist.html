@@ -1,11 +1,25 @@
 {% extends "base.html" %}
 {% block maincontent %}
 			
-<h1>profiles list</h1>
-
-{% for profile in Profiles_list %}
-	{{ profile.username }}
-	<a href="{% url 'profileslistdetail' profile.id %}">View profile</a>
-	<a href="{% url 'updatesfortoday' %}">updates</a>
+<h3>profiles list<span class="h3link"><a href="{% url 'createprofile' %}">Create profile</a></span></h3>
+<table id="tblList">
+	{% for profile in Profiles_list %}
+	
+	<tr>
+		<td>
+			{{ profile.username }}
+		</td>
+		<td>
+			<a href="{% url 'profileslistdetail' profile.id %}">View profile</a>	
+		</td>
+		<td>
+			<a href="{% url 'userUpdates' profile.id %}">updates</a>
+		</td>
+	</tr>
+	
+	
 {% endfor %}
+	
+	
+</table>
 {% endblock maincontent %}

@@ -1,29 +1,46 @@
-{% extends "base.html" %}
+
 {% load static %}
-{% block extraHeaders %}
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<script src="{% static "js/jquery.js" %}"></script>
 	<script src="{% static "js/socket.io.js" %}"></script>
 	<script>
-	  var socket = io.connect('http://localhost:8080');
-	  socket.emit('clientdetails', { "name": "{{ request.user }}","id":"{{ request.user.id }}","email":"{{ request.user.email }}" });
-	  
-	  
-		  socket.on('clients',function(data){
-			    $("#OnlineUsersDiv").append("<div class='OnlineUsers' id='"+data.id+"'>"+data.name+"</div>")
-			    
-		  })
-	  
-	  
-	  
-	  
+		$(document).ready(function(){
+			$('#OnlineUsersDiv').width(($('body').width()-960)/2)
+		})
 	</script>
-{% endblock %}
+	<script>
+	  if(typeof(EventSource)!=="undefined")
+	  {
+	  var source=new EventSource("{% url 'serversideevents' %}");
+	  source.onmessage=function(event)
+		{
+		console.log(event.data)
+		document.getElementById("result").innerHTML+=event.data + "<br>";
+		};
+	  }
+	else
+	  {
+	  document.getElementById("result").innerHTML="Sorry, your browser does not support server-sent events...";
+	  }
+	</script>
+	
+	
 
-{% block maincontent %}
 			<div id="OnlineUsersDiv">
 				
 			</div>
+			
+			
+			<div id="HomeOuterDiv">
+			
 			<div id="MainHeader">
 			<h1>TEAM TRACK</h1>
+			</div>
+			
+			<div id="MenuButtonsWrapper">
+				<a href="{% url 'projects' %}"><div class="menuBtnBig">Projects</div></a>
+				<a href="{% url 'profileslist' %}"><div class="menuBtnBig" id="profileIcon">Profiles</div></a>
+				<a href="{% url 'CalenderEvents' %}"><div class="menuBtnBig">Calendar</div></a>
 			</div>
 			<div id="SearchBarDiv">
 				<form method="get" action="{% url 'searchresults' %}">
@@ -32,4 +49,7 @@
 				</form>
 				
 			</div>
-{% endblock maincontent %}
+			<div id="Homefooter">
+				Copyrights 2013 Achumen Technologies Pvt Ltd.
+			</div>
+		  </div>

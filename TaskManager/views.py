@@ -2,10 +2,10 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse
 from haystack.query import SearchQuerySet
-from TaskManager.models import Projects,Tasks,TaskTrack,Client,WeeklyUpdates
+from TaskManager.models import Projects,Tasks,TaskTrack,Client,WeeklyUpdates,ExtendedUser
 from django.contrib.auth.models import User
 from django.template import RequestContext
-from TaskManager.forms import LoginForm,SearchForm
+from TaskManager.forms import LoginForm,SearchForm,UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.core.cache import cache
 from django.contrib import messages
@@ -13,7 +13,7 @@ import xlsxwriter
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView,UpdateView
+from django.views.generic.edit import CreateView,UpdateView,FormView
 from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm,MailForm,AddClientForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage,send_mass_mail
@@ -40,33 +40,16 @@ class HomeView(TemplateView):
         context['SearchForm'] = SearchForm()
         return context
 
-class MailView(TemplateView):
+class MailView(FormView):
     
     template_name = 'MailTemplate.html'
-    success_url = '/sendMail/'
+    form_class = MailForm
     
     def form_valid(self, form):
-        message = EmailMessage(subject=form.Subject,
-                       body=form.Message,
-                       from_email=form.sender,
-                       to=form.to_addresses,
-                       bcc=form.cc_addresses,
-                       headers={'Cc': ','.join(form.cc_addresses)})
-        message.send()
-        datatuple = (
-            ('Subject', 'Message.', 'from@example.com', ['john@example.com']),
-            ('Subject', 'Message.', 'from@example.com', ['jane@example.com']),
-        )
-        send_mass_mail(datatuple)
-
-
-        return super(MailView, self).form_valid(form)
+        form.send_email()
+        return super(MailView,self).form_valid(form)
     
-    def get_context_data(self, **kwargs):
-        context = super(MailView, self).get_context_data(**kwargs)
-        context['MailForm'] = MailForm()
-        context['Users'] = User.objects.all()
-        return context
+    
 
 class ProjectsView(TemplateView):
     template_name = 'Projects.html'
@@ -113,13 +96,20 @@ class TasksDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super(TasksDetailView, self).get_context_data(**kwargs)
+        context['graphValues'] = getGraphValues()
         context['TaskTrack'] = TaskTrack.objects.filter(taskid=self.kwargs['pk'])
         return context
-
+    
 class TasksUpdateView(UpdateView):
     model = Tasks
     template_name = 'tasksEdit.html'
     context_object_name = "Tasks_update"
+    
+    def get_context_data(self, **kwargs):
+        context = super(TasksUpdateView, self).get_context_data(**kwargs)
+        context['TaskTrack'] = TaskTrack.objects.filter(taskid=self.kwargs['pk'])
+        return context
+
 
 class TasksListView(ListView):
     model = Tasks
@@ -132,9 +122,14 @@ class TasksCreate(CreateView):
 
 
 class ProfileView(ListView):
-    model = User
+    model = ExtendedUser
     template_name = 'profileslist.html'
     context_object_name = "Profiles_list"
+
+class CreateProfileView(CreateView):
+    model = ExtendedUser
+    template_name = 'Createprofile.html'
+    form_class = UserCreationForm
 
 class ProfileDetailView(DetailView):
     model = User
@@ -155,6 +150,14 @@ class CalenderView(TemplateView):
         context['Projects'] = Projects.objects.all()
         return context
     
+class UpdatesDetailView(TemplateView):
+    template_name='updatesDetail.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(UpdatesDetailView, self).get_context_data(**kwargs)
+        context['WeeklyUpdates'] = WeeklyUpdates.objects.filter(owner=self.kwargs['pk'])
+        return context    
+    
 def SearchResults(request):
     searchform = SearchForm()
     sqs = SearchQuerySet().models(User,Projects,Tasks).load_all().auto_query(request.GET['Search'])
@@ -168,6 +171,7 @@ def pdf_view(request):
     p.showPage()
     #p.save()
     return response
+
 
 
 def authenticateUser(request):
@@ -245,3 +249,12 @@ def GenerateTimesheet(request):
     worksheet.insert_image('A0', '/var/www/my_eclipse_workspace/TeamTrack/TaskManager/static/images/achumenTimesheet.png')
     workbook.close()
     return HttpResponse(workbook) 
+
+
+def view_event_request(request):
+    return HttpResponse("hi", mimetype='text/event-stream')
+
+def getGraphValues():
+        graphValueObj = {}
+        
+        return "hello"

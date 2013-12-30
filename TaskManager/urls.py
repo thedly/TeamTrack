@@ -3,6 +3,7 @@ from django.conf.urls.defaults import patterns, include, url
 from TaskManager.models import Projects,Tasks
 from TaskManager.views import LoginView,HomeView,ProjectsView,TasksView,TasksDetailView,TasksListView,TasksCreate,ProjectsCreate,ProfileView,TasksUpdateView,CalenderView
 from TaskManager.views import ProjectsListView,ProjectsListView,ProjectsDetailView,MailView,OngoingProjectsView,CompletedProjectsView,ProfileDetailView,AddClientView
+from TaskManager.views import UpdatesDetailView,CreateProfileView
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm
@@ -41,13 +42,14 @@ urlpatterns = patterns('',
     url('^ongoingprojects/$', OngoingProjectsView.as_view(),name="ongoingprojects"),
     url('^completedprojects/$', CompletedProjectsView.as_view(), name="completedprojects"),
     
-    url('^profileslist/$', ProfileView.as_view(), {"queryset" : User.objects.all(),"template_name" : 'profileslist.html'} , name="profileslist"),
+    url('^createprofile/$', login_required(CreateProfileView.as_view()), name="createprofile"),
+    url('^profileslist/$', login_required(ProfileView.as_view()), name="profileslist"),
     url('^ViewResume/$','TaskManager.views.pdf_view',name='ViewResume'),
-    url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view(), {"queryset" : User.objects.all(),"template_name" : 'profileslistdetail.html'} , name="profileslistdetail"),
-    url('^updatesfortoday/$', TemplateView.as_view(), {'template': 'updatesfortoday.html','extra_context':{'UpdatesForTodayForm': UpdatesForTodayForm()}} , name="updatesfortoday"),
-   
+    url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view() , name="profileslistdetail"),
+    url('^userUpdates/(?P<pk>\d+)/$', UpdatesDetailView.as_view() , name="userUpdates"),
+
     url('^searchresults/$','TaskManager.views.SearchResults',name="searchresults"),
     url('^taskdetail/$', TemplateView.as_view(), {'template': 'taskdetail.html'}, name="taskdetail"),
 
-    
+    url('^serversideevents/$','TaskManager.views.view_event_request',name='serversideevents')
 )

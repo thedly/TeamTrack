@@ -3,18 +3,32 @@ body
 	margin:0;
 	background:#F0EFE7;
 }
-#header
+#headerMainBtns
 {
 	width:100%;
 	height:50px;
-	padding:20px;
+	margin:auto;
+	background:aqua;
+}
+
+.menuBtnBig
+{
+	width:100px;
+	height:100px;
+	border:thin black solid;
+	border-radius:10px;
+	padding:2px;
+	display:inline-block;
+}
+
+.menuBtnSmall
+{
+	width:100px;
+	height:30px;
+	display:inline-block;
 	text-align:center;
 }
-#header span
-{
-	margin-right:25px;
-	margin-left:25px;
-}
+
 #OuterDiv
 {
 	width:960px;
@@ -23,9 +37,33 @@ body
 	
 }
 
+.h3link
+{
+	float:right;
+	font-size:15;
+	font-weight:normal;
+}
+
+#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+
+#HomeOuterDiv
+{
+	width:960px;
+	margin:auto;
+	height:500px;
+	margin-top:50px;
+	border-radius:15px;
+	background:orange;/*#FCFCFA;*/
+}
+.clicktomail img
+{
+	position:absolute;
+}
 .clicktomail:hover
 {
-	text-decoration:underline;
 	cursor:pointer;
 }
 #MainHeader
@@ -35,11 +73,28 @@ body
 #MainHeader h1
 {
 	color:#0388A6;
-	background: url("../images/texture.png") repeat;
 	height:100px;
 	font-size:50px;
 }
 
+.menuAlign
+{
+	padding:10px;
+	display:inline-block;
+}
+
+#menus
+{
+	height:50px;
+	width:100%;
+	background-color:orange;
+}
+#navmenus
+{
+	height:50px;
+	width:100%;
+	background-color:orange;
+}
 #SearchBarDiv
 {
 	text-align:center;
@@ -51,6 +106,110 @@ body
 	border-radius: 10px;
 	margin:auto;
 	font-size:25px;
+}
+#BaseSearchBar
+{
+	width:100%;
+	height:30px;
+	border-radius: 10px;
+	margin:auto;
+	font-size:15px;
+}
+
+#BaseSearchsubmit
+{
+	width:30px;
+	height:35px;
+	border:none;
+	background: url('../images/remote_search_extraSmall.png') no-repeat;
+	position:absolute;	
+	border-radius:15px;
+}
+#BaseSearchBarDiv
+{
+	width:52%;
+}
+#mainBaseHeader
+{
+	
+	width:20%;
+	font-size:28px;
+	font-weight:bold;
+}
+
+#mainBaseHeader a
+{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.menuBtnHolder
+{
+	width:960px;
+	margin:auto;
+	text-align:center;
+}
+.navBtnHolder
+{
+	width:960px;
+	margin:auto;
+	text-align:center;
+	background-color:#000000;
+}
+#tblList
+{
+	width:100%;
+	text-align:center;
+}
+
+#tblList th
+{
+	border-bottom:thin black solid;
+}
+#mainContentHolder h1,#mainContentHolder h3
+{
+	margin:20 auto;
+}
+
+
+.signal
+{
+	width:10px;
+	height:10px;
+	border-radius:20px;
+}
+
+.signalBig
+{
+	width:30px;
+	height:30px;
+	margin:auto;
+	border-radius:20px;
+}
+.signalLights
+{
+	width:40px;
+	text-align:center;
+	display:inline-block;
+	border: thin black solid;
+	border-radius:5px;
+	padding:2px;
+}
+#task_projectDetails
+{
+	width:900px;
+	display:inline-block;
+}
+.navBtnHolder a
+{
+	color:#FFFFFF;
+}
+
+#userWelcome
+{
+	width:20%;
+	text-align:center;
+	color:#FFFFFF;
 }
 #searchsubmit
 {
@@ -110,14 +269,16 @@ body
 
 #OnlineUsersDiv
 {
-	width:200px;
 	height:500px;
+	margin-top:50px;
 	overflow:auto;
 	position:fixed;
 	right:0;
 	top:0;
 	background:rgba(223, 221, 213, 0.33);
 }
+
+
 .OnlineUsers
 {
 	width:100%;
@@ -142,3 +303,52 @@ body
 {
 	font-size:14px;
 }
+
+#tracking 
+{
+	margin:auto;
+	width:800px;
+}
+#tracking table
+{
+	width:150px;
+	display:inline-block;
+	border:thin black solid;
+	border-radius:15px;
+	padding:2px;
+	font-size:12px;
+}
+.boldHeader
+{
+	font-weight:bold;
+}
+
+#editTask
+{
+	float:right;
+}
+footer
+{
+	background:gray;
+	text-align:center;
+}
+#Homefooter
+{
+	text-align:center;
+	width:960px;
+	margin-top:100px;
+}
+
+#MenuButtonsWrapper
+{
+	width:350px;
+	margin:auto;
+	height:120px;
+}
+
+#MenuButtonsWrapper a
+{
+	text-decoration:none;
+}
+
+
