@@ -3,7 +3,7 @@ from django.conf.urls.defaults import patterns, include, url
 from TaskManager.models import Projects,Tasks
 from TaskManager.views import LoginView,HomeView,ProjectsView,TasksView,TasksDetailView,TasksListView,TasksCreate,ProjectsCreate,ProfileView,TasksUpdateView,CalenderView
 from TaskManager.views import ProjectsListView,ProjectsListView,ProjectsDetailView,MailView,OngoingProjectsView,CompletedProjectsView,ProfileDetailView,AddClientView
-from TaskManager.views import UpdatesDetailView,CreateProfileView
+from TaskManager.views import UpdatesDetailView,CreateProfileView,MeetingsView
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm
@@ -15,7 +15,8 @@ from django.views.generic.edit import CreateView,UpdateView
 from TaskManager import signals
 
 urlpatterns = patterns('',
-
+    
+    
 #-----------------Login----------------------------------------
     url('^$',  LoginView.as_view(),name='loginpage'),#direct_to_template, {'template': 'login.html','extra_context':{'LoginForm': LoginForm()}}, name="loginpage"),
     url('^authenticate/$', 'TaskManager.views.authenticateUser', name="authenticateuser"),
@@ -33,6 +34,8 @@ urlpatterns = patterns('',
     url('^taskupdate/(?P<pk>\d+)/$', login_required(TasksUpdateView.as_view()), name="taskupdate"),
 
     
+    url('^Meetings/$', login_required(MeetingsView.as_view()), name="Meetings"),
+    
     url('^CalenderEvents/$', login_required(CalenderView.as_view()), name="CalenderEvents"),
     url('^GenerateTimeSheet/$','TaskManager.views.GenerateTimesheet',name='GenerateTimesheet'),
     url('^AddClient/$', login_required(AddClientView.as_view()), name="AddClient"),
@@ -47,7 +50,6 @@ urlpatterns = patterns('',
     url('^ViewResume/$','TaskManager.views.pdf_view',name='ViewResume'),
     url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view() , name="profileslistdetail"),
     url('^userUpdates/(?P<pk>\d+)/$', UpdatesDetailView.as_view() , name="userUpdates"),
-
     url('^searchresults/$','TaskManager.views.SearchResults',name="searchresults"),
     url('^taskdetail/$', TemplateView.as_view(), {'template': 'taskdetail.html'}, name="taskdetail"),
 

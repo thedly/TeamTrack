@@ -18,7 +18,7 @@ from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm,MailForm,
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage,send_mass_mail
 from reportlab.pdfgen import canvas
-
+import datetime
 import logging
 log = logging.getLogger(__name__)
 
@@ -30,14 +30,26 @@ class LoginView(TemplateView):
         context['LoginForm'] = LoginForm()
         return context
 
+class MeetingsView(TemplateView):
+    template_name = 'meetings.html'
+    
+
 class HomeView(TemplateView):
     
     template_name = 'home.html'
     log.debug("debug")
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        
         context['SearchForm'] = SearchForm()
+        context['NoOfdays'] = datetime.datetime.now()
+        x_forwarded_for = self.request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = self.request.META.get('REMOTE_ADDR')
+        context['ip'] = ip
+        
+        context['tasksPending'] = Tasks.objects.filter(Developer=self.request.user.id)
         return context
 
 class MailView(FormView):
@@ -96,8 +108,11 @@ class TasksDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super(TasksDetailView, self).get_context_data(**kwargs)
-        context['graphValues'] = getGraphValues()
+        query = Tasks.objects.get(pk=self.kwargs['pk'])
         context['TaskTrack'] = TaskTrack.objects.filter(taskid=self.kwargs['pk'])
+        rangevalue = int(query.EndDate.strftime("%d"))-int(query.StartDate.strftime("%d"))
+        context['loop_times'] = [i+1 for i in range(rangevalue)]
+        
         return context
     
 class TasksUpdateView(UpdateView):
@@ -171,8 +186,7 @@ def pdf_view(request):
     p.showPage()
     #p.save()
     return response
-
-
+    
 
 def authenticateUser(request):
     filled_form = LoginForm(request.POST)
@@ -254,7 +268,3 @@ def GenerateTimesheet(request):
 def view_event_request(request):
     return HttpResponse("hi", mimetype='text/event-stream')
 
-def getGraphValues():
-        graphValueObj = {}
-        
-        return "hello"

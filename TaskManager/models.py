@@ -65,7 +65,10 @@ class Tasks(models.Model):
         return ('taskdetail', [self.id])
     
 
-
+class graphData(models.Model):
+    taskid = models.ForeignKey(Tasks)
+    proposedPlot = models.CharField(max_length=150) 
+    processTPlot = models.CharField(max_length=150)
 
 class TaskTrack(models.Model):
     project = models.ForeignKey(Projects)

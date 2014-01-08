@@ -38,6 +38,8 @@
 			<script type="text/javascript">
 $(function () {
 	
+	
+	
     $('#container').highcharts({
 	
 	    chart: {
@@ -177,7 +179,7 @@ $(function () {
 	</th>
 </tr>
 {% for task in Tasks %}
-	<tr>	
+	<tr class="hovereffect" >	
 		<td>
 			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task }}</a>
 		</td>

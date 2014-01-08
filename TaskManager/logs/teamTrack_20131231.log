@@ -1,0 +1,36 @@
+[2013-12-31 01:00:28,457] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:00:28,460] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:00:37,839] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:00:37,839] INFO [TaskManager.signals:25] No task in the track
+[2013-12-31 01:01:15,437] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:01:15,440] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:01:28,391] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:01:41,721] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:01:41,724] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:01:41,793] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:01:59,316] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:01:59,319] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:01:59,385] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:02:12,088] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:02:12,092] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:02:12,210] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:02:22,269] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:02:22,270] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:02:22,345] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:02:39,875] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:02:39,878] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:02:39,947] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:03:18,434] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:03:18,437] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:03:18,509] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:03:18,512] INFO [TaskManager.signals:15] 0.15
+[2013-12-31 01:03:18,512] INFO [TaskManager.signals:17] 0.5
+[2013-12-31 01:03:18,512] INFO [TaskManager.signals:19] 0.3
+[2013-12-31 01:03:18,512] INFO [TaskManager.signals:21] 0.05
+[2013-12-31 01:03:45,696] DEBUG [TaskManager.views:36] debug
+[2013-12-31 01:03:45,700] DEBUG [TaskManager.signals:7] signals page
+[2013-12-31 01:03:45,802] INFO [TaskManager.signals:10] Signal was called
+[2013-12-31 01:03:45,812] INFO [TaskManager.signals:15] 0.15
+[2013-12-31 01:03:45,812] INFO [TaskManager.signals:17] 0.5
+[2013-12-31 01:03:45,813] INFO [TaskManager.signals:19] 0.3
+[2013-12-31 01:03:45,813] INFO [TaskManager.signals:21] 0.05

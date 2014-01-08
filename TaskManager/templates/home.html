@@ -1,11 +1,28 @@
-
+{% load apptags %}
 {% load static %}
+<!doctype>
+<html>
+<head>
 	<link rel="stylesheet" href="{% static "css/style.css" %}">
 	<script src="{% static "js/jquery.js" %}"></script>
 	<script src="{% static "js/socket.io.js" %}"></script>
+	
+	
 	<script>
 		$(document).ready(function(){
 			$('#OnlineUsersDiv').width(($('body').width()-960)/2)
+			
+			$.ajax({
+				url:"/TaskManager/getip/",
+				type:"get",
+				success:function(result){
+					alert(result)
+				    $("#ip").html(result);
+				  }});
+			})
+			
+			
+			
 		})
 	</script>
 	<script>
@@ -24,14 +41,93 @@
 	  }
 	</script>
 	
-	
+	<script>
 
-			<div id="OnlineUsersDiv">
+var x=document.getElementById("demo");
+
+function getLocation()
+
+  {
+
+  if (navigator.geolocation)
+
+    {
+
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+
+    }
+
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+
+  }
+
+ 
+
+function showPosition(position)
+
+  {
+
+  var latlon=position.coords.latitude+","+position.coords.longitude;
+
+ 
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+
+  +latlon+"&zoom=14&size=400x300&sensor=false";
+
+  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+
+  }
+
+ 
+
+function showError(error)
+
+  {
+
+  switch(error.code)
+
+    {
+
+    case error.PERMISSION_DENIED:
+
+      x.innerHTML="User denied the request for Geolocation."
+
+      break;
+
+    case error.POSITION_UNAVAILABLE:
+
+      x.innerHTML="Location information is unavailable."
+
+      break;
+
+    case error.TIMEOUT:
+
+      x.innerHTML="The request to get user location timed out."
+
+      break;
+
+    case error.UNKNOWN_ERROR:
+
+      x.innerHTML="An unknown error occurred."
+
+      break;
+
+    }
+
+  }
+
+</script>
+
+</head>
+<body onload="getLocation()">
+
+			<div id="events">
 				
 			</div>
 			
 			
-			<div id="HomeOuterDiv">
+			<div class="HomeOuterDiv">
 			
 			<div id="MainHeader">
 			<h1>TEAM TRACK</h1>
@@ -44,12 +140,88 @@
 			</div>
 			<div id="SearchBarDiv">
 				<form method="get" action="{% url 'searchresults' %}">
-					{{ SearchForm.as_table }}
+					<input name="Search" class="varchardata" placeholder="Search for projects,tasks & profiles" id="MainSearchBar" lang="en" x-webkit-speech>
 					<button type="submit" id="searchsubmit"></button>
 				</form>
 				
 			</div>
-			<div id="Homefooter">
+			
+			
+		  </div>
+		  
+		  <div  class="HomeOuterDiv">
+		  <div id="loggedinDetails">
+		  	<table>
+		  		<tr>
+		  			<td>
+		  				USER:
+		  			</td>
+		  			<td>
+		  				{{ request.user.username }}
+		  			</td>
+		  		</tr>
+		  		<tr>
+		  			<td>
+		  			IP:
+		  			</td>
+		  			<td>
+		  			{{ ip }}
+		  			</td>
+		  		</tr>
+		  	</table>
+		  </div>
+		  
+		  <div id="mapholder"></div>
+		  </div>
+		  
+			  
+		  {% if tasksPending %}
+		  <div class="HomeOuterDiv">
+<table id="tblList">
+<tr>
+	<th>
+		Task title
+	</th>
+	<th>
+		status
+	</th>
+	<th>
+		No. of days remaining
+	</th>
+</tr>
+{% for task in tasksPending %}
+	
+	<tr class="hovereffect" >	
+		<td>
+			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task }}</a>
+		</td>
+		<td>
+			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task.Status }}</a>
+		</td>
+		<td>
+			{{ task.EndDate.date.day|subtractDates }} 
+		</td>
+		<td>
+			{% if task.Status.id == 4 %}
+			<div class="signal" style="background-color:green;"></div>
+			{% elif task.Status.id == 3 %}
+			<div class="signal" style="background-color:orange;"></div>
+			{% else %}
+			<div class="signal" style="background-color:red;"></div>
+			{% endif %}
+		</td>
+</tr>
+{% endfor %}
+	</table>
+</div>
+{% endif %}
+		  
+		  
+		  
+		  
+		  <div id="Homefooter">
 				Copyrights 2013 Achumen Technologies Pvt Ltd.
 			</div>
-		  </div>
+		  
+</body>
+</html>

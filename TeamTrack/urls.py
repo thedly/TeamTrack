@@ -2,6 +2,8 @@ from django.conf.urls import patterns, include, url
 from tastypie.api import Api
 from TaskManager.api import TasksResource,ProjectsResource,UserResource
 
+
+
 v1_api = Api(api_name='v1')
 v1_api.register(TasksResource())
 v1_api.register(UserResource())
@@ -10,6 +12,7 @@ v1_api.register(ProjectsResource())
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+
 
 urlpatterns = patterns('',
     # Examples:

@@ -49,12 +49,11 @@ body
 		margin: 0 auto;
 		}
 
-#HomeOuterDiv
+.HomeOuterDiv
 {
 	width:960px;
-	margin:auto;
-	height:500px;
-	margin-top:50px;
+	margin:10 auto;
+	padding:5px;
 	border-radius:15px;
 	background:orange;/*#FCFCFA;*/
 }
@@ -73,7 +72,7 @@ body
 #MainHeader h1
 {
 	color:#0388A6;
-	height:100px;
+	height:50px;
 	font-size:50px;
 }
 
@@ -336,7 +335,29 @@ footer
 {
 	text-align:center;
 	width:960px;
-	margin-top:100px;
+	margin:auto;
+}
+
+#loggedinDetails
+{
+	width:200px;
+	border-right:thin black solid;
+	display:inline-block;
+}
+#mapholder
+{
+	width:600px;
+	text-align:center;
+	display:inline-block;
+}
+.hovereffect:hover
+{
+	background:orange;
+}
+
+#mapholder
+{
+	margin:auto;
 }
 
 #MenuButtonsWrapper

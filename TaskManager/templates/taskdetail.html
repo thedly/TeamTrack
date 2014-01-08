@@ -10,6 +10,9 @@
   
 <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
 <script src="{% static "js/jquery.min.js" %}"></script>
+
+
+
 <script type="text/javascript" charset="utf-8">
 						
 			$(document).ready(function() {
@@ -23,66 +26,48 @@
   					return window.open('{% url 'mail' %}','Mail', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 				})
 				
+			
+			$('#container').highcharts({
+            title: {
+                text: 'Monthly Average Temperature',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'Source: WorldClimate.com',
+                x: -20
+            },
+            xAxis: {
+                categories: [{% for track in TaskTrack %}'{{ track.date }}',{% endfor %}]
+            },
+            yAxis: {
+                title: {
+                    text: 'Temperature (deg)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: 'deg'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Tokyo',
+                data: [{% for track in TaskTrack %}{{ track.status.id }},{% endfor %}]
+            }, {
+                name: 'New York',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+            }]
+        });
 				
-				$('#container').highcharts({
-		            chart: {
-		                type: 'areaspline'
-		            },
-		            title: {
-		                text: 'Hourly progress of task completion'
-		            },
-		            legend: {
-		                layout: 'vertical',
-		                align: 'left',
-		                verticalAlign: 'top',
-		                x: 150,
-		                y: 100,
-		                floating: true,
-		                borderWidth: 1,
-		                backgroundColor: '#FFFFFF'
-		            },
-		            xAxis: {
-		                categories: [
-		                    'Investigation',
-		                    'Development',
-		                    'Testing',
-		                    'Merge'
-		                ],
-		                plotBands: [{ // visualize the weekend
-		                    from: 4.5,
-		                    to: 6.5,
-		                    color: 'rgba(68, 170, 213, .2)'
-		                }]
-		            },
-		            yAxis: {
-		                title: {
-		                    text: 'Time(Hours)'
-		                }
-		            },
-		            tooltip: {
-		                shared: true,
-		                valueSuffix: ' Hours'
-		            },
-		            credits: {
-		                enabled: false
-		            },
-		            plotOptions: {
-		                areaspline: {
-		                    fillOpacity: 0.5
-		                }
-		            },
-		            series: [{
-		                name: 'Proposed',
-		                data: [3.6, 12, 7.2, 1.2]
-		            }, {
-		                name: 'Progress',
-		                data: [1.2, 11, 8, 3]
-		            }]
-		        });
-				
-				
-				alert(series)
-			});
+			})
 		</script>
 		
 		
@@ -101,9 +86,11 @@
 		
 		
 		<h3>Project details<span  class="h3link"><a href="{% url 'projectsdetail' Tasks_detail.ProjectId.id %}">One step back</a></span></h3>
+			
+			
 			<div id="task_projectDetails">
 			<span class="boldHeader">Project :</span> {{ Tasks_detail.ProjectId.Title }}</p>
-			<p><span class="boldHeader">Client :</span> {{ Tasks_detail.ProjectId.Client }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}"></span></p>
+			<p><span class="boldHeader">Client :</span> {{ Tasks_detail.ProjectId.Client }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}" width="24px"></span></p>
 			<p><span class="boldHeader">Task :</span> {{ TaskTrack.0.taskid.TaskTitle }}</p>
 			</div>
 			<div class="signalLights">
@@ -154,10 +141,10 @@
 					<td class="boldHeader">Requirement:</td><td>{{ Tasks_detail.Requirement }}</td>
 				</tr>
 				<tr>
-					<td class="boldHeader">Owner:</td><td>{{ Tasks_detail.Owner }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}"></span></td>
+					<td class="boldHeader">Owner:</td><td>{{ Tasks_detail.Owner }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}" width="24px"></span></td>
 				</tr>
 				<tr>
-					<td class="boldHeader">Developer:</td><td>{{ Tasks_detail.Developer }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}"></span></td>
+					<td class="boldHeader">Developer:</td><td>{{ Tasks_detail.Developer }}&nbsp&nbsp<span class="clicktomail"><img src="{% static "images/mail.ico" %}" width="24px"></span></td>
 				</tr>
 				<tr>
 					<td class="boldHeader">Status:</td><td>{{ Tasks_detail.Status }}</td>

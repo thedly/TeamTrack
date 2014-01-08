@@ -1,0 +1,108 @@
+[2014-01-04 11:01:44,967] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:01:45,055] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:36:31,750] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:36:31,753] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:36:57,411] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:36:57,413] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:39:42,180] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:39:42,183] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:39:53,069] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:39:53,071] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:43:22,500] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:43:22,502] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:43:27,653] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:43:27,655] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:43:34,755] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:43:34,756] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:44:20,309] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:44:20,311] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:44:54,536] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:44:54,539] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 11:45:18,469] DEBUG [TaskManager.views:36] debug
+[2014-01-04 11:45:18,471] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 12:31:59,773] DEBUG [TaskManager.views:36] debug
+[2014-01-04 12:31:59,846] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 12:35:07,671] INFO [TaskManager.signals:10] Signal was called
+[2014-01-04 12:47:03,187] DEBUG [TaskManager.views:36] debug
+[2014-01-04 12:47:03,188] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 12:47:54,193] DEBUG [TaskManager.views:36] debug
+[2014-01-04 12:47:54,196] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 12:48:31,233] DEBUG [TaskManager.views:36] debug
+[2014-01-04 12:48:31,234] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:26:00,868] DEBUG [TaskManager.views:36] debug
+[2014-01-04 13:26:00,874] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:43:29,128] DEBUG [TaskManager.views:38] debug
+[2014-01-04 13:43:29,155] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:43:43,664] DEBUG [TaskManager.views:38] debug
+[2014-01-04 13:43:43,667] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:44:08,309] DEBUG [TaskManager.views:38] debug
+[2014-01-04 13:44:08,311] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:53:10,720] DEBUG [TaskManager.views:40] debug
+[2014-01-04 13:53:10,723] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 13:53:46,420] DEBUG [TaskManager.views:40] debug
+[2014-01-04 13:53:46,421] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 18:12:28,549] DEBUG [TaskManager.views:40] debug
+[2014-01-04 18:12:28,615] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 18:19:20,394] DEBUG [TaskManager.views:40] debug
+[2014-01-04 18:19:20,400] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:13:31,721] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:13:31,723] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:13:42,644] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:13:42,644] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:13:48,868] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:13:48,871] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:09,969] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:09,970] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:16,609] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:16,615] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:25,634] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:25,635] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:36,917] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:36,918] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:47,604] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:47,605] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:51,009] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:51,012] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:14:55,243] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:14:55,244] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:15:31,220] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:15:31,220] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:17:00,627] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:17:00,628] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:17:22,954] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:17:22,957] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:17:33,905] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:17:33,907] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:19:16,528] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:19:16,529] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:21:03,332] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:21:03,335] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:21:21,858] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:21:21,858] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:21:33,467] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:21:33,470] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:23:17,555] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:23:17,556] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:23:44,608] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:23:44,611] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:24:14,852] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:24:14,855] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:24:29,085] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:24:29,088] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:26:12,180] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:26:12,181] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:26:30,641] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:26:30,642] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:27:11,611] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:27:11,615] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:27:55,846] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:27:55,848] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:28:13,016] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:28:13,019] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:28:28,713] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:28:28,713] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:29:23,676] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:29:23,677] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:31:31,273] DEBUG [TaskManager.views:40] debug
+[2014-01-04 19:31:31,273] DEBUG [TaskManager.signals:7] signals page
+[2014-01-04 19:38:58,976] INFO [TaskManager.signals:10] Signal was called
