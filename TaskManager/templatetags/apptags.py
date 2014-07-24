@@ -1,16 +1,18 @@
 from django import template
 register = template.Library()
-import datetime 
+import datetime
+from django.http import HttpResponse
 
 @register.filter    
 def subtractDates(value):
-    days = value - datetime.datetime.today().day
+    SubtractedDate = value - datetime.datetime.today().date()
+    days = SubtractedDate.days
     if days > 5:
-        return days
+        return "%s days left"%days
     elif days == 0:
-        return "Last day to complete this task"
+        return "Last day"
     elif days < 0:
         return "Task delayed"
     else:
-        return "You only have %s days to complete the task"%days    
+        return "only %s days left"%days
     return 

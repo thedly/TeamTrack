@@ -30,14 +30,13 @@ urlpatterns = patterns('',
     url('^tasks/$', login_required(TasksView.as_view()),name="tasks"),
     url('^CreateTask/$',login_required(TasksCreate.as_view()),name="createtasks"),
     url(r'^ProjectsList/$', login_required(TasksListView.as_view()), name='projectslist'),
-    url('^taskdetail/(?P<pk>\d+)/$', login_required(TasksDetailView.as_view()), name="taskdetail"),
     url('^taskupdate/(?P<pk>\d+)/$', login_required(TasksUpdateView.as_view()), name="taskupdate"),
 
     
     url('^Meetings/$', login_required(MeetingsView.as_view()), name="Meetings"),
     
     url('^CalenderEvents/$', login_required(CalenderView.as_view()), name="CalenderEvents"),
-    url('^GenerateTimeSheet/$','TaskManager.views.GenerateTimesheet',name='GenerateTimesheet'),
+    #url('^GenerateTimeSheet/$','TaskManager.views.GenerateTimesheet',name='GenerateTimesheet'),
     url('^AddClient/$', login_required(AddClientView.as_view()), name="AddClient"),
     url('^mail/$', login_required(MailView.as_view()), name="mail"),
     url('^home/$', login_required(HomeView.as_view()),name='home'),#login_required(direct_to_template), {'template': 'home.html','login_required':True,'extra_context':{'SearchForm': SearchForm()}}, name="home"),
@@ -51,7 +50,7 @@ urlpatterns = patterns('',
     url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view() , name="profileslistdetail"),
     url('^userUpdates/(?P<pk>\d+)/$', UpdatesDetailView.as_view() , name="userUpdates"),
     url('^searchresults/$','TaskManager.views.SearchResults',name="searchresults"),
-    url('^taskdetail/$', TemplateView.as_view(), {'template': 'taskdetail.html'}, name="taskdetail"),
+    url('^taskdetail/(?P<pk>\d+)/$', login_required(TasksDetailView.as_view()), name="tasksdetail"),
 
-    url('^serversideevents/$','TaskManager.views.view_event_request',name='serversideevents')
+   ##  url('^serversideevents/$','TaskManager.views.view_event_request',name='serversideevents')
 )

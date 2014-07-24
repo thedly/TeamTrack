@@ -1,23 +1,73 @@
 {% extends "base.html" %}
-{% block maincontent %}
+{% load static %}
+{% block MainBodyWrapper %}
 
-<h2>search results</h2>
-{% if object_list %}
 
-	{% for obj in object_list %}
-	{% if obj.username %}
-	<p><a href="{% url 'profileslistdetail' obj.id %}">{{ obj.username }}</a></p>
-	{% endif %}
-	{% if obj.Title %}
-	<p><a href="{% url 'projectsdetail' obj.id  %}">{{ obj.Title }}</a></p>	
-	{% endif %}
-	{% if obj.TaskTitle %}
-	<p><a href="{% url 'taskdetail' obj.id %}">{{ obj.TaskTitle }}</p>
-	{% endif %}
-	{% endfor %}
-	
-	
-{% else %}
-	<h4>No results found for your search</h4>
-{% endif %}
-{% endblock maincontent %}
+
+<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Search</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Search Results</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                       {% if object_list %}
+                                       {% for obj in object_list %}
+                                       {% if obj.username %}
+                                        <tr class="odd gradeA">
+                                            <td><a href="{% url 'profileslistdetail' obj.id %}">{{ obj.username }}</a></td>
+                                        </tr>
+                                         {% endif %}
+                                         {% if obj.Title %}
+                                          <tr class="even gradeC">
+                                            <td><a href="{% url 'projectsdetail' obj.id  %}">{{ obj.Title }}</a></td>
+                                          </tr>
+                                         {% endif %}
+                                         {% if obj.TaskTitle %}
+                                         <tr class="odd gradeA">
+                                            <td><a href="{% url 'taskdetail' obj.id %}">{{ obj.TaskTitle }}</a></td>
+                                          </tr>
+                                          {% endif %}
+                                           {% endfor %}
+                                         {% else %}
+                                       <tr class="odd gradeA">
+                                            <td>No results found for your search</td>
+                                          </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+
+
+
+
+                            </div>
+                            <!-- /.table-responsive -->
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+    </div>
+{% endblock MainBodyWrapper %}

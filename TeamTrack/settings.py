@@ -139,7 +139,7 @@ INSTALLED_APPS = (
     'TaskManager',
     'haystack',
     'tastypie',
-    'django_cron',
+    #'django_cron',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

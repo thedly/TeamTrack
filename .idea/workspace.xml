@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb878fdc-3042-4a57-8b35-6c63836520a5" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\bootstrap-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\easing.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\farbtastic.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\freshereditor.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\fullcalendar\fullcalendar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\fullcalendar\fullcalendar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\fullcalendar\gcal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\fullcalendar\jquery-ui.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\fullcalendar\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery-ui-1.7.2.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery.raty.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery.raty.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\jquery.stickynotes.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\shortcut.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js\socket.io.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\templates\taskdetail.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\templates\tasksEdit.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" afterPath="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/base.html" afterPath="$PROJECT_DIR$/TaskManager/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/calender.html" afterPath="$PROJECT_DIR$/TaskManager/templates/calender.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/home.html" afterPath="$PROJECT_DIR$/TaskManager/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/searchresults.html" afterPath="$PROJECT_DIR$/TaskManager/templates/searchresults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamTrack/settings.py" afterPath="$PROJECT_DIR$/TeamTrack/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/urls.py" afterPath="$PROJECT_DIR$/TaskManager/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/views.py" afterPath="$PROJECT_DIR$/TaskManager/views.py" />
+    </list>
+    <ignored path="TeamTrack.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="TeamTrack" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BugTracker/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="155" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tasks.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/Tasks.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="9" selection-start="408" selection-end="408" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="8" selection-start="2287" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profileslist.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="141" column="5" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.0" vertical-offset="2004" max-vertical-offset="3757">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apptags.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templatetags/apptags.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="28" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="97" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="4471">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasksDetail.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/tasksDetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="47" selection-start="3388" selection-end="3388" vertical-scroll-proportion="3.773707" vertical-offset="0" max-vertical-offset="2703">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calender.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/calender.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="2142">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectsDetail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="69" selection-end="1153" vertical-scroll-proportion="-4.8271604" vertical-offset="221" max-vertical-offset="3910">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/TaskManager/templates/login.html" />
+        <option value="$PROJECT_DIR$/TaskManager/static/TeamTrack/index.html" />
+        <option value="$PROJECT_DIR$/TaskManager/static/TeamTrack/tables.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/Projects.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/ongoingprojects.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html" />
+        <option value="$PROJECT_DIR$/TaskManager/forms.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/CreateProjects.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/profileslist.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/profileslistdetail.html" />
+        <option value="$PROJECT_DIR$/BugTracker/models.py" />
+        <option value="$PROJECT_DIR$/BugTracker/views.py" />
+        <option value="$PROJECT_DIR$/BugTracker/Templates/bugs.html" />
+        <option value="$PROJECT_DIR$/BugTracker/urls.py" />
+        <option value="$PROJECT_DIR$/TeamTrack/urls.py" />
+        <option value="$PROJECT_DIR$/BugTracker/forms.py" />
+        <option value="$PROJECT_DIR$/TeamTrack/settings.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/searchresults.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/tasksEdit.html" />
+        <option value="$PROJECT_DIR$/TaskManager/urls.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/calender.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/base.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/home.html" />
+        <option value="$PROJECT_DIR$/TaskManager/models.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/tasksDetail.html" />
+        <option value="$PROJECT_DIR$/TaskManager/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BugTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistory" value="&#10;view&#10;hom&#10;ur&#10;vi&#10;ho&#10;home&#10;url&#10;urls&#10;views&#10;profi&#10;profilesdeta&#10;base&#10;forms.&#10;forms&#10;create&#10;s&#10;model&#10;ongoi&#10;projects&#10;proje&#10;.html&#10;projectsde&#10;ca&#10;inde&#10;search&#10;tables&#10;index&#10;login_ol&#10;login" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../geodjango" />
+    <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\BugTracker\Templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="TeamTrack" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb878fdc-3042-4a57-8b35-6c63836520a5" name="Default" comment="" />
+      <created>1398929534840</created>
+      <updated>1398929534840</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16030534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16129032" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="32" selection-start="1597" selection-end="1605" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="4692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="26" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="7837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/searchresults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="54" selection-start="1007" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding>
+            <marker date="1405618972844" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="29" selection-start="3993" selection-end="4009" vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/AddClient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="5" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.0" vertical-offset="2004" max-vertical-offset="3757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="32" selection-start="1597" selection-end="1605" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="4692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="3706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="22" selection-start="3450" selection-end="3462" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="33" selection-start="5030" selection-end="5030" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="16" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="789" column="45" selection-start="45212" selection-end="45212" vertical-scroll-proportion="0.0" vertical-offset="13694" max-vertical-offset="14229" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="33" selection-start="5030" selection-end="5030" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="2732" selection-end="2732" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="26" selection-start="5865" selection-end="5865" vertical-scroll-proportion="0.0" vertical-offset="2853" max-vertical-offset="4692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="33" selection-start="5030" selection-end="5030" vertical-scroll-proportion="0.0" vertical-offset="2286" max-vertical-offset="3757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="2732" selection-end="2732" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="26" selection-start="5865" selection-end="5865" vertical-scroll-proportion="0.0" vertical-offset="2853" max-vertical-offset="4692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="16" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Projectslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="392" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ongoingprojects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="6" selection-start="59" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslistdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="39" selection-start="617" selection-end="619" vertical-scroll-proportion="-9.192307" vertical-offset="237" max-vertical-offset="1598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/CreateTasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="491" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/CreateProjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="61" selection-start="479" selection-end="479" vertical-scroll-proportion="-9.384615" vertical-offset="11" max-vertical-offset="476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BugTracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="189" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="44" selection-start="582" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+          <folding>
+            <marker date="1405618972844" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/AddClient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="5" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.0" vertical-offset="2004" max-vertical-offset="3757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/searchresults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="28" selection-start="2698" selection-end="2698" vertical-scroll-proportion="-1.8024691" vertical-offset="908" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templatetags/apptags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1832" selection-end="2322" vertical-scroll-proportion="-1.709091" vertical-offset="501" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="69" selection-end="1153" vertical-scroll-proportion="-4.8271604" vertical-offset="221" max-vertical-offset="3910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/meetings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/calender.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="9" selection-start="408" selection-end="408" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="363" column="0" selection-start="18130" selection-end="18130" vertical-scroll-proportion="-3.4615386" vertical-offset="6081" max-vertical-offset="6545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="460" column="66" selection-start="28722" selection-end="28722" vertical-scroll-proportion="-13.923077" vertical-offset="7458" max-vertical-offset="7939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="8" selection-start="2287" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BugTracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="155" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="97" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="4471">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/tasksDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="47" selection-start="3388" selection-end="3388" vertical-scroll-proportion="3.773707" vertical-offset="0" max-vertical-offset="2703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

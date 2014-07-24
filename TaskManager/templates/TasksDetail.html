@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load static %}
+        {% block extraHeaders %}
+
+  <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
+<link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
+<script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
+<script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+<script>
+
+	$(document).ready(function() {
+
+		var calendar = $('#calendar')
+		calendar.fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2014-06-12',
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2014-06-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2014-06-07',
+					end: '2014-06-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-06-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-06-16T16:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2014-06-12T10:30:00',
+					end: '2014-06-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2014-06-12T12:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2014-06-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2014-06-28'
+				}
+			]
+		});
+
+	});
+
+</script>
+
+        {% endblock extraHeaders %}
+{% block MainBodyWrapper %}
+
+        <div id="page-wrapper">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{ object }}</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> {{ object }}
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="timeline">
+
+                                {% for track in TaskTrack %}
+                                    {% if track.status.id == 1 or track.status.id == 3  %}
+                                    <li>
+                                    {% else %}
+                                    <li class="timeline-inverted">
+                                    {% endif %}
+                                    {% if track.status.id == 1 %}
+                                        <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                    {% elif track.status.id == 2 %}
+                                        <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                    {% elif track.status.id == 3 %}
+                                        <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                    {% elif track.status.id == 4 %}
+                                        <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                    {% endif %}
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                            <p>
+                                                <small class="text-muted"><i class="fa fa-time"></i> 11 hours ago via Twitter</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
+
+                                        </div>
+                                    </div>
+                                    </li>
+                                    {% if track.status.id == 1 or track.status.id == 3  %}
+                                    <li>
+                                    {% else %}
+                                    <li class="timeline-inverted">
+                                    {% endif %}
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Timeline Event</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
+                                        </div>
+                                    </div>
+                                    </li>
+                                {% endfor %}
+
+
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+        </div>
+     </div>
+             <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Calendar</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id='calendar'></div>
+                </div>
+            </div>
+            </div>
+
+{% endblock MainBodyWrapper %}
