@@ -90,3 +90,16 @@ class WeeklyUpdates(models.Model):
     
     def __unicode__(self):
         return self.status
+
+class TaskmanagerTasktimeline(models.Model):
+    taskid = models.ForeignKey(Tasks, db_column='taskid')
+    status = models.ForeignKey(TaskStatus, db_column='status')
+    notes = models.TextField()
+    owner = models.ForeignKey(ExtendedUser, db_column='owner')
+    date = models.DateTimeField(auto_now=True)
+    timelineCheck = models.CharField(max_length=20, db_column='timelineCheck')
+    class Meta:
+        db_table = 'taskmanager_tasktimeline'
+
+    def __unicode__(self):
+        return self.notes

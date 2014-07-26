@@ -1,12 +1,10 @@
 from django.conf.urls.defaults import patterns, include, url
 #from django.views.generic.simple import direct_to_template
 from TaskManager.models import Projects,Tasks
-from TaskManager.views import LoginView,HomeView,ProjectsView,TasksView,TasksDetailView,TasksListView,TasksCreate,ProjectsCreate,ProfileView,TasksUpdateView,CalenderView
-from TaskManager.views import ProjectsListView,ProjectsListView,ProjectsDetailView,MailView,OngoingProjectsView,CompletedProjectsView,ProfileDetailView,AddClientView
-from TaskManager.views import UpdatesDetailView,CreateProfileView,MeetingsView
+from TaskManager.views import *
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm
+from TaskManager.forms import *
 from haystack.query import SearchQuerySet
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
@@ -35,7 +33,7 @@ urlpatterns = patterns('',
     
     url('^Meetings/$', login_required(MeetingsView.as_view()), name="Meetings"),
     
-    url('^CalenderEvents/$', login_required(CalenderView.as_view()), name="CalenderEvents"),
+    url('^CalenderEvents/$', login_required(CalenderView.as_view()), name="Events"),
     #url('^GenerateTimeSheet/$','TaskManager.views.GenerateTimesheet',name='GenerateTimesheet'),
     url('^AddClient/$', login_required(AddClientView.as_view()), name="AddClient"),
     url('^mail/$', login_required(MailView.as_view()), name="mail"),
@@ -51,6 +49,5 @@ urlpatterns = patterns('',
     url('^userUpdates/(?P<pk>\d+)/$', UpdatesDetailView.as_view() , name="userUpdates"),
     url('^searchresults/$','TaskManager.views.SearchResults',name="searchresults"),
     url('^taskdetail/(?P<pk>\d+)/$', login_required(TasksDetailView.as_view()), name="tasksdetail"),
-
-   ##  url('^serversideevents/$','TaskManager.views.view_event_request',name='serversideevents')
+   url('^CreateTimelineEvent/$','TaskManager.views.CreateTimelineEvent',name='CreateTimelineEvent')
 )

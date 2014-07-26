@@ -318,7 +318,7 @@
                                 <!--</a>-->
                             </div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                            <a href="{% url 'tasks' %}" class="btn btn-default btn-block">View All Tasks</a>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -374,7 +374,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <ul class="chat">
+                            <ul class="chat" id="ChatUl">
                                 <li class="left clearfix">
                                     <span class="chat-img pull-left">
                                         <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
@@ -459,4 +459,35 @@
         </div>
         <!-- /#page-wrapper -->
         <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+        <script src="{% static "NodeModules/node_modules/socket.io/node_modules/socket.io-client/socket.io.js" %}"></script>
+        <script>
+         var socket = io.connect("http://localhost:3000");
+
+         socket.on('connect', function (data) {
+            socket.emit('storeClientInfo', { customId:"000CustomIdHere0000" });
+         })
+         socket.on('Clients', function(msg){
+            $.each(msg, function( index, value ) {
+                $("#chatclients").append("<div>"+value.customId+"</div>")
+            });
+
+
+         })
+
+
+         socket.on('ReceiveMsg', function(msg){
+             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
+         })
+         $('#btn-chat').click(function(){
+            socket.emit('chat message', $('#btn-input').val());
+
+            $('#btn-input').val('');
+
+
+
+          });
+
+
+	    </script>
+
 {% endblock MainBodyWrapper %}

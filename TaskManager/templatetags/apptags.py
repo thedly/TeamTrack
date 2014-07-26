@@ -15,4 +15,11 @@ def subtractDates(value):
         return "Task delayed"
     else:
         return "only %s days left"%days
-    return 
+    return
+
+@register.filter
+def TaskPercentage(TaskDate, ProjectDate):
+    ProjectDate_days = ProjectDate.date.days
+    TaskDate_days = TaskDate.date.days
+    percentValue = (TaskDate_days/ProjectDate_days)*100
+    return percentValue+"%"

@@ -2,19 +2,20 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse
 from haystack.query import SearchQuerySet
-from TaskManager.models import Projects,Tasks,TaskTrack,Client,WeeklyUpdates,ExtendedUser
+from TaskManager.models import *
 from django.contrib.auth.models import User
 from django.template import RequestContext
 from TaskManager.forms import LoginForm,SearchForm,UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.core.cache import cache
 from django.contrib import messages
+import json
 #import xlsxwriter
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView,UpdateView,FormView
-from TaskManager.forms import UpdatesForTodayForm,LoginForm,SearchForm,MailForm,AddClientForm
+from TaskManager.forms import LoginForm, SearchForm, MailForm, TimelineTaskUpdatesForm
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMessage,send_mass_mail
 #from reportlab.pdfgen import canvas
@@ -100,8 +101,10 @@ class AddClientView(CreateView):
     template_name = 'AddClient.html'
     
     
-class TasksView(TemplateView):
+class TasksView(ListView):
     template_name = 'Tasks.html'
+    context_object_name = "Tasks"
+    queryset = Tasks.objects.all()
 
 class TasksDetailView(DetailView):
     model = Tasks
@@ -109,8 +112,15 @@ class TasksDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(TasksDetailView, self).get_context_data(**kwargs)
-        context['TaskTrack'] = TaskTrack.objects.filter(taskid=self.kwargs['pk']).order_by('-date')
+        context['TimelineTaskUpdatesForm'] = TimelineTaskUpdatesForm()
+        context['Timeline'] = TaskmanagerTasktimeline.objects.filter(taskid=self.kwargs['pk']).order_by('-date')
         return context
+
+    def form_valid(self, form):
+        log.debug('TasksDetailView')
+        obj = form.save(commit=False)
+        obj.owner = self.request.user
+        obj.save()
     
 class TasksUpdateView(UpdateView):
     model = Tasks
@@ -128,9 +138,12 @@ class TasksListView(ListView):
     template_name = 'taskdetail.html'
     context_object_name = "Tasks_detail"
 
+
 class TasksCreate(CreateView):
     model = Tasks
     template_name='CreateTasks.html'
+
+
 
 
 class ProfileView(ListView):
@@ -265,3 +278,30 @@ def userlogout(request):
 # def view_event_request(request):
 #     return HttpResponse("hi", mimetype='text/event-stream')
 
+def CreateTimelineEvent(request):
+    #if request.method == 'POST':
+        #try:
+    obj = Tasks.objects.get(pk=request.POST['taskid'])
+    obj.Status = TaskStatus.objects.get(pk=request.POST['status'])
+    log.debug(request.POST['status'])
+    obj.save()
+    timelineObj = TaskmanagerTasktimeline(taskid=obj, status=obj.Status, owner=obj.Owner, notes=request.POST['notes'])
+    if TaskmanagerTasktimeline.objects.all():
+        TimelineInstance = TaskmanagerTasktimeline.objects.latest('date')
+        if TimelineInstance.status == obj.Status:
+            timelineObj.timelineCheck = "u"
+        else:
+            timelineObj.timelineCheck = "c"
+    else:
+        timelineObj.timelineCheck = "c"
+
+    timelineObj.save()
+
+    messages.add_message(request, messages.INFO, 'Saved successfully')
+    return HttpResponseRedirect(reverse('tasksdetail', args=(request.POST['taskid'],)))
+        #except Exception as e:
+        #    return HttpResponse(e.message+" hello")
+        #    messages.add_message(request, messages.ERROR, "hello")
+        #    return HttpResponseRedirect(reverse('tasksdetail', args=(taskid,)))
+    #else:
+     #   return HttpResponseRedirect(reverse('tasksdetail', args=(taskid,))) # Redirect after POST

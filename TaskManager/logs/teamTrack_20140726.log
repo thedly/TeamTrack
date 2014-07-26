@@ -1,0 +1,88 @@
+[2014-07-26 17:02:39,411] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:02:39,487] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:02:39,490] ERROR [TaskManager.signals:19] 'Tasks' object has no attribute 'notes'
+Traceback (most recent call last):
+  File "D:\Work\Projects\Python\TeamTrack\TaskManager\signals.py", line 11, in taskUpdate
+    obj = TaskmanagerTasktimeline(taskid=instance.id, status=instance.Status, owner=instance.Owner, notes=instance.notes)
+AttributeError: 'Tasks' object has no attribute 'notes'
+[2014-07-26 17:19:59,697] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:19:59,700] DEBUG [TaskManager.signals:6] signals page
+[2014-07-26 17:19:59,720] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:19:59,765] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:20:22,664] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:20:22,670] DEBUG [TaskManager.signals:6] signals page
+[2014-07-26 17:20:22,726] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:20:22,767] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:20:22,767] INFO [TaskManager.signals:10] {'update_fields': None, 'raw': False, 'signal': <django.dispatch.dispatcher.Signal object at 0x02E29E30>, 'using': 'default', 'created': False}
+[2014-07-26 17:20:22,770] ERROR [TaskManager.signals:20] 'Tasks' object has no attribute 'notes'
+Traceback (most recent call last):
+  File "D:\Work\Projects\Python\TeamTrack\TaskManager\signals.py", line 12, in taskUpdate
+    obj = TaskmanagerTasktimeline(taskid=instance.id, status=instance.Status, owner=instance.Owner, notes=instance.notes)
+AttributeError: 'Tasks' object has no attribute 'notes'
+[2014-07-26 17:21:16,325] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:21:16,328] DEBUG [TaskManager.signals:6] signals page
+[2014-07-26 17:21:16,348] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:21:16,430] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:21:16,430] INFO [TaskManager.signals:10] {'update_fields': None, 'raw': False, 'signal': <django.dispatch.dispatcher.Signal object at 0x02E09E30>, 'using': 'default', 'created': False}
+[2014-07-26 17:21:16,430] INFO [TaskManager.signals:11] <class 'TaskManager.models.Tasks'>
+[2014-07-26 17:21:16,436] ERROR [TaskManager.signals:21] 'Tasks' object has no attribute 'notes'
+Traceback (most recent call last):
+  File "D:\Work\Projects\Python\TeamTrack\TaskManager\signals.py", line 13, in taskUpdate
+    obj = TaskmanagerTasktimeline(taskid=instance.id, status=instance.Status, owner=instance.Owner, notes=instance.notes)
+AttributeError: 'Tasks' object has no attribute 'notes'
+[2014-07-26 17:22:06,342] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:22:06,346] DEBUG [TaskManager.signals:6] signals page
+[2014-07-26 17:22:08,910] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:22:08,950] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:22:08,950] INFO [TaskManager.signals:10] {'update_fields': None, 'raw': False, 'signal': <django.dispatch.dispatcher.Signal object at 0x02E69E30>, 'using': 'default', 'created': False}
+[2014-07-26 17:22:37,719] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:22:37,721] DEBUG [TaskManager.signals:6] signals page
+[2014-07-26 17:22:37,743] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:22:37,799] INFO [TaskManager.signals:9] Signal was called
+[2014-07-26 17:22:37,801] INFO [TaskManager.signals:10] {'update_fields': None, 'raw': False, 'signal': <django.dispatch.dispatcher.Signal object at 0x02CD9E30>, 'using': 'default', 'created': False}
+[2014-07-26 17:22:37,803] ERROR [TaskManager.signals:21] 'Tasks' object has no attribute 'notes'
+Traceback (most recent call last):
+  File "D:\Work\Projects\Python\TeamTrack\TaskManager\signals.py", line 13, in taskUpdate
+    obj = TaskmanagerTasktimeline(taskid=instance.id, status=instance.Status, owner=instance.Owner, notes=instance.notes)
+AttributeError: 'Tasks' object has no attribute 'notes'
+[2014-07-26 17:27:48,183] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:27:54,851] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:28:19,190] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:28:19,210] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:30:41,710] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:30:41,743] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:32:34,395] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:32:34,414] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:33:47,762] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:33:47,780] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:34:07,197] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:34:07,216] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:36:03,779] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:36:03,803] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:36:28,364] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:36:28,397] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:38:16,592] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:38:16,618] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:39:15,703] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:39:15,724] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:39:42,015] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:39:42,081] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:40:01,144] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:40:01,171] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:41:23,023] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:41:23,072] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:43:09,456] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:43:09,473] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:44:53,815] DEBUG [TaskManager.views:41] debug
+[2014-07-26 17:44:53,872] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:45:03,428] DEBUG [TaskManager.views:286] 1
+[2014-07-26 17:45:36,999] DEBUG [TaskManager.views:286] 2
+[2014-07-26 17:46:08,990] DEBUG [TaskManager.views:286] 2
+[2014-07-26 17:49:25,999] DEBUG [TaskManager.views:286] 2
+[2014-07-26 17:49:51,200] DEBUG [TaskManager.views:286] 3
+[2014-07-26 17:50:14,938] DEBUG [TaskManager.views:286] 3
+[2014-07-26 17:50:35,852] DEBUG [TaskManager.views:286] 4
+[2014-07-26 17:50:55,878] DEBUG [TaskManager.views:286] 4
+[2014-07-26 18:12:01,760] DEBUG [TaskManager.views:286] 1
+[2014-07-26 18:13:00,694] DEBUG [TaskManager.views:286] 2
+[2014-07-26 18:13:20,240] DEBUG [TaskManager.views:286] 2

@@ -1,16 +1,18 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage,send_mass_mail
-from TaskManager.models import ExtendedUser
-class UpdatesForTodayForm(forms.Form):
-    TaskNotes = forms.CharField(widget=forms.Textarea(attrs={'class':'varcharData','placeholder':'SCR1234: Gathered requirements'}))
+from TaskManager.models import ExtendedUser, TaskStatus
+
+class TimelineTaskUpdatesForm(forms.Form):
+    status = forms.ModelChoiceField(label='', widget=forms.Select(attrs={'class': 'form-control', 'id': 'TaskStatus'}), queryset=TaskStatus.objects.all(), empty_label=None)
+    notes = forms.CharField(label='', widget=forms.Textarea(attrs={'style': 'resize:none', 'class': 'form-control', 'placeholder': 'Notes', 'rows': '5'}))
 
 class SearchForm(forms.Form):
-    Search = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Search for tasks,projects & profiles','id':'MainSearchBar','lang':'en','x-webkit-speech':''}))
+    Search = forms.CharField(label='', widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Search for tasks,projects & profiles','id':'MainSearchBar','lang':'en','x-webkit-speech':''}))
      
 class LoginForm(forms.Form):
-    Username = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Username'}))
-    Password = forms.CharField(label='',widget=forms.PasswordInput(attrs={'class':'varcharData','placeholder':'Password'}))
+    Username = forms.CharField(label='', widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}))
+    Password = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}))
 
 class UserCreationForm(forms.ModelForm):
     class Meta:

@@ -1,11 +1,70 @@
-<span id="authentication_error">{% if messages %}{% for message in messages %}{{ message }}{% endfor %}{% endif %}</span>
+{% load static %}
+<!DOCTYPE html>
+<html>
 
-<form action="{% url 'authenticateuser' %}" method="POST">{% csrf_token %}
-{{ LoginForm.as_p }}
-{% if request.GET.next %}
-<input type="hidden" name="next" value="{{ request.GET.next }}">
-{% else %}
-<input type="hidden" name="next" value="{% url 'home' %}">
-{% endif %}
-<button type="submit">Login</button>
-</form>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "font-awesome/css/font-awesome.css" %}" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="{% static "css/sb-admin.css" %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="{% url 'authenticateuser' %}" method="POST">{% csrf_token %}
+                            <fieldset>
+                                {{ LoginForm.as_p }}
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                {% if request.GET.next %}
+                                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                                {% else %}
+                                <input type="hidden" name="next" value="{% url 'home' %}">
+                                {% endif %}
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+</body>
+
+</html>
+
+
+
+

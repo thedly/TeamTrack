@@ -12,6 +12,38 @@
 
 	$(document).ready(function() {
 
+        $("#TaskStatus").val({{ object.Status.id }})
+        if($("#Messages").html() != "")
+        {
+            $("#Messages").fadeOut(2000)
+        }
+
+        $("#TaskStatus").change(function(){
+            $("#ProgressBar").removeClass()
+            switch($(this).val())
+            {
+                case "1":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-danger')
+                    $("#ProgressBar").css({'width':'20%'})
+                    break;
+                case "2":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-warning')
+                    $("#ProgressBar").css({'width':'40%'})
+                    break;
+                case "3":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-info')
+                    $("#ProgressBar").css({'width':'60%'})
+                    break;
+                case "4":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-success')
+                    $("#ProgressBar").css({'width':'80%'})
+                    break;
+            }
+
+
+        })
+
+
 		var calendar = $('#calendar')
 		calendar.fullCalendar({
 			header: {
@@ -19,45 +51,18 @@
 				center: 'title',
 				right: 'month,basicWeek,basicDay'
 			},
-			defaultDate: '2014-06-12',
+			//defaultDate: '2014-06-12',
 			editable: true,
 			events: [
 				{
-					title: 'All Day Event',
-					start: '2014-06-01'
+					title: 'Task : {{ object.TaskTitle }}',
+					start: '{{ object.StartDate|date:"Y-m-d" }}',
+					end: '{{ object.EndDate|date:"Y-m-d" }}'
 				},
 				{
-					title: 'Long Event',
-					start: '2014-06-07',
-					end: '2014-06-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-16T16:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2014-06-12T10:30:00',
-					end: '2014-06-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2014-06-12T12:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2014-06-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2014-06-28'
+					title: 'Project : {{ object.ProjectId.Title }}',
+					start: '{{ object.ProjectId.StartDate|date:"Y-m-d" }}',
+					end: '{{ object.ProjectId.EndDate|date:"Y-m-d" }}'
 				}
 			]
 		});
@@ -71,64 +76,190 @@
 
         <div id="page-wrapper">
 
+             <div class="col-lg-6">
+
+
+
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                    <div id="Messages" class="alert alert-success">
+                        {{ message }}
+                    </div>
+                    {% elif message.tags == 'info' %}
+                    <div id="Messages" class="alert alert-info">
+                        {{ message }}
+                    </div>
+                    {% elif message.tags == 'error' %}
+                    <div id="Messages" class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% endif %}
+                 </div>
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">{{ object }}</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Task Details
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                                <table class="table">
+
+                                    <tbody>
+                                        <tr>
+                                            <th>Project</th>
+                                            <td>{{ object.ProjectId.Title }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>TaskId</th>
+                                            <td>{{ object.id }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Task title</th>
+                                            <td>{{ object.TaskTitle }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Owner</th>
+                                            <td>{{ object.Developer }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Task status</th>
+                                            <td>{{ object.Status }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Started on</th>
+                                            <td>{{ object.StartDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ends on</th>
+                                            <td>{{ object.EndDate }}</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                <!-- /.col-lg-12 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Task Details
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                        <div class="form-group">
+                            <div class="progress progress-striped active">
+                                {% if object.Status.id == 1 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                </div>
+                                {% elif object.Status.id == 2 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                                {% elif object.Status.id == 3 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                </div>
+                                {% elif object.Status.id == 4 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                </div>
+                                {% endif %}
+                            </div>
+                            <form method="post" action="{% url 'CreateTimelineEvent' %}" >{% csrf_token %}
+                            {{ TimelineTaskUpdatesForm.as_p }}
+                                <input name="taskid" type="hidden" value="{{ object.id }}">
+                                <input name="owner" type="hidden" value="{{ request.user }}">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                            </form>
+                        </div>
+
+                </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- end row form -->
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i> {{ object }}
+                            <i class="fa fa-clock-o fa-fw"></i> Timeline
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
+
                             <ul class="timeline">
 
-                                {% for track in TaskTrack %}
-                                    {% if track.status.id == 1 or track.status.id == 3  %}
-                                    <li>
-                                    {% else %}
-                                    <li class="timeline-inverted">
-                                    {% endif %}
-                                    {% if track.status.id == 1 %}
-                                        <div class="timeline-badge"><i class="fa fa-check"></i></div>
-                                    {% elif track.status.id == 2 %}
-                                        <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
-                                    {% elif track.status.id == 3 %}
-                                        <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
-                                    {% elif track.status.id == 4 %}
-                                        <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                {% for track in Timeline %}
+                                {% if track.status.id == 1 or track.status.id == 3  %} <!-- normal time line. occurs on the right -->
+                                 <li>
+                                    {% if track.timelineCheck == "c" %}
+                                        {% if track.status.id == 1 %}
+                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                        {% elif track.status.id == 2 %}
+                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 3 %}
+                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 4 %}
+                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                        {% endif %}
                                     {% endif %}
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
-                                            <p>
-                                                <small class="text-muted"><i class="fa fa-time"></i> 11 hours ago via Twitter</small>
-                                            </p>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
-
+                                            <p>{{ track.notes }}</p>
                                         </div>
                                     </div>
-                                    </li>
-                                    {% if track.status.id == 1 or track.status.id == 3  %}
-                                    <li>
-                                    {% else %}
-                                    <li class="timeline-inverted">
+                                </li>
+
+                                {% else %}
+
+                                 <li class="timeline-inverted">
+                                    {% if track.timelineCheck == "c" %}
+                                        {% if track.status.id == 1 %}
+                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                        {% elif track.status.id == 2 %}
+                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 3 %}
+                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 4 %}
+                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                        {% endif %}
                                     {% endif %}
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Timeline Event</h4>
+                                            <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi scelerisque vulputate. Aliquam in metus eu lectus aliquet egestas.</p>
+                                            <p>{{ track.notes }}</p>
                                         </div>
                                     </div>
-                                    </li>
+                                </li>
+                                {% endif %}
+
+
+
+
+
                                 {% endfor %}
 
 
@@ -139,7 +270,7 @@
         </div>
      </div>
              <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <h1 class="page-header">Calendar</h1>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -150,5 +281,9 @@
                 </div>
             </div>
             </div>
+
+
+
+
 
 {% endblock MainBodyWrapper %}
