@@ -1,224 +1,403 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extraHeaders %}
-<link href='{% static 'css/fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
-<link href='{% static 'css/fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
-<script src='{% static 'js/fullcalendar/jquery.min.js' %}'></script>
-<script src='{% static 'js/fullcalendar/jquery-ui.custom.min.js' %}'></script>
-<script src='{% static 'js/fullcalendar/fullcalendar.min.js' %}'></script>
+{% load apptags %}
+        {% block extraHeaders %}
+
+  <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
+<link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
+<script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
+<script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+
+        <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+    <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
 <script>
 
 	$(document).ready(function() {
-	
-		var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
-		
-		$('#calendar').fullCalendar({
+
+        /* Start morris line chart */
+
+        Morris.Donut({
+            element: 'morris-donut-chart',
+            data: {% autoescape off %}{{ object.id|BuildDonutGraph }}{% endautoescape %} ,
+            resize: true
+        });
+
+        Morris.Line({
+        element: 'morris-line-chart',
+        data: {% autoescape off %}{{ object.id|BuildLineGraph }}{% endautoescape %},
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['proposed', 'current'],
+         xLabelFormat: function(data){
+            return data.getDate()+"-"+(data.getMonth()+1)+"-"+data.getFullYear();
+          },
+        hideHover: 'auto',
+        resize: true
+    });
+
+        /* end morris line chart */
+
+
+        $("#TaskStatus").val({{ object.Status.id }})
+        if($("#Messages").html() != "")
+        {
+            $("#Messages").fadeOut(2000)
+        }
+
+        $("#TaskStatus").change(function(){
+            $("#ProgressBar").removeClass()
+            switch($(this).val())
+            {
+                case "1":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-danger')
+                    $("#ProgressBar").css({'width':'20%'})
+                    break;
+                case "2":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-warning')
+                    $("#ProgressBar").css({'width':'40%'})
+                    break;
+                case "3":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-info')
+                    $("#ProgressBar").css({'width':'60%'})
+                    break;
+                case "4":
+                    $("#ProgressBar").addClass('progress-bar progress-bar-success')
+                    $("#ProgressBar").css({'width':'80%'})
+                    break;
+            }
+
+
+        })
+
+
+		var calendar = $('#calendar')
+		calendar.fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
+				right: ''
 			},
+			defaultDate: '{{ object.StartDate|date:"Y-m-d" }}',
 			editable: false,
-			events: [    			     
-			     {
-			    	 title : '{{ object.Title }}',
-			     	 start: new Date({{ object.StartDate|date:"Y" }}, {{ object.StartDate|date:"m" }}-1, {{ object.StartDate|date:"d" }}),
-			     	 end: new Date({{ object.EndDate|date:"Y" }}, {{ object.EndDate|date:"m" }}-1, {{ object.EndDate|date:"d" }})
-			     }
+			events: [
+				{
+					title: 'Task : {{ object.Title }}',
+					start: '{{ object.StartDate|date:"Y-m-d" }}',
+					end: '{{ object.EndDate|date:"Y-m-d" }}'
+				}
 			]
 		});
-		
+
 	});
 
 </script>
 
-			<script type="text/javascript">
-$(function () {
-	
-	
-	
-    $('#container').highcharts({
-	
-	    chart: {
-	        type: 'gauge',
-	        plotBackgroundColor: null,
-	        plotBackgroundImage: null,
-	        plotBorderWidth: 0,
-	        plotShadow: false
-	    },
-	    
-	    title: {
-	        text: 'Speedometer'
-	    },
-	    
-	    pane: {
-	        startAngle: -150,
-	        endAngle: 150,
-	        background: [{
-	            backgroundColor: {
-	                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-	                stops: [
-	                    [0, '#FFF'],
-	                    [1, '#333']
-	                ]
-	            },
-	            borderWidth: 0,
-	            outerRadius: '109%'
-	        }, {
-	            backgroundColor: {
-	                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-	                stops: [
-	                    [0, '#333'],
-	                    [1, '#FFF']
-	                ]
-	            },
-	            borderWidth: 1,
-	            outerRadius: '107%'
-	        }, {
-	            // default background
-	        }, {
-	            backgroundColor: '#DDD',
-	            borderWidth: 0,
-	            outerRadius: '105%',
-	            innerRadius: '103%'
-	        }]
-	    },
-	       
-	    // the value axis
-	    yAxis: {
-	        min: 0,
-	        max: 200,
-	        
-	        minorTickInterval: 'auto',
-	        minorTickWidth: 1,
-	        minorTickLength: 10,
-	        minorTickPosition: 'inside',
-	        minorTickColor: '#666',
-	
-	        tickPixelInterval: 30,
-	        tickWidth: 2,
-	        tickPosition: 'inside',
-	        tickLength: 10,
-	        tickColor: '#666',
-	        labels: {
-	            step: 2,
-	            rotation: 'auto'
-	        },
-	        title: {
-	            text: 'km/h'
-	        },
-	        plotBands: [{
-	            from: 0,
-	            to: 120,
-	            color: '#55BF3B' // green
-	        }, {
-	            from: 120,
-	            to: 160,
-	            color: '#DDDF0D' // yellow
-	        }, {
-	            from: 160,
-	            to: 200,
-	            color: '#DF5353' // red
-	        }]        
-	    },
-	
-	    series: [{
-	        name: 'Speed',
-	        data: [80],
-	        tooltip: {
-	            valueSuffix: ' km/h'
-	        }
-	    }]
-	
-	}, 
-	// Add some life
-	function (chart) {
-		if (!chart.renderer.forExport) {
-		    setInterval(function () {
-		        var point = chart.series[0].points[0],
-		            newVal,
-		            inc = Math.round((Math.random() - 0.5) * 20);
-		        
-		        newVal = point.y + inc;
-		        if (newVal < 0 || newVal > 200) {
-		            newVal = point.y - inc;
-		        }
-		        
-		        point.update(newVal);
-		        
-		    }, 3000);
-		}
-	});
-});
-		</script>
+        {% endblock extraHeaders %}
+{% block MainBodyWrapper %}
 
-{% endblock extraHeaders %}
+        <div id="page-wrapper">
 
-{% block maincontent %}
-<h3>Projects detail</h3>
-{{ object.Title }}
-{{ object.IsCompleted }}
-{{ object.StartDate }}
-{{ object.EndDate }}
-<h3>Tasks<span class="h3link"><a href="{% url 'createtasks' %}">Create Task</a></span></h3>
+             <div class="col-lg-6">
 
-{% if Tasks %}
-<table id="tblList">
-<tr>
-	<th>
-		Task title
-	</th>
-	<th>
-		status
-	</th>
-	<th>
-		developer
-	</th>
-</tr>
-{% for task in Tasks %}
-	<tr class="hovereffect" >	
-		<td>
-			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task }}</a>
-		</td>
-		<td>
-			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task.Status }}</a>
-		</td>
-		<td>
-			<a href="{% url 'taskdetail' task.id %}" style="text-decoration:none">{{ task.Developer }}</a>
-		</td>
-		<td>
-			{% if task.Status.id == 4 %}
-			<div class="signal" style="background-color:green;"></div>
-			{% elif task.Status.id == 3 %}
-			<div class="signal" style="background-color:orange;"></div>
-			{% else %}
-			<div class="signal" style="background-color:red;"></div>
-			{% endif %}
-		</td>
-</tr>
-{% endfor %}
-	</table>
-{% if object.IsCompleted == False %}
 
-{% else %}
-<h2>This project has been closed</h2>
-{% endif %}
 
-<h3>Graph</h3>
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                    <div id="Messages" class="alert alert-success">
+                        {{ message }}
+                    </div>
+                    {% elif message.tags == 'info' %}
+                    <div id="Messages" class="alert alert-info">
+                        {{ message }}
+                    </div>
+                    {% elif message.tags == 'error' %}
+                    <div id="Messages" class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
 
-<script src="{%static "js/highcharts.js" %}"></script>
-<script src="{%static "js/highcharts-more.js" %}"></script>
-<script src="{%static "js/modules/exporting.js" %}"></script>
+                    {% endif %}
+                 </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{ object }}</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
 
-<div id="container" ></div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Project Details
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                                <table class="table">
 
-<h3>Event</h3>
-<div id='calendar'></div>
-{% else %}
-<h2 style="margin:20 auto">No tasks have been created for this project <br> <a href="{% url 'createtasks' %}">Create Task</a> ?</h2>
-{% endif %}
-{% endblock maincontent %}
+                                    <tbody>
+                                        <tr>
+                                            <th>Id</th>
+                                            <td>{{ object.id }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Title</th>
+                                            <td>{{ object.Title }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Client</th>
+                                            <td>{{ object.Client }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Started on</th>
+                                            <td>{{ object.StartDate }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ends on</th>
+                                            <td>{{ object.EndDate }}</td>
+                                        </tr>
 
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                <!-- /.col-lg-12 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Task Details
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                        <div class="form-group">
+                            <div class="progress progress-striped active">
+                                {% if object.Status.id == 1 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                </div>
+                                {% elif object.Status.id == 2 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                                {% elif object.Status.id == 3 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                </div>
+                                {% elif object.Status.id == 4 %}
+                                <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                </div>
+                                {% endif %}
+                            </div>
+                            <form method="post" action="{% url 'CreateTimelineEvent' %}" >{% csrf_token %}
+                            {{ TimelineTaskUpdatesForm.as_p }}
+                                <input name="taskid" type="hidden" value="{{ object.id }}">
+                                <input name="owner" type="hidden" value="{{ request.user }}">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
+                            </form>
+                        </div>
+
+                </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- end row form -->
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Tasks
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table" id="dataTables-example">
+                                    <thead>
+
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Owner</th>
+                                            <th>Status</th>
+                                            <th>Details</th>
+                                            <th>progress</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        {% for Task in Tasks %}
+                                       <tr>
+                                            <td>{{ Task.TaskTitle }}</td>
+                                            <td>{{ Task.Owner }}</td>
+                                            <td>{{ Task.Status }}</td>
+
+
+                                           <td><a href="{% url 'tasksdetail' Task.id %}">View</a></td>
+                                           <td>
+                                           <div class="progress progress-striped active">
+                                                {% if Task.Status.id == 1 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                </div>
+                                                {% elif Task.Status.id == 2 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                </div>
+                                                {% elif Task.Status.id == 3 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                </div>
+                                                {% elif Task.Status.id == 4 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                           </td>
+
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+
+            </div>
+            <!-- /.row -->
+
+             <div class="row">
+                 <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Line Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-line-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                 <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Donut Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Calendar
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                    <div id='calendar'></div>
+                            </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Timeline
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <ul class="timeline">
+
+                                {% for track in Timeline %}
+                                {% if track.status.id == 1 or track.status.id == 3  %} <!-- normal time line. occurs on the right -->
+                                 <li>
+                                    {% if track.timelineCheck == "c" %}
+                                        {% if track.status.id == 1 %}
+                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                        {% elif track.status.id == 2 %}
+                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 3 %}
+                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 4 %}
+                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                        {% endif %}
+                                    {% endif %}
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>{{ track.notes }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                {% else %}
+
+                                 <li class="timeline-inverted">
+                                    {% if track.timelineCheck == "c" %}
+                                        {% if track.status.id == 1 %}
+                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                        {% elif track.status.id == 2 %}
+                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 3 %}
+                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                        {% elif track.status.id == 4 %}
+                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                        {% endif %}
+                                    {% endif %}
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>{{ track.notes }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endif %}
+
+
+
+
+
+                                {% endfor %}
+
+
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+        </div>
+     </div>
+
+
+
+            </div>
+
+
+
+
+
+{% endblock MainBodyWrapper %}

@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls import patterns, include, url
 #from django.views.generic.simple import direct_to_template
 from TaskManager.models import Projects,Tasks
 from TaskManager.views import *
@@ -10,7 +10,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView,UpdateView
-from TaskManager import signals
+
 
 urlpatterns = patterns('',
     
@@ -26,10 +26,10 @@ urlpatterns = patterns('',
     url('^projectsdetail/(?P<pk>\d+)/$', ProjectsDetailView.as_view(), name="projectsdetail"),
 #-----------------Tasks--------------------------------------                       
     url('^tasks/$', login_required(TasksView.as_view()),name="tasks"),
-    url('^CreateTask/$',login_required(TasksCreate.as_view()),name="createtasks"),
+    #url('^CreateTask/$',login_required(TasksCreate.as_view()),name="createtasks"),
     url(r'^ProjectsList/$', login_required(TasksListView.as_view()), name='projectslist'),
     url('^taskupdate/(?P<pk>\d+)/$', login_required(TasksUpdateView.as_view()), name="taskupdate"),
-
+    url('^CreateTask/$', 'TaskManager.views.CreateTask', name="CreateTask"),
     
     url('^Meetings/$', login_required(MeetingsView.as_view()), name="Meetings"),
     
@@ -45,9 +45,12 @@ urlpatterns = patterns('',
     url('^createprofile/$', login_required(CreateProfileView.as_view()), name="createprofile"),
     url('^profileslist/$', login_required(ProfileView.as_view()), name="profileslist"),
     url('^ViewResume/$','TaskManager.views.pdf_view',name='ViewResume'),
-    url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view() , name="profileslistdetail"),
+    url('^profileslistdetail/(?P<pk>\d+)/$', ProfileDetailView.as_view() , name="profilesdetail"),
     url('^userUpdates/(?P<pk>\d+)/$', UpdatesDetailView.as_view() , name="userUpdates"),
     url('^searchresults/$','TaskManager.views.SearchResults',name="searchresults"),
     url('^taskdetail/(?P<pk>\d+)/$', login_required(TasksDetailView.as_view()), name="tasksdetail"),
-   url('^CreateTimelineEvent/$','TaskManager.views.CreateTimelineEvent',name='CreateTimelineEvent')
+   url('^CreateTimelineEvent/$','TaskManager.views.CreateTimelineEvent',name='CreateTimelineEvent'),
+      url('^ChatRoom/$', login_required(ChatRoom.as_view()), name="ChatRoom"),
+      url('^logout/$','django.contrib.auth.views.logout',name='logout'),
+      url('^Call/$', login_required(CallView.as_view()), name="Call"),
 )

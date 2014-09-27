@@ -443,7 +443,7 @@
                             <div class="input-group">
                                 <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                    <button class="btn btn-warning btn-sm">
                                         Send
                                     </button>
                                 </span>
@@ -459,35 +459,11 @@
         </div>
         <!-- /#page-wrapper -->
         <script src="{% static "js/jquery-1.10.2.js" %}"></script>
-        <script src="{% static "NodeModules/node_modules/socket.io/node_modules/socket.io-client/socket.io.js" %}"></script>
         <script>
-         var socket = io.connect("http://localhost:3000");
 
-         socket.on('connect', function (data) {
-            socket.emit('storeClientInfo', { customId:"000CustomIdHere0000" });
-         })
-         socket.on('Clients', function(msg){
-            $.each(msg, function( index, value ) {
-                $("#chatclients").append("<div>"+value.customId+"</div>")
-            });
-
-
-         })
-
-
-         socket.on('ReceiveMsg', function(msg){
-             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
-         })
-         $('#btn-chat').click(function(){
-            socket.emit('chat message', $('#btn-input').val());
-
-            $('#btn-input').val('');
-
-
-
-          });
-
-
-	    </script>
+            $('body').on("click",'.ClientsList', function() {
+                   alert($(this).attr("id"))
+                })
+        </script>
 
 {% endblock MainBodyWrapper %}

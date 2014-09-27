@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage,send_mass_mail
-from TaskManager.models import ExtendedUser, TaskStatus
+from TaskManager.models import ExtendedUser, TaskStatus, Projects
 
 class TimelineTaskUpdatesForm(forms.Form):
     status = forms.ModelChoiceField(label='', widget=forms.Select(attrs={'class': 'form-control', 'id': 'TaskStatus'}), queryset=TaskStatus.objects.all(), empty_label=None)
@@ -13,6 +13,14 @@ class SearchForm(forms.Form):
 class LoginForm(forms.Form):
     Username = forms.CharField(label='', widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}))
     Password = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}))
+
+class CreateTaskForm(forms.Form):
+    ProjectId = forms.ModelChoiceField(label='', queryset=Projects.objects.all(), widget=forms.Select(attrs={'class':'form-control'}))
+    TaskTitle = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Title'}))
+    Description = forms.CharField(label='', widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder':'Description'}))
+    Requirement = forms.CharField(label='', widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder':'Requirement'}))
+    UserId = forms.ModelChoiceField(label='', queryset=ExtendedUser.objects.all(), widget=forms.Select(attrs={'class':'form-control'}))
+    EndDate = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'End Date'}))
 
 class UserCreationForm(forms.ModelForm):
     class Meta:

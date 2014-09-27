@@ -33,7 +33,7 @@
                                        {% for obj in object_list %}
                                        {% if obj.username %}
                                         <tr class="odd gradeA">
-                                            <td><a href="{% url 'profileslistdetail' obj.id %}">{{ obj.username }}</a></td>
+                                            <td><a href="{% url 'profilesdetail' obj.id %}">{{ obj.username }}</a></td>
                                         </tr>
                                          {% endif %}
                                          {% if obj.Title %}
@@ -43,7 +43,7 @@
                                          {% endif %}
                                          {% if obj.TaskTitle %}
                                          <tr class="odd gradeA">
-                                            <td><a href="{% url 'taskdetail' obj.id %}">{{ obj.TaskTitle }}</a></td>
+                                            <td><a href="{% url 'tasksdetail' obj.id %}">{{ obj.TaskTitle }}</a></td>
                                           </tr>
                                           {% endif %}
                                            {% endfor %}

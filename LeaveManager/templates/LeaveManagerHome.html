@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+{% load apptags %}
+{% load static %}
+{% load humanize %}
+{% block extraHeaders %}
+<
+  <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
+<link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
+<script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
+<script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+<script>
+
+	$(document).ready(function() {
+
+        window.setInterval(function(){
+            $('#calendar_Updates').fullCalendar('removeEvents')
+            $('#calendar_Updates').fullCalendar('removeEventSource', getEvents())
+            $('#calendar_Updates').fullCalendar('refetchEvents')
+            $('#calendar_Updates').fullCalendar('addEventSource', getEvents())
+            $('#calendar_Updates').fullCalendar('refetchEvents');
+        },3000)
+		var date = new Date();
+		var d = date.getDate();
+
+		var m = date.getMonth() + 1;
+		var y = date.getFullYear();
+
+        var CurrentDate = y+"/"+m+"/"+d
+
+        $("#SaveEventData").click(function(){
+
+            var endDateTime = new Date( $("#EndDate").val())
+            var startDateTime = new Date( $("#StartDate").val())
+
+
+
+            var NewStartDateTime = startDateTime.getTime()
+            var NewEndDateTime = endDateTime.getTime()
+            var dat = {"Message":$(".modal-body").html(),"Purpose":$("#Purpose").val(), "StartDate": NewStartDateTime, "EndDate": NewEndDateTime}
+            $.ajax({
+               url:"{% url 'SendLeaveRequest' %}",
+               type:"get",
+               data:dat,
+               dataType:"json",
+               contentType:"application/json",
+               success:function(res){JSON.stringify(res)},
+               error:function(res){alert(JSON.stringify(res))}
+            })
+        })
+
+        $("#ResetEvent").click(function(){
+            $('#calendar_Updates').fullCalendar( 'removeEvents' , 'temp' )
+            $("#StartDate").val("")
+            $("#EndDate").val("")
+            $("#eventTitle").val("")
+            $(this).attr({"disabled":true})
+            $("#Submit").attr({"disabled":true})
+
+
+        })
+
+        $("#Purpose").keyup(function(){
+            ShowPanal();
+        })
+
+        function ShowPanal()
+        {
+            if($("#Purpose").val() != "")
+            {
+                $("#CheckboxPanal").slideDown(200)
+            }
+            else
+            {
+                $("#CheckboxPanal").slideUp(200)
+            }
+        }
+
+        function SetData()
+        {
+            var endDateTime = new Date( $("#EndDate").val())
+            var endDate_d = endDateTime.getDate()
+            var endDate_m = endDateTime.getMonth()
+            var endDate_y = endDateTime.getFullYear()
+
+            var startDateTime = new Date( $("#StartDate").val())
+            var startDate_d = startDateTime.getDate()
+            var startDate_m = startDateTime.getMonth()
+            var startDate_y = startDateTime.getFullYear()
+
+            var timeDiff = Math.abs(endDateTime.getTime() - startDateTime.getTime())
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24))
+
+
+
+            $("#EndDateRequest").html(""+endDate_d+"/"+endDate_m+"/"+endDate_y+"")
+            $("#StartDateRequest").html(""+startDate_d+"/"+startDate_m+"/"+startDate_y+"")
+            $("#NoOfdays").html(""+diffDays+"")
+        }
+
+        $('#calendar_Updates').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: CurrentDate,
+            selectable: true,
+            selectHelper: true,
+
+            select: function(start, end) {
+
+
+
+            eventData = {
+                    id: 'temp',
+                    title: $("#Purpose").val(),
+                    start: start,
+                    end: end
+                };
+
+                if($("#eventTitle").val() == "")
+                {
+                    alert("Please provide the reason for your leave")
+                }
+                else
+                {
+                    if($("#StartDate").val() == "" && $("#EndDate").val() == "")
+                    {
+                        $('#calendar_Updates').fullCalendar('renderEvent', eventData, true); // stick? = true
+                        $("#StartDate").val(start)
+                        $("#EndDate").val(end)
+
+                        SetData()
+
+                        $("#ResetEvent").attr({"disabled":false})
+                        $("#Submit").attr({"disabled":false})
+                    }
+                    else
+                    {
+                        alert("reset your form to apply for another leave")
+                    }
+
+                }
+                $('#calendar_Updates').fullCalendar('unselect');
+            },
+            editable: true,
+            eventDrop : function(event)
+            {
+                $("#StartDate").val(event.start)
+                $("#EndDate").val(event.end)
+                SetData()
+            },
+            eventResize : function(event)
+            {
+                $("#StartDate").val(event.start)
+                $("#EndDate").val(event.end)
+                SetData()
+            },
+
+            events: getEvents()
+
+
+        });
+
+        function getEvents()
+        {
+            return {% getLeaveEvents request.user.id %}
+        }
+
+
+
+	});
+
+</script>
+
+{% endblock extraHeaders %}
+{% block MainBodyWrapper %}
+ <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Leaves</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input style="height:60px" id="Purpose" placeholder="Purpose" id="eventTitle" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                        <button disabled="disabled" id="ResetEvent" type="button" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i></button>
+                        <button disabled="disabled" id="Submit" class="btn btn-primary btn-circle btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-check"></i></button>
+                </div>
+            </div>
+            <div class="row" style="display:none" id="CheckboxPanal">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <span>Emergency</span><input id="IsEmergency" type="checkbox" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="hidden" id="StartDate" class="form-control">
+                <input type="hidden" id="EndDate" class="form-control">
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i>Duration
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                     <div id='calendar_Updates'></div>
+                                </div>
+                                <!-- /.col-lg-12 -->
+                           </div>
+
+                      </div>
+                      <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            <!-- /.col-lg-12-->
+            </div>
+         <!-- /.row -->
+        <div class="row">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            aorem ipsum <span id="StartDateRequest"></span> to <span id="EndDateRequest"></span> (<span id="NoOfdays"></span> days) sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        </div>
+                        <input type="text" value="" id="okClicked">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button id="SaveEventData" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div>
+
+        <div class="row">
+            <button style="display:none" id="PopupBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                Launch Demo Modal
+            </button>
+        </div>
+
+</div>
+
+
+{% endblock MainBodyWrapper %}
+
+

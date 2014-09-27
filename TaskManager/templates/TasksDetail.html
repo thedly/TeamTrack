@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
+{% load apptags %}
         {% block extraHeaders %}
 
   <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
@@ -8,9 +10,50 @@
 <script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
 <script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
 <script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+
+        <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+    <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
 <script>
 
 	$(document).ready(function() {
+
+       $("#ChartArrow, #TimelineArrow, #calendarArrow").click(function(){
+
+            $(this).parent().next().toggle(function(){
+                $(this).parent().next().slideUp(200)
+            },function(){
+                $(this).parent().next().slideDown(200)
+            })
+
+       })
+
+
+
+
+        $(window).resize(function(){
+            $("#ChartArrow").parent().next().slideDown()
+            $("#TimelineArrow").parent().next().slideDown()
+            $("#calendarArrow").parent().next().slideDown()
+        })
+        /* Start morris line chart */
+
+
+
+        Morris.Line({
+        element: 'morris-line-chart',
+        data: {% autoescape off %}{{ object.id|BuildLineGraph }}{% endautoescape %},
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['proposed', 'current'],
+         xLabelFormat: function(data){
+            return data.getDate()+"-"+(data.getMonth()+1)+"-"+data.getFullYear();
+          },
+        hideHover: 'auto',
+        resize: true
+    });
+
+        /* end morris line chart */
+
 
         $("#TaskStatus").val({{ object.Status.id }})
         if($("#Messages").html() != "")
@@ -49,20 +92,15 @@
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,basicWeek,basicDay'
+				right: ''
 			},
-			//defaultDate: '2014-06-12',
-			editable: true,
+			defaultDate: '{{ object.StartDate|date:"Y-m-d" }}',
+			editable: false,
 			events: [
 				{
 					title: 'Task : {{ object.TaskTitle }}',
 					start: '{{ object.StartDate|date:"Y-m-d" }}',
 					end: '{{ object.EndDate|date:"Y-m-d" }}'
-				},
-				{
-					title: 'Project : {{ object.ProjectId.Title }}',
-					start: '{{ object.ProjectId.StartDate|date:"Y-m-d" }}',
-					end: '{{ object.ProjectId.EndDate|date:"Y-m-d" }}'
 				}
 			]
 		});
@@ -105,7 +143,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-
 
             <div class="row">
                 <div class="col-lg-8">
@@ -195,12 +232,47 @@
             </div>
 
             <!-- end row form -->
+             <div class="row">
+                 <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Line Chart Example
 
+
+
+                            <span id="ChartArrow" class="fa arrow"></span>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-line-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+
+             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Calendar
+                            <span id="CalendarArrow" class="fa arrow"></span>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                    <div id='calendar'></div>
+                            </div>
+                </div>
+            </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-clock-o fa-fw"></i> Timeline
+                            <span id="TimelineArrow" class="fa arrow"></span>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -224,6 +296,9 @@
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                             <p>
+                                                <small class="text-muted"><i class="fa fa-time"></i> {{ track.date|naturaltime }}</small>
+                                            </p>
                                         </div>
                                         <div class="timeline-body">
                                             <p>{{ track.notes }}</p>
@@ -248,6 +323,9 @@
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                            <p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>{{ track.date|naturaltime }}</small>
+                                            </p>
                                         </div>
                                         <div class="timeline-body">
                                             <p>{{ track.notes }}</p>
@@ -269,17 +347,9 @@
                     </div>
         </div>
      </div>
-             <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="page-header">Calendar</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id='calendar'></div>
-                </div>
-            </div>
+
+
+
             </div>
 
 

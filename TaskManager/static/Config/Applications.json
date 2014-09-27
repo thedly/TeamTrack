@@ -1,0 +1,9 @@
+{
+    "Apps": [
+        "TaskManager",
+        "haystack",
+        "tastypie",
+        "LeaveManager",
+        "BugTracker"
+    ]
+}

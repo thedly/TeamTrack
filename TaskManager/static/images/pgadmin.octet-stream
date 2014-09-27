@@ -1,0 +1,6 @@
+2014-07-10 20:37:52 ERROR  : ERROR:  grant options can only be granted to roles
+2014-07-10 20:38:04 ERROR  : ERROR:  grant options can only be granted to roles
+2014-07-10 20:38:14 ERROR  : ERROR:  grant options can only be granted to roles
+2014-07-16 19:16:36 ERROR  : ERROR:  column "spclocation" does not exist
+LINE 1: SELECT ts.oid, spcname, spclocation, spcoptions, pg_get_user...
+                                ^

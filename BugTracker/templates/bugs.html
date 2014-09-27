@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load static %}
+{% load apptags %}
+
+        {% block MainBodyWrapper %}
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tasks</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Create Bug
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                    <form method="post" action="{% url 'CreateBug' %}">{% csrf_token %}
+                        {{ BugForm.as_p }}
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+                    </form>
+
+                            </div>
+
+                </div>
+                </div>
+                <div class="col-lg-8">
+                     <div class="panel panel-default">
+                         <div class="panel-heading">
+                            Screenshots<span id="DeleteUploads" style="cursor:pointer" class="fa arrow"></span>
+                        </div>
+                        <div class="panel-body" style="overflow:auto">
+                             <form action="{% url 'UploadImages' %}" class="dropzone" id="my-awesome-dropzone">{% csrf_token %}
+                            </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            To Do
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table" id="dataTables-example">
+                                    <thead>
+
+                                        <tr>
+                                            <th><select class="filterOption" value="0">{% getDataIntoOptions 'tas' %}</select></th>
+                                            <th><select class="filterOption" value="1">{% getDataIntoOptions 'pro' %}</select></th>
+                                            <th><select class="filterOption" value="2">{% getDataIntoOptions 'usr' %}</select></th>
+                                            <th><select class="filterOption" value="4">{% getDataIntoOptions 'sta' %}</select></th>
+                                            <th>Details</th>
+                                            <th>Progress</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        {% for Task in Bugs %}
+                                       <tr>
+                                            <td>{{ Task.TaskTitle }}</td>
+                                           <td>{{ Task.ProjectId.Title }}</td>
+                                            <td>{{ Task.Owner }}</td>
+                                            <td>{{ Task.Status }}</td>
+
+
+                                           <td><a href="{% url 'tasksdetail' Task.id %}">View</a></td>
+                                           <td>
+                                           <div class="progress progress-striped active">
+                                                {% if Task.Status.id == 1 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                </div>
+                                                {% elif Task.Status.id == 2 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                </div>
+                                                {% elif Task.Status.id == 3 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                </div>
+                                                {% elif Task.Status.id == 4 %}
+                                                <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                           </td>
+
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- /.table-responsive -->
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+
+            </div>
+            <!-- /.row -->
+             <div class="row">
+                 <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Donut Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                 </div>
+                 <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    <Link rel="stylesheet" href="{% static "css/Dropzone.css" %}">
+    <!-- Core Scripts - Include with every page -->
+    <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
+    <script src="{% static "js/plugins/dataTables/jquery.dataTables.js" %}"></script>
+    <script src="{% static "js/plugins/dataTables/dataTables.bootstrap.js" %}"></script>
+
+
+
+    <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+     <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
+    <script src="{% static "js/Dropzone.js" %}"></script>
+
+    <script>
+    $(document).ready(function() {
+
+
+
+        //$('#dataTables-example').dataTable();
+
+        $(".filterOption").change(function(){
+            var SelectedTag = $(this).val()
+            var SelectedColumn = $(this).attr("value")
+            tblFilter('dataTables-example', SelectedTag, SelectedColumn)
+
+        })
+
+        $("#DeleteUploads").click(function(){
+            var arrayList = []
+            $("#my-awesome-dropzone div.dz-preview").each(function(){
+                arrayList.push($(this).children('div.dz-details').children('div.dz-filename').children('span').html())
+            })
+            alert(arrayList)
+            var arr = {"arr": arrayList, "csrfmiddlewaretoken": "{{ csrf_token }}"}
+            $.ajax({
+                url:"{% url 'DeleteFileUploads' %}",
+                type:"post",
+                data:arr,
+                success: function(dat){ alert(JSON.stringify(dat)) },
+                error: function(dat){alert(JSON.stringify(dat))}
+            })
+        })
+
+        function tblFilter(tableId, tag, columnNo)
+        {
+            $('#'+tableId+' tr').each(function() {
+                    if($(this).find("td").eq(columnNo).html() != null)
+                    {
+                        $(this).show();
+
+                    }
+                });
+
+            $(".filterOption").each(function(){
+                var SelectedTag = $(this).val()
+                var SelectedColumn = $(this).attr("value")
+                if(SelectedTag != "No Filter")
+                {
+                    $('#'+tableId+' tr').each(function() {
+                        if($(this).find("td").eq(SelectedColumn).html() != null)
+                        {
+                            if($(this).find("td").eq(SelectedColumn).html() != SelectedTag)
+                            {
+                                $(this).hide();
+                            }
+                        }
+                    });
+                }
+            })
+
+
+
+        }
+
+
+
+
+    });
+    </script>
+{% endblock MainBodyWrapper %}

@@ -1,25 +1,37 @@
 {% extends "base.html" %}
-{% block maincontent %}
-			
-<h3>profiles list<span class="h3link"><a href="{% url 'createprofile' %}">Create profile</a></span></h3>
-<table id="tblList">
+{% block MainBodyWrapper %}
+ <div id="page-wrapper">
+<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Events</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+ <div class="col-lg-12">
+        <table>
 	{% for profile in Profiles_list %}
-	
+
 	<tr>
 		<td>
 			{{ profile.username }}
 		</td>
 		<td>
-			<a href="{% url 'profileslistdetail' profile.id %}">View profile</a>	
+			<a href="{% url 'profilesdetail' profile.id %}">View profile</a>
 		</td>
 		<td>
 			<a href="{% url 'userUpdates' profile.id %}">updates</a>
 		</td>
 	</tr>
-	
-	
+
+
 {% endfor %}
-	
-	
+
+
 </table>
-{% endblock maincontent %}
+     </div>
+              </div>
+     </div>
+
+{% endblock MainBodyWrapper %}

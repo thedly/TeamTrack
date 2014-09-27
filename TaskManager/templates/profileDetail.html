@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% load static %}
+{% load apptags %}
+{% block extraHeaders %}
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <style>
+      html, body, #map-canvas {
+        height: 400px;
+      }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+
+        function CreateMap(lat,lng)
+        {
+
+          var UserLatLng = new google.maps.LatLng(lat, lng)
+            var mapOptions = {
+            zoom: 18,
+            center: UserLatLng
+          };
+
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+          var marker = new google.maps.Marker({
+              position: UserLatLng,
+              map: map,
+              title: 'Hello World!'
+          });
+
+           var Secondmarker = new google.maps.Marker({
+              position: (-34.924868, 18.45),
+              map: map,
+              title: 'Hello World!'
+          });
+        }
+
+        function displayLocation(latitude,longitude){
+        var request = new XMLHttpRequest();
+
+        var method = 'GET';
+        var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+        var async = true;
+
+        request.open(method, url, async);
+        request.onreadystatechange = function(){
+          if(request.readyState == 4 && request.status == 200){
+            var data = JSON.parse(request.responseText);
+            var address = data.results[0];
+            alert(address.formatted_address);
+            CreateMap(latitude,longitude)
+          }
+        };
+        request.send();
+      };
+
+      var successCallback = function(position){
+        var x = position.coords.latitude;
+        var y = position.coords.longitude;
+        displayLocation(x,y);
+      };
+
+      var errorCallback = function(error){
+        var errorMessage = 'Unknown error';
+        switch(error.code) {
+          case 1:
+            errorMessage = 'Permission denied';
+            break;
+          case 2:
+            errorMessage = 'Position unavailable';
+            break;
+          case 3:
+            errorMessage = 'Timeout';
+            break;
+        }
+        akert(errorMessage);
+      };
+
+      var options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      };
+    var map;
+    navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options);
+
+
+        </script>
+
+
+{% endblock extraHeaders %}
+        {% block MainBodyWrapper %}
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Profile</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Current tasks
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table" id="dataTables-example">
+                                    <thead>
+
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Project</th>
+                                            <th>Task</th>
+                                            <th>Progress</th>
+                                            <th></th>
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        {% for task in DevelopersTask %}
+
+
+                                       <tr>
+                                           <td>{{ task.id }}</td>
+                                           <td>{{ task.ProjectId.Title }}</td>
+                                           <td>{{ task.TaskTitle }}</td>
+                                           <td><div class="progress progress-striped active">
+                                                {% if task.Status.id == 1 %}
+                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                </div>
+                                                {% elif task.Status.id == 2 %}
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                </div>
+                                                {% elif task.Status.id == 3 %}
+                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                </div>
+                                                {% elif task.Status.id == 4 %}
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                                </div>
+                                               {% else %}
+                                                No tasks available
+                                                {% endif %}
+                                            </div></td>
+                                            <td><a href="{% url 'tasksdetail' task.id %}">View</a></td>
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                 <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Current tasks
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                             <div id="map-canvas"></div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+             <div class="row">
+                 <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Donut Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                 </div>
+                 <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
+    <script src="{% static "js/plugins/dataTables/jquery.dataTables.js" %}"></script>
+    <script src="{% static "js/plugins/dataTables/dataTables.bootstrap.js" %}"></script>
+
+
+
+    <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+     <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
+
+     <script>
+                $(function(){
+                    Morris.Donut({
+                        element: 'morris-donut-chart',
+                        data: [],
+                        resize: true
+                    });
+                });
+            </script>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').dataTable();
+    });
+    </script>
+
+
+
+{% endblock MainBodyWrapper %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

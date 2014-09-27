@@ -54,8 +54,9 @@ class Tasks(models.Model):
     Owner = models.ForeignKey(ExtendedUser,related_name='Owner')
     Developer = models.ForeignKey(ExtendedUser,related_name='Developer')
     Status = models.ForeignKey(TaskStatus)
-    StartDate = models.DateTimeField(auto_now=True)
+    StartDate = models.DateTimeField()
     EndDate = models.DateTimeField()
+    modifieddate = models.DateTimeField(auto_now=True, db_column='ModifiedDate') # Field name made lowercase.
     
     def __unicode__(self):
         return self.TaskTitle
@@ -87,11 +88,13 @@ class WeeklyUpdates(models.Model):
     status = models.ForeignKey(TaskStatus)
     date = models.DateTimeField(auto_now=True)
     owner = models.ForeignKey(ExtendedUser)
+    notes = models.TextField(db_column='notes')
     
     def __unicode__(self):
-        return self.status
+        return self.notes
 
 class TaskmanagerTasktimeline(models.Model):
+    project = models.ForeignKey(Projects, db_column='project')
     taskid = models.ForeignKey(Tasks, db_column='taskid')
     status = models.ForeignKey(TaskStatus, db_column='status')
     notes = models.TextField()
@@ -103,3 +106,15 @@ class TaskmanagerTasktimeline(models.Model):
 
     def __unicode__(self):
         return self.notes
+
+class TeamtrackNotifications(models.Model):
+    id = models.IntegerField(primary_key=True, db_column='Id')
+    message = models.CharField(max_length=300L, db_column='Message')
+    fromwhom = models.ForeignKey(ExtendedUser, db_column='FromWhom', related_name='FromWhom')
+    towhom = models.ForeignKey(ExtendedUser, db_column='ToWhom', related_name='ToWhom')
+    modelname = models.CharField(max_length=100L, db_column='ModelName') # Field name made lowercase.
+    rowid = models.IntegerField(db_column='RowId') # Field name made lowercase.
+    link = models.CharField(max_length=100L, db_column='Link')
+    createddate = models.DateTimeField(db_column='CreatedDate', auto_now=True)
+    class Meta:
+        db_table = 'teamtrack_notifications'

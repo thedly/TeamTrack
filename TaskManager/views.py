@@ -11,13 +11,14 @@ from django.core.cache import cache
 from django.contrib import messages
 import json
 #import xlsxwriter
+from django.conf.urls import include
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView,UpdateView,FormView
-from TaskManager.forms import LoginForm, SearchForm, MailForm, TimelineTaskUpdatesForm
+from TaskManager.forms import LoginForm, SearchForm, MailForm, TimelineTaskUpdatesForm, CreateTaskForm
 from django.contrib.auth.decorators import login_required
-from django.core.mail import EmailMessage,send_mass_mail
+
 #from reportlab.pdfgen import canvas
 import datetime
 import logging
@@ -33,7 +34,10 @@ class LoginView(TemplateView):
 
 class MeetingsView(TemplateView):
     template_name = 'meetings.html'
-    
+
+class CallView(TemplateView):
+    template_name = 'Call.html'
+
 
 class HomeView(TemplateView):
     
@@ -66,6 +70,11 @@ class MailView(FormView):
 
 class ProjectsView(TemplateView):
     template_name = 'Projects.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectsView, self).get_context_data(**kwargs)
+        context['Projects'] = Projects.objects.all()
+        return context
     
 class OngoingProjectsView(ListView):
     template_name = 'ongoingprojects.html'
@@ -85,6 +94,7 @@ class ProjectsDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProjectsDetailView, self).get_context_data(**kwargs)
         context['Tasks'] = Tasks.objects.filter(ProjectId=self.kwargs['pk'])
+        context['Timeline'] = TaskmanagerTasktimeline.objects.filter(taskid=self.kwargs['pk']).order_by('-date')
         return context
 
 class ProjectsListView(ListView):
@@ -105,6 +115,11 @@ class TasksView(ListView):
     template_name = 'Tasks.html'
     context_object_name = "Tasks"
     queryset = Tasks.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(TasksView, self).get_context_data(**kwargs)
+        context['CreateTaskForm'] = CreateTaskForm()
+        return context
 
 class TasksDetailView(DetailView):
     model = Tasks
@@ -158,8 +173,7 @@ class CreateProfileView(CreateView):
 
 class ProfileDetailView(DetailView):
     model = User
-    template_name = 'profileslistdetail.html'
-    context_object_name = "Profiles_detail"
+    template_name = 'profileDetail.html'
 
     def get_context_data(self, **kwargs):
         context = super(ProfileDetailView, self).get_context_data(**kwargs)
@@ -285,7 +299,7 @@ def CreateTimelineEvent(request):
     obj.Status = TaskStatus.objects.get(pk=request.POST['status'])
     log.debug(request.POST['status'])
     obj.save()
-    timelineObj = TaskmanagerTasktimeline(taskid=obj, status=obj.Status, owner=obj.Owner, notes=request.POST['notes'])
+    timelineObj = TaskmanagerTasktimeline(project=obj.ProjectId,  taskid=obj, status=obj.Status, owner=obj.Owner, notes=request.POST['notes'])
     if TaskmanagerTasktimeline.objects.all():
         TimelineInstance = TaskmanagerTasktimeline.objects.latest('date')
         if TimelineInstance.status == obj.Status:
@@ -305,3 +319,17 @@ def CreateTimelineEvent(request):
         #    return HttpResponseRedirect(reverse('tasksdetail', args=(taskid,)))
     #else:
      #   return HttpResponseRedirect(reverse('tasksdetail', args=(taskid,))) # Redirect after POST
+
+
+
+def CreateTask(request):
+    obj = Tasks(ProjectId=Projects.objects.get(pk=request.POST['ProjectId']), TaskTitle=request.POST['TaskTitle'], Description=request.POST['Description'], Requirement=request.POST['Requirement'], Owner=ExtendedUser.objects.get(pk=request.POST['UserId']), Developer=ExtendedUser.objects.get(pk=request.POST['UserId']), EndDate=request.POST['EndDate'], StartDate=datetime.datetime.now())
+    obj.Status = TaskStatus.objects.get(pk=1) # creating task so status is 1
+    obj.save()
+    timelineObj = TaskmanagerTasktimeline(project=Projects.objects.get(pk=request.POST['ProjectId']), taskid=Tasks.objects.get(pk=obj.id), status=obj.Status, owner=ExtendedUser.objects.get(pk=obj.Owner), notes="Task started")
+    timelineObj.save()
+    return HttpResponseRedirect(reverse('tasks'))
+
+class ChatRoom(TemplateView):
+    template_name = 'ChatRoom.html'
+
