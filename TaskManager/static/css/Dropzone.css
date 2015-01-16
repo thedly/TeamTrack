@@ -341,12 +341,12 @@
   -o-transition: opacity 0.3s ease-in-out;
   -ms-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  background-image: url("../images/success.png");
+  background-image: url("../images/Dropzone-JS-Image.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
-  width: 428px;
-  height: 123px;
+  width: 478px;
+  height: 133px;
   margin-left: -214px;
   margin-top: -61.5px;
   top: 50%;

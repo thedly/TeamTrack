@@ -12,8 +12,17 @@
 <script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
 
         <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+
     <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
+
+
 <script>
+
+
+
+
+
+
 
 	$(document).ready(function() {
 
@@ -28,7 +37,11 @@
        })
 
 
+        $("#CreateTimelineBtn").click(function(){
+            startLoad()
+        })
 
+        
 
         $(window).resize(function(){
             $("#ChartArrow").parent().next().slideDown()
@@ -112,6 +125,7 @@
         {% endblock extraHeaders %}
 {% block MainBodyWrapper %}
 
+
         <div id="page-wrapper">
 
              <div class="col-lg-6">
@@ -140,6 +154,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">{{ object }}</h1>
+                       <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li><a href="{% url 'tasks' %}">Tasks</a></li>
+                      <li class="active">{{ object }}</li>
+                    </ol>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -165,10 +184,6 @@
                                             <td>{{ object.id }}</td>
                                         </tr>
                                         <tr>
-                                            <th>Task title</th>
-                                            <td>{{ object.TaskTitle }}</td>
-                                        </tr>
-                                        <tr>
                                             <th>Owner</th>
                                             <td>{{ object.Developer }}</td>
                                         </tr>
@@ -184,26 +199,9 @@
                                             <th>Ends on</th>
                                             <td>{{ object.EndDate }}</td>
                                         </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-
-                <!-- /.col-lg-12 -->
-
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i> Task Details
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-
-                        <div class="form-group">
-                            <div class="progress progress-striped active">
+                                        <tr>
+                                            <th>Progress</th>
+                                            <td><div class="progress progress-striped active">
                                 {% if object.Status.id == 1 %}
                                 <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                 </div>
@@ -217,13 +215,40 @@
                                 <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
                                 </div>
                                 {% endif %}
+                            </div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <form method="post" action="{% url 'CreateTimelineEvent' %}" >{% csrf_token %}
+                            </div>
+                        </div>
+                        </div>
+
+                <!-- /.col-lg-12 -->
+
+                <div class="col-lg-4" style="padding-left:15px">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Task Details
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                        <div class="form-group">
+
+                            <!--<form method="post" action="" >-->{% csrf_token %}
                             {{ TimelineTaskUpdatesForm.as_p }}
-                                <input name="taskid" type="hidden" value="{{ object.id }}">
-                                <input name="owner" type="hidden" value="{{ request.user }}">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Update</button>
-                            </form>
+                                <input name="taskid" id="taskid" type="hidden" value="{{ object.id }}">
+                                <input name="owner" id="owner" type="hidden" value="{{ request.user }}">
+
+                                <div class="progress-button">
+                                    <button id="CreateTimelineBtn"><span>Update</span></button>
+                                    <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+                                    <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+                                    <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+                                </div>
+
+                            <!--</form>-->
                         </div>
 
                 </div>
@@ -253,6 +278,7 @@
                 <!-- /.col-lg-6 -->
 
              </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -267,7 +293,7 @@
                 </div>
             </div>
             </div>
-            <div class="row">
+            <div class="row" id="TimeLineEvents">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -284,20 +310,26 @@
                                  <li>
                                     {% if track.timelineCheck == "c" %}
                                         {% if track.status.id == 1 %}
-                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                            <div class="timeline-badge info"><i style="margin-top:6px" class="fa fa-cogs fa-2x "></i></div>
                                         {% elif track.status.id == 2 %}
-                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                            <div class="timeline-badge warning" ><i style="margin-top:6px" class="fa fa-code fa-2x"></i></div>
                                         {% elif track.status.id == 3 %}
-                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                            <div class="timeline-badge danger" ><i style="margin-top:6px" class="fa fa-bullseye fa-2x"></i></div>
                                         {% elif track.status.id == 4 %}
-                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                            <div class="timeline-badge success" ><i style="margin-top:6px" class="fa fa-check fa-2x"></i></div>
                                         {% endif %}
+                                    {% elif track.timelineCheck == "b" %}
+                                        <div class="timeline-badge danger" ><i style="margin-top:6px" class="fa fa-bug fa-2x"></i></div>
+                                     {% elif track.timelineCheck == "" %}
+                                        <div class="timeline-badge" ><i style="margin-top:6px" class="fa fa-file-text-o fa-2x"></i></i></div>
                                     {% endif %}
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+                                            <h6 class="pull-right">{{ track.owner.first_name }} {{ track.owner.last_name }}</h6>
+                                            <h4 class="timeline-title">{{ track.title }}</h4>
                                              <p>
-                                                <small class="text-muted"><i class="fa fa-time"></i> {{ track.date|naturaltime }}</small>
+                                                 <small class="text-muted"><i class="fa fa-time fa-2x"></i> {{ track.date|naturalday }}</small>
+                                                <!--<small class="text-muted"><i class="fa fa-time"></i> {{ track.date|naturaltime }}</small>-->
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -311,20 +343,26 @@
                                  <li class="timeline-inverted">
                                     {% if track.timelineCheck == "c" %}
                                         {% if track.status.id == 1 %}
-                                            <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                                            <div class="timeline-badge info" ><i style="margin-top:6px" class="fa fa-cogs fa-2x"></i></div>
                                         {% elif track.status.id == 2 %}
-                                            <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                                            <div class="timeline-badge warning" ><i style="margin-top:6px" class="fa fa-code fa-2x"></i></div>
                                         {% elif track.status.id == 3 %}
-                                            <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                                            <div class="timeline-badge danger" ><i style="margin-top:6px" class="fa fa-bullseye fa-2x"></i></div>
                                         {% elif track.status.id == 4 %}
-                                            <div class="timeline-badge info"><i class="fa fa-save"></i></div>
+                                            <div class="timeline-badge success"><i style="margin-top:6px" class="fa fa-check fa-2x"></i></div>
                                         {% endif %}
+                                    {% elif track.timelineCheck == "b" %}
+                                        <div class="timeline-badge danger" ><i style="margin-top:6px" class="fa fa-bug fa-2x"></i></div>
+                                     {% elif track.timelineCheck == "" %}
+                                        <div class="timeline-badge" ><i style="margin-top:6px" class="fa fa-file-text-o fa-2x"></i></i></div>
                                     {% endif %}
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
+                                             <h6 class="pull-right">{{ track.owner.first_name }} {{ track.owner.last_name }}</h6>
                                             <h4 class="timeline-title">{{ track.taskid.TaskTitle }}</h4>
+
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-time"></i>{{ track.date|naturaltime }}</small>
+                                                <small class="text-muted"><i class="fa fa-time"></i>{{ track.date|naturalday }}</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">

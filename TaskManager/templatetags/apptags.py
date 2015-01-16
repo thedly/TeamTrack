@@ -2,12 +2,14 @@ from django import template
 register = template.Library()
 import datetime
 from django.http import HttpResponse
-from TaskManager.models import Tasks, Projects, TaskmanagerTasktimeline, ExtendedUser, TaskStatus
+from TaskManager.models import Tasks, Projects, TaskmanagerTasktimeline, ExtendedUser, TaskStatus, WeeklyUpdates
 from LeaveManager.models import LeavemanagerLeaves
 import json
-
+import win32com.client as pyCom
+import pythoncom
 import logging
 log = logging.getLogger(__name__)
+from django.core.urlresolvers import reverse
 
 @register.filter    
 def subtractDates(value):
@@ -93,6 +95,66 @@ def getLeaveEvents(id):
         arrObj.append(obj)
     return json.dumps(arrObj)
 
+@register.simple_tag
+def getProjects():
+    ProjectObj = Projects.objects.all()
+    proArr = []
+    for pro in ProjectObj:
+        proObj = {}
+        proObj["title"] = pro.Title
+        proObj["start"] = str(pro.StartDate.date())
+        proObj["end"] = str(pro.EndDate.date())
+        proObj["url"] = reverse("projectsdetail", kwargs={'pk': pro.id})
+        proObj["editable"] = False
+        proArr.append(proObj)
+    return json.dumps(proArr)
+
+@register.simple_tag
+def getWeeklyUpdates():
+    WeeklyUpdatesObj = WeeklyUpdates.objects.all()
+    wupArr = []
+    for wup in WeeklyUpdatesObj:
+        wupObj = {}
+        wupObj["title"] = wup.taskid.TaskTitle
+        wupObj["start"] = wup.date
+        wupObj["editable"] = False,
+        #wupObj["url"] = reverse("taskdetail", kwargs={'pk': wup.taskid})
+        wupArr.append(wupObj)
+    return json.dumps(wupArr)
+
+@register.simple_tag
+def getMeetings():
+    pythoncom.CoInitialize()
+    outlook = pyCom.Dispatch("Outlook.Application")
+    namespace = outlook.GetNamespace("MAPI")
+    appointments = namespace.GetDefaultFolder(9).Items
+    appointments.Sort("[Start]")
+    appointments.IncludeRecurrences = "True"
+    MeetingArr = []
+    for appointment in appointments:
+        MeetingObj = {}
+        MeetingObj["title"] = appointment.Subject
+        MeetingObj["start"] = str(datetime.date(appointment.Start.year, appointment.Start.month, appointment.Start.day))
+        MeetingObj["editable"] = False,
+        MeetingArr.append(MeetingObj)
+    return json.dumps(MeetingArr)
+
+@register.simple_tag
+def getAddressBook():
+    UserObj = ExtendedUser.objects.all()
+    str = ""
+    str += "<table class='EmailAddressBook'>"
+    str += "<tr><th>Name</th><th>Email</th><th></th></tr>"
+    for obj in UserObj:
+        str += "<tr>"
+        str += "<td>"+obj.username+"</td><td>"+obj.email+"</td>"
+        str += "<td><input class='EmailAddressBookCheck' type='checkbox' value='"+obj.email+"'>"
+        str += "</tr>"
+    str += "</table>"
+    return str;
+
+
+
 @register.filter
 def BuildDonutGraph(value):
     TaskObj = Tasks.objects.filter(ProjectId=value)
@@ -154,6 +216,7 @@ def BuildLineGraph(value):
     log.debug("InvPhaseDaysLim : %s, DevPhaseDaysLim: %s, TestPhaseDaysLim: %s, DeplPhaseDaysLim: %s"%(InvPhaseDaysLim, DevPhaseDaysLim, TestPhaseDaysLim, DeplPhaseDaysLim))
     initialDate = TaskObj.StartDate
     StartDate = TaskObj.StartDate
+    Modifieddate = TaskObj.modifieddate
     EndDate = TaskObj.EndDate
     DayCount = 1
     while StartDate <= EndDate:
@@ -170,7 +233,7 @@ def BuildLineGraph(value):
             if StartDate.date() >= CurrentDate:
                 DataObj['b'] = 0
             else:
-                if StartDate.date() in TimelineDatesArray:
+                if Modifieddate.date() in TimelineDatesArray:
                     NewStartDate = datetime.datetime.strptime(str(StartDate.date()), "%Y-%m-%d")
                     NewinitialDate = datetime.datetime.strptime(str(initialDate.date()), "%Y-%m-%d")
                     newDayCount = abs((NewStartDate - NewinitialDate).days)
@@ -188,13 +251,13 @@ def BuildLineGraph(value):
             if StartDate.date() >= CurrentDate:
                 DataObj['b'] = 0
             else:
-                if StartDate.date() in TimelineDatesArray:
+                if Modifieddate.date() in TimelineDatesArray:
                     NewStartDate = datetime.datetime.strptime(str(StartDate.date()), "%Y-%m-%d")
                     NewinitialDate = datetime.datetime.strptime(str(initialDate.date()), "%Y-%m-%d")
                     newDayCount = abs((NewStartDate - NewinitialDate).days)
                     log.debug("%s - %s = %s"%(NewStartDate, NewinitialDate, newDayCount))
                     log.debug("newDayCount : %s"%newDayCount)
-                    DataObj['b'] = (round((15*newDayCount.days)/InvPhaseDaysLim, 1))
+                    DataObj['b'] = (round((15*newDayCount)/InvPhaseDaysLim, 1))
                 else:
                     DataObj['b'] = 0 # there was no update
         elif DayCount <= TestPhaseDaysLim:
@@ -204,14 +267,14 @@ def BuildLineGraph(value):
             if StartDate.date() >= CurrentDate:
                 DataObj['b'] = 0
             else:
-                if StartDate.date() in TimelineDatesArray:
+                if Modifieddate.date() in TimelineDatesArray:
                     NewStartDate = datetime.datetime.strptime(str(StartDate.date()), "%Y-%m-%d")
                     NewinitialDate = datetime.datetime.strptime(str(initialDate.date()), "%Y-%m-%d")
 
                     newDayCount = abs((NewStartDate - NewinitialDate).days)
                     log.debug("%s - %s = %s"%(NewStartDate, NewinitialDate, newDayCount))
                     log.debug("newDayCount : %s"%newDayCount)
-                    DataObj['b'] = (round((15*newDayCount.days)/InvPhaseDaysLim, 1))
+                    DataObj['b'] = (round((15*newDayCount)/InvPhaseDaysLim, 1))
                 else:
                     DataObj['b'] = 0 # there was no update
         elif DayCount <= DeplPhaseDaysLim:
@@ -221,13 +284,13 @@ def BuildLineGraph(value):
             if StartDate.date() >= CurrentDate:
                 DataObj['b'] = 0
             else:
-                if StartDate.date() in TimelineDatesArray:
+                if Modifieddate.date() in TimelineDatesArray:
                     NewStartDate = datetime.datetime.strptime(str(StartDate.date()), "%Y-%m-%d")
                     NewinitialDate = datetime.datetime.strptime(str(initialDate.date()), "%Y-%m-%d")
                     newDayCount = abs((NewStartDate - NewinitialDate).days)
                     log.debug("%s - %s = %s"%(NewStartDate, NewinitialDate, newDayCount))
                     log.debug("newDayCount : %s"%newDayCount)
-                    DataObj['b'] = (round((15*newDayCount.days)/InvPhaseDaysLim, 1))
+                    DataObj['b'] = (round((15*newDayCount)/InvPhaseDaysLim, 1))
                 else:
                     DataObj['b'] = 0 # there was no update
         log.debug("Current performance is %s" % (round((100*DayCount)/DeplPhaseDaysLim, 1)))

@@ -1,7 +1,7 @@
 # Create your views here.
 from django.views.generic.base import TemplateView
 from BugTracker.forms import CreateBugForm
-from BugTracker.models import Bug
+from BugTracker.models import Bug, BugScreenShots
 from TaskManager.models import Tasks, TaskStatus, TaskmanagerTasktimeline, ExtendedUser
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
@@ -10,6 +10,7 @@ from TeamTrack.settings import STATIC_URL
 import logging
 import os
 import json
+import redis
 log = logging.getLogger(__name__)
 from mimetypes import MimeTypes
 
@@ -19,47 +20,56 @@ class BugView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(BugView, self).get_context_data(**kwargs)
         context['BugForm'] = CreateBugForm()
-        context['Bugs'] = Tasks.objects.filter(Status=3)
+        context['Bugs'] = Bug.objects.all()
         return context
 
 def RaiseABug(request):
-    obj = Tasks.objects.get(pk=request.POST['TaskId'])
-    obj.Status = TaskStatus.objects.get(pk=3)
-    obj.save()
-    project = obj.ProjectId
-    timelineObj = TaskmanagerTasktimeline(project=project, taskid=obj, status=obj.Status, owner=ExtendedUser.objects.get(pk=request.user.id), notes="A bug has been raised", timelineCheck="b")
-    timelineObj.save()
-    return HttpResponseRedirect(reverse('BugView'))
+    try:
+        obj = Tasks.objects.get(pk=request.POST['TaskId'])
+        obj.Status = TaskStatus.objects.get(pk=3)
+        BugObj = Bug(title=request.POST['Title'], taskid=obj, description=request.POST['Description'], status=obj.Status, owner=ExtendedUser.objects.get(pk=request.user))
+        BugObj.save()
+        obj.save()
+        project = obj.ProjectId
+        timelineObj = TaskmanagerTasktimeline(project=project, title=request.POST['Title'], taskid=obj, status=obj.Status, owner=ExtendedUser.objects.get(pk=request.user.id), notes=request.POST['Description'], timelineCheck="b")
+        timelineObj.save()
 
+        r = redis.StrictRedis(host='localhost', port=6379, db=0)
+        redisNotiObj = {}
+        redisNotiArr = []
+        redisNotiObj["Notify"] = "%s"%request.user
+        redisNotiObj["Message"] = "A new Bug was raised"
+        redisNotiObj["Type"] = 2
+        redisNotiObj["Link"] = "%s"%reverse('CreateBug')
+        redisNotiArr.append(redisNotiObj)
+        r.publish('chat', json.dumps(redisNotiObj))
+        return HttpResponse("success")
+    except Exception as ex:
+        log.exception(ex)
+        return HttpResponse(ex)
 
 def upload_file(request):
-    log.debug("Entered the upload file method")
     file = request.FILES['file']
     fileName = request.FILES['file'].name
-    fileType = request.FILES['file'].content_type
-    handle_uploaded_file(file, fileName, fileType)
-    log.debug("Finished handle upload file method, redirecting")
+    curUser = request.user
+    newFileName = "%s_%s" % (curUser, fileName)
+    handle_uploaded_file(file, newFileName)
     return HttpResponseRedirect(reverse('BugView'))
 
 
-def handle_uploaded_file(f, FName, FType):
-    if FType is None:
-        FType = "application/text"
-    fName = FName.split('.')[0]
-    fType = FType.split('/')[1]
-
-    log.debug("handle upload file method called")
-    log.debug("%s %s"% (FName, FType))
-    with open('D:/Work/Projects/Python/TeamTrack/TaskManager/static/images/%s.%s' % (fName, fType), 'wb+') as destination:
+def handle_uploaded_file(f, FName):
+    with open('D:/Work/Projects/Python/TeamTrack/BugTracker/BugScreenshotsTemp/%s' % FName, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
 def DeleteFileUploads(request):
     arr = request.POST.getlist('arr[]')
+    curUser = request.user
     for item in arr:
-        file_path = 'D:/Work/Projects/Python/TeamTrack/TaskManager/static/images/%s' % item
+        file_path = 'D:/Work/Projects/Python/TeamTrack/BugTracker/BugScreenshotsTemp/%s_%s' % (curUser, item)
         try:
-            os.unlink(file_path)
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
         except Exception as ex:
             return HttpResponse(ex)
     return HttpResponse("Success")

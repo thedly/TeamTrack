@@ -5,11 +5,24 @@
         {% block MainBodyWrapper %}
 
 
-        <div id="page-wrapper">
+            </br>
+
+
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tasks</h1>
+                    <div >
+                        <h1 class="page-header">
+                            Bugs
+                        </h1>
+                         <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li class="active">Bugs</li>
+                    </ol>
+
+                    </div>
+
                 </div>
+
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
@@ -20,24 +33,27 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                    <form method="post" action="{% url 'CreateBug' %}">{% csrf_token %}
-                        {{ BugForm.as_p }}
 
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
-                    </form>
+                        {{ BugForm.as_p }}
+                            <div class="progress-button">
+                            <button id="CreateBug"><span>Create Bug</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+                            <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+                            <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+                            </div>
 
                             </div>
 
                 </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8" style="padding-left:15px;">
                      <div class="panel panel-default">
                          <div class="panel-heading">
                             Screenshots<span id="DeleteUploads" style="cursor:pointer" class="fa arrow"></span>
                         </div>
-                        <div class="panel-body" style="overflow:auto">
+                        <div class="panel-body" id="DropzoneDiv" style="min-height: 400px;" >
                              <form action="{% url 'UploadImages' %}" class="dropzone" id="my-awesome-dropzone">{% csrf_token %}
-                            </form>
+                             </form>
                         </div>
                       </div>
                 </div>
@@ -57,10 +73,11 @@
                                     <thead>
 
                                         <tr>
-                                            <th><select class="filterOption" value="0">{% getDataIntoOptions 'tas' %}</select></th>
-                                            <th><select class="filterOption" value="1">{% getDataIntoOptions 'pro' %}</select></th>
-                                            <th><select class="filterOption" value="2">{% getDataIntoOptions 'usr' %}</select></th>
-                                            <th><select class="filterOption" value="4">{% getDataIntoOptions 'sta' %}</select></th>
+                                            <th>Title</th>
+                                            <th><select class="form-control filterOption" value="1">{% getDataIntoOptions 'tas' %}</select></th>
+                                            <th><select class="form-control filterOption" value="2">{% getDataIntoOptions 'pro' %}</select></th>
+                                            <th><select class="form-control filterOption" value="3">{% getDataIntoOptions 'usr' %}</select></th>
+                                            <th><select class="form-control filterOption" value="4">{% getDataIntoOptions 'sta' %}</select></th>
                                             <th>Details</th>
                                             <th>Progress</th>
                                         </tr>
@@ -69,25 +86,27 @@
                                     <tbody>
                                         {% for Task in Bugs %}
                                        <tr>
-                                            <td>{{ Task.TaskTitle }}</td>
-                                           <td>{{ Task.ProjectId.Title }}</td>
-                                            <td>{{ Task.Owner }}</td>
-                                            <td>{{ Task.Status }}</td>
+
+                                            <td>{{ Task.title }}</td>
+                                            <td>{{ Task.taskid.TaskTitle }}</td>
+                                           <td>{{ Task.taskid.ProjectId.Title }}</td>
+                                            <td>{{ Task.owner }}</td>
+                                            <td>{{ Task.status }}</td>
 
 
-                                           <td><a href="{% url 'tasksdetail' Task.id %}">View</a></td>
+                                           <td><a href="{% url 'tasksdetail' Task.taskid.id %}">View</a></td>
                                            <td>
                                            <div class="progress progress-striped active">
-                                                {% if Task.Status.id == 1 %}
+                                                {% if Task.status.id == 1 %}
                                                 <div id="ProgressBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                                 </div>
-                                                {% elif Task.Status.id == 2 %}
+                                                {% elif Task.status.id == 2 %}
                                                 <div id="ProgressBar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                                 </div>
-                                                {% elif Task.Status.id == 3 %}
+                                                {% elif Task.status.id == 3 %}
                                                 <div id="ProgressBar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                                 </div>
-                                                {% elif Task.Status.id == 4 %}
+                                                {% elif Task.status.id == 4 %}
                                                 <div id="ProgressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
                                                 </div>
                                                 {% endif %}
@@ -129,12 +148,10 @@
                 <!-- /.col-lg-6 -->
                  </div>
                  <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+
 
     <Link rel="stylesheet" href="{% static "css/Dropzone.css" %}">
-    <!-- Core Scripts - Include with every page -->
-    <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
 
     <script src="{% static "js/plugins/dataTables/jquery.dataTables.js" %}"></script>
     <script src="{% static "js/plugins/dataTables/dataTables.bootstrap.js" %}"></script>
@@ -150,6 +167,8 @@
 
 
 
+        $("#bugsTab").addClass("Active")
+        $("#bugsTab a").bind('click', false);
         //$('#dataTables-example').dataTable();
 
         $(".filterOption").change(function(){
@@ -158,19 +177,34 @@
             tblFilter('dataTables-example', SelectedTag, SelectedColumn)
 
         })
+        $('#my-awesome-dropzone').hide();
+        $("#id_TaskId, #id_UserId").bind('change keyup',function(){$("#DeleteUploads").click(); Validate()})
+        $("#id_Description").keyup(function(){Validate()})
+        function Validate()
+        {
+            if($("#id_TaskId").val() != "" && $("#id_Description").val() != "" && $("#id_UserId").val()!="")
+            {
+                $('#my-awesome-dropzone').fadeIn();
+            }
+            else
+            {
+                $('#my-awesome-dropzone').fadeOut();
+            }
+
+        }
+
 
         $("#DeleteUploads").click(function(){
             var arrayList = []
             $("#my-awesome-dropzone div.dz-preview").each(function(){
                 arrayList.push($(this).children('div.dz-details').children('div.dz-filename').children('span').html())
             })
-            alert(arrayList)
             var arr = {"arr": arrayList, "csrfmiddlewaretoken": "{{ csrf_token }}"}
             $.ajax({
                 url:"{% url 'DeleteFileUploads' %}",
                 type:"post",
                 data:arr,
-                success: function(dat){ alert(JSON.stringify(dat)) },
+                success: function(dat){ Notify();$(".icon").slideUp(5000);$(".dz-preview").remove() },
                 error: function(dat){alert(JSON.stringify(dat))}
             })
         })

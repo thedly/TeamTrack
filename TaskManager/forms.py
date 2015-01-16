@@ -1,9 +1,10 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage,send_mass_mail
-from TaskManager.models import ExtendedUser, TaskStatus, Projects
+from TaskManager.models import ExtendedUser, TaskStatus, Projects, Client
 
 class TimelineTaskUpdatesForm(forms.Form):
+    Title = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}))
     status = forms.ModelChoiceField(label='', widget=forms.Select(attrs={'class': 'form-control', 'id': 'TaskStatus'}), queryset=TaskStatus.objects.all(), empty_label=None)
     notes = forms.CharField(label='', widget=forms.Textarea(attrs={'style': 'resize:none', 'class': 'form-control', 'placeholder': 'Notes', 'rows': '5'}))
 
@@ -17,8 +18,8 @@ class LoginForm(forms.Form):
 class CreateTaskForm(forms.Form):
     ProjectId = forms.ModelChoiceField(label='', queryset=Projects.objects.all(), widget=forms.Select(attrs={'class':'form-control'}))
     TaskTitle = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Title'}))
-    Description = forms.CharField(label='', widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder':'Description'}))
-    Requirement = forms.CharField(label='', widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder':'Requirement'}))
+    Description = forms.CharField(label='', widget=forms.Textarea(attrs={'style': 'resize:none','class': 'form-control', 'placeholder':'Description'}))
+    Requirement = forms.CharField(label='', widget=forms.Textarea(attrs={'style': 'resize:none','class': 'form-control', 'placeholder':'Requirement'}))
     UserId = forms.ModelChoiceField(label='', queryset=ExtendedUser.objects.all(), widget=forms.Select(attrs={'class':'form-control'}))
     EndDate = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'End Date'}))
 
@@ -43,7 +44,7 @@ class MailForm(forms.Form):
     Cc = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Cc'}))
     UsersCc = forms.ModelChoiceField(label='',queryset = User.objects.all(),widget=forms.SelectMultiple(attrs={'class':'varcharData'}))
     Subject = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Subject'}))
-    Message = forms.CharField(label='',widget=forms.Textarea(attrs={'class':'varcharData','placeholder':'Message'}))
+    Message = forms.CharField(label='',widget=forms.Textarea(attrs={'style': 'resize:none','class':'varcharData','placeholder':'Message'}))
     
     def send_email(self):
         message = EmailMessage(subject=self.Subject,
@@ -60,8 +61,15 @@ class MailForm(forms.Form):
 #         send_mass_mail(datatuple)
     
 class AddClientForm(forms.Form):
-    Name = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Name'}))
-    Email = forms.EmailField(label='',widget=forms.TextInput(attrs={'class':'varcharData','placeholder':'Email'}))
-    ContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'integerData','placeholder':'Contact NUmber'}))
-    AlternateContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'integerData','placeholder':'Alternate number'}))
-    
+    Name = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Name'}))
+    Email = forms.EmailField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Email'}))
+    ContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Contact NUmber'}))
+    AlternateContactNumber = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Alternate number'}))
+
+class AddProjectForm(forms.Form):
+    Title = forms.CharField(label='',widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Title'}))
+    IsCompleted = forms.CharField(label='Completed ?',widget=forms.CheckboxInput(attrs={'class':'form-control'}))
+    ClientId = forms.ModelChoiceField(label='',queryset = Client.objects.all(),widget=forms.Select(attrs={'class':'form-control'}))
+    StartDate = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Start Date'}))
+    EndDate = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'End Date'}))
+

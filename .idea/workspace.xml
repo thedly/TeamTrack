@@ -2,34 +2,613 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb878fdc-3042-4a57-8b35-6c63836520a5" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\api.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140721.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140722.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140723.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140724.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140725.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140726.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\templates\profileslistdetail.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/images/Dropzone-JS-Image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/BugScreenshots/Hydrangeas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/BugScreenshots/Jellyfish.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/BugScreenshots/Penguins.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/img/related/PerspectiveNavigation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/BugScreenshots/Tulips.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/dist/WebSocketMain.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/WebSocketMain.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/dist/WebSocketMainInsecure.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/WebSocketMainInsecure.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/icomoon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/icomoon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/icomoon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/icomoon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/icomoon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/icomoon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/linecons/linecons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/linecons/linecons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/linecons/linecons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/templates/fonts/raty.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/templates/fonts/raty.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/templates/fonts/raty.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/img/related/sidebartransitions.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/speed/size-rate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/speed/size-rate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/stroke7pixeden/stroke7pixeden.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/stroke7pixeden/stroke7pixeden.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/stroke7pixeden/stroke7pixeden.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/BugScreenshotsTemp/tejas_Tulips.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/img/user1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/.document" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/speed/00" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/speed/00" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/AESKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/AESKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/ARC4.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ARC4Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/ArrayUtil.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/BarrettReduction.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Base64.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/BigInteger.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BigIntegerTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/BlowFishKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BlowFishKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/Config/BugTrackerConfig.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/BulkCiphers.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ByteString.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CBCMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CBCModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CFB8Mode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFB8ModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CFBMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFBModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CTRMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CTRModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/ChatClient.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/CipherSuites.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/ClassicReduction.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/Crypto.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/DER.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/DESKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/DESKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ECBMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ECBModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/HMAC.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/HMACTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Hex.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/IAsn1Type.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ICipher.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/IConnectionState.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/IHMAC.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/IHash.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/IPRNG.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IPad.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/IReduction.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/ISecurityParameters.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IStreamCipher.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ISymmetricKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ITestHarness.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IVMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/IWebSocketLogger.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Integer.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/KeyExchanges.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MAC.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/MACs.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MD2.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD2Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/gsolo/encryption/MD5.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MD5.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD5Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/Memory.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/MontgomeryReduction.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/MozillaRootCertificates.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/NullPad.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/NullReduction.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/OFBMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/OFBModeTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/OID.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ObjectIdentifier.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PEM.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/PKCS5.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PrintableString.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/README.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/README.markdown" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/README.org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/adobe/net/proxies/RFC2817Socket.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/rsa/RSAKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/RSAKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/Random.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA1.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA1Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA224.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA224Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA256.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA256Test.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHABase.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLConnectionState.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLEvent.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/SSLPad.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLSecurityParameters.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Sequence.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Set.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BugTracker/Signals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/SimpleIVMode.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSConfig.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSConnectionState.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSEngine.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSError.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSEvent.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/TLSPRF.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TLSPRFTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TLSPad.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSecurityParameters.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSocket.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSocketEvent.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/templates/TaskStatus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TestCase.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TripleDESKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TripleDESKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Type.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/UTCTime.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/VERSION" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/WPFChat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/WebSocket.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/WebSocketEvent.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/WebSocketMain.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/WebSocketMainInsecure.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509Certificate.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509CertificateCollection.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/XMLHttpRequest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/XTeaKey.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/XTeaKeyTest.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/test/_.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/aeskey.pl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/public/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/test/_/argv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/ext/array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/array1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/array1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/array2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/array2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/array3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/array3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/array4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/array4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/assignment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/assignment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/autotest.watchr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/backpressure_drain.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/backpressure_drain.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/examples/basic.fallback.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/examples/basic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/beautify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/bi_internal.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/test/_/bin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/bool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/boolean_double.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/boolean_single.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootstrap_BaseForUnited.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/bootswatch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootswatch_cerulean.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootswatch_cyborg.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootswatch_flatly.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootswatch_superhero.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/buffer_bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/buffer_bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/node/builder.common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/bin/builder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/node/builder.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/cbpFWTabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/channel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/classie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/examples/client-unix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/examples/client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/codec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/codec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/concatstring.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/concatstring.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/connection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/const.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/const.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/content.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/benchmarks/decode.bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket/default.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/default_hash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/default_singles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/dialogFx.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/test/disconnect-pubsub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/divide.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/docstyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/dump.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/empty-blocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/empty-blocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/benchmarks/encode.bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/lib/juggernaut/rails/engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/eval_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/eval_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/events.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/extend.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/extend.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/examples/file-server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/flashsocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/flashsocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/forstatement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/forstatement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/generate_commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/generate_commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/parser/hiredis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/parser/hiredis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/htmlfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/htmlfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/http-polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/http.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket/hybi-07-12.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket/hybi-16.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket/hybi-17.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/icomoon.dev.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/icomoon.dev.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/icomoon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/icomoon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/if.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/if.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/ifreturn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/ifreturn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/ifreturn2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/ifreturn2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/doc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/tmp/instrument.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/tmp/instrument2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/io.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue10.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue10.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue11.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue11.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue13.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue13.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue14.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue14.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue16.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue16.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue17.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue17.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue20.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue20.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue21.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue21.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue25.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue25.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue27.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue27.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue28.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue28.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue29.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue29.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue30.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue30.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue34.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue34.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue48.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue48.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue50.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue50.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue53.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue53.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue54.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue54.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue68.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue68.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue69.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue69.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/issue9.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/issue9.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/parser/javascript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/parser/javascript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/jquery.accordion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/jquery.easing.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/jquery.raty.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/jquery.raty.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/vendor/assets/javascripts/json.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/json.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/jsonp-polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/jsonp-polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/.bin/juggernaut.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/juggernaut.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/vendor/assets/javascripts/juggernaut.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/lib/juggernaut.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/.bin/juggernaut" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/examples/juggernaut_observer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/examples/juggernaut_observer.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/klass.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/icomoon/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/icomoon/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/line_count.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/line_count_options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/line_count_wrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/linecons/linecons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/logger.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/test/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/main2Calender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/main3Chat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/manager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/mangle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/mangle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/stores/memory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/menu_cornerbox_nestedCalendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/menu_cornermorph.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/menu_topside.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/message.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/mget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/mget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/lib/node-static/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/modernizr.custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/modernizr_morph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/multi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/multi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/multi2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/multi2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/multi_bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/multi_bench.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/namespace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/namespace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/new" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/benchmark/node-static-0.3.0.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/lib/node-static.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/nonopt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/normalize.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/notificationFx.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/ns-default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/ns-style-bar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/old" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/lib/parse-js.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/test/parse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/parser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/parser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/parser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/parser.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/speed/plot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/speed/plot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/lib/process.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/psubscribe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/psubscribe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/pubsub/pub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/rpushblpop/pub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/pubsub/pub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/rpushblpop/pub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/pub_sub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/pub_sub.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/publish.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/pygments.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/templates/fonts/raty.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/reconnect_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/reconnect_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/redis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/stores/redis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/reflect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/examples/roster.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/pubsub/run" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/rpushblpop/run" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/pubsub/run" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/rpushblpop/run" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/benchmarks/runner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saaramshaWebService.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/sample.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/examples/server-unix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/lib/juggernaut/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/pubsub/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/rpushblpop/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/lib/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/pubsub/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/rpushblpop/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/short.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/simple.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/simple.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/simple_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/simple_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/site.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/snap.svg-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/socket.io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/socket.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/client/vendor/assets/javascripts/socket_io.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/stress/speed/speed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/stress/speed/speed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/lib/squeeze-more.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/tests/ssl/ssl.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/tests/ssl/ssl.private.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/static.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/strict-equals.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/strict-equals.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/string.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/fonts/stroke7pixeden/stroke7pixeden.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/sub_quit_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/sub_quit_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/subqueries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/subqueries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/subquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/subquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/swfobject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/css/tabstyles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-basic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-client-close.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/tests/test-constants.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/tests/test-headers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-readonly-attrs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-ready-state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/xmlhttprequest/tests/test-request.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-server-close.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-unix-send-fd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/test/test-unix-sockets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/tests/test_start_stop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/tests/test_start_stop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/testparser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/to_array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/to_array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/uglify-js.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/.bin/uglifyjs.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/.bin/uglifyjs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/bin/uglifyjs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/uiMorphingButton_fixed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/uiProgressButton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/js/uisearch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/policyfile/tests/unit.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/unix_socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/unix_socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/usage-options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/test/usage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/userMiddleware.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/node-static-maccman/lib/node-static/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/lib/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/lib/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/util.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/node-redis/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/var.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/var.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/redis/examples/web_server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/redis/examples/web_server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/web_socket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/websocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/websocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/websocket-client/lib/websocket.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/with.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/test/with.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/test/worker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/lib/transports/xhr-polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/xhr-polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/socket.io/node_modules/socket.io-client/lib/transports/xhr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/juggernaut/node_modules/optimist/examples/xup.js" />
+      <change type="DELETED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\logs\teamTrack_20140927.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/ChatRoom.html" afterPath="$PROJECT_DIR$/TaskManager/templates/ChatRoom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/css/Dropzone.css" afterPath="$PROJECT_DIR$/TaskManager/static/css/Dropzone.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaveManager/templates/LeaveManagerHome.html" afterPath="$PROJECT_DIR$/LeaveManager/templates/LeaveManagerHome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/MailTemplate.html" afterPath="$PROJECT_DIR$/TaskManager/templates/MailTemplate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/Projects.html" afterPath="$PROJECT_DIR$/TaskManager/templates/Projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html" afterPath="$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/Tasks.html" afterPath="$PROJECT_DIR$/TaskManager/templates/Tasks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" afterPath="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/base.html" afterPath="$PROJECT_DIR$/TaskManager/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/TaskManager/static/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugTracker/templates/bugs.html" afterPath="$PROJECT_DIR$/BugTracker/templates/bugs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/calender.html" afterPath="$PROJECT_DIR$/TaskManager/templates/calender.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugTracker/forms.py" afterPath="$PROJECT_DIR$/BugTracker/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/forms.py" afterPath="$PROJECT_DIR$/TaskManager/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/home.html" afterPath="$PROJECT_DIR$/TaskManager/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js" afterPath="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugTracker/models.py" afterPath="$PROJECT_DIR$/BugTracker/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/models.py" afterPath="$PROJECT_DIR$/TaskManager/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sb-admin-v2/notifications.html" afterPath="$PROJECT_DIR$/sb-admin-v2/notifications.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/profileDetail.html" afterPath="$PROJECT_DIR$/TaskManager/templates/profileDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/profileslist.html" afterPath="$PROJECT_DIR$/TaskManager/templates/profileslist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/static/css/sb-admin.css" afterPath="$PROJECT_DIR$/TaskManager/static/css/sb-admin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/templates/searchresults.html" afterPath="$PROJECT_DIR$/TaskManager/templates/searchresults.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamTrack/settings.py" afterPath="$PROJECT_DIR$/TeamTrack/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/urls.py" afterPath="$PROJECT_DIR$/TaskManager/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TeamTrack/urls.py" afterPath="$PROJECT_DIR$/TeamTrack/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugTracker/views.py" afterPath="$PROJECT_DIR$/BugTracker/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaveManager/views.py" afterPath="$PROJECT_DIR$/LeaveManager/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskManager/views.py" afterPath="$PROJECT_DIR$/TaskManager/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskManager/Signals.py" afterPath="$PROJECT_DIR$/TaskManager/Signals.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskManager/templates/base.html" afterPath="$PROJECT_DIR$/TaskManager/templates/base_bkup.html" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/TaskManager/templates/tasksDetail.html" afterPath="$PROJECT_DIR$/TaskManager/templates/tasksDetail.html" />
+      <change type="MOVED" beforePath="D:\Work\Projects\Python\TeamTrack\TaskManager\templates\CreateTasks.html" afterPath="$PROJECT_DIR$/TaskManager/templates/taskTypeView.html" />
     </list>
     <ignored path="TeamTrack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,71 +631,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="73" selection-start="2400" selection-end="2459" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="4114">
+            <state line="30" column="55" selection-start="1430" selection-end="1482" vertical-scroll-proportion="-6.5384617" vertical-offset="340" max-vertical-offset="12886">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <file leaf-file-name="jquery.raty.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/static/css/jquery.raty.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bugs.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BugTracker/templates/bugs.html">
+      <file leaf-file-name="jquery.raty.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/static/js/jquery.raty.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="12" selection-start="1694" selection-end="1694" vertical-scroll-proportion="1.4274809" vertical-offset="408" max-vertical-offset="3723">
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="14" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13022">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasksDetail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaskManager/templates/tasksDetail.html">
+      <file leaf-file-name="profileslist.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="36" selection-start="6655" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3031" max-vertical-offset="6188">
+            <state line="75" column="32" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.35157546" vertical-offset="1063" max-vertical-offset="1768">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BugTracker/views.py">
+        <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="20" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.0" vertical-offset="541" max-vertical-offset="1190">
+            <state line="187" column="17" selection-start="7116" selection-end="7116" vertical-scroll-proportion="0.0" vertical-offset="3179" max-vertical-offset="8993">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BugTracker/urls.py">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="94" selection-start="383" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dropzone.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaskManager/static/css/Dropzone.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="389" column="38" selection-start="17919" selection-end="17957" vertical-scroll-proportion="0.0" vertical-offset="6448" max-vertical-offset="15079">
+            <state line="19" column="28" selection-start="497" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1564">
               <folding />
             </state>
           </provider>
@@ -135,65 +698,65 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140726.log" />
-        <option value="$PROJECT_DIR$/TaskManager/signals.py" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/home.html" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140802.log" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140803.log" />
-        <option value="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/WebRTC.js" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/Call.html" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140804.log" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/profileslistdetail.html" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/searchresults.html" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/Projects.html" />
-        <option value="$PROJECT_DIR$/TaskManager/static/js/Maps.js" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/profileslist.html" />
+        <option value="$PROJECT_DIR$/LeaveManager/views.py" />
+        <option value="$PROJECT_DIR$/TaskManager/static/js/main2Calender.js" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/menu_cornerbox_nestedCalendar.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/WPFChat.js" />
+        <option value="$PROJECT_DIR$/TaskManager/static/js/main3Chat.js" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/menu_cornermorph.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/js/ChatClient.js" />
+        <option value="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" />
+        <option value="$PROJECT_DIR$/TaskManager/static/js/cbpFWTabs.js" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/tabstyles.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/tabs.css" />
+        <option value="$USER_HOME$/Desktop/TkinterApp.py" />
+        <option value="$USER_HOME$/Desktop/app.py" />
+        <option value="$PROJECT_DIR$/saaramshaWebService.py" />
+        <option value="$PROJECT_DIR$/TransformTest.py" />
+        <option value="$PROJECT_DIR$/../Saaramsha_webService/ConfigFiles/TransformTest.py" />
         <option value="$PROJECT_DIR$/TaskManager/templates/ChatRoom.html" />
-        <option value="$PROJECT_DIR$/TaskManager/static/js/MapLocationDetails.js" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140807.log" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140808.log" />
-        <option value="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140812.log" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/searchresults.html" />
+        <option value="$PROJECT_DIR$/LeaveManager/templates/LeaveManagerHome.html" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/content.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/bootstrap_BaseForUnited.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/site.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/pygments.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/bootswatch_cyborg.css" />
+        <option value="$PROJECT_DIR$/TeamTrack/settings.py" />
+        <option value="$PROJECT_DIR$/TaskManager/userMiddleware.py" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/bootswatch_cerulean.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/bootswatch_flatly.css" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/bootswatch_superhero.css" />
+        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20150111.log" />
+        <option value="$PROJECT_DIR$/BugTracker/views.py" />
         <option value="$PROJECT_DIR$/TaskManager/forms.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/Tasks.html" />
+        <option value="$PROJECT_DIR$/BugTracker/templates/bugs.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/Projects.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/tasksDetail.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/TaskStatus.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/MailTemplate.html" />
         <option value="$PROJECT_DIR$/TaskManager/templates/calender.html" />
         <option value="$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/profileDetail.html" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140824.log" />
-        <option value="$PROJECT_DIR$/TaskManager/static/Config/Applications.json" />
-        <option value="$PROJECT_DIR$/BugTracker/forms.py" />
-        <option value="$PROJECT_DIR$/LeaveManager/views.py" />
-        <option value="$PROJECT_DIR$/api.py" />
-        <option value="$PROJECT_DIR$/Services.py" />
-        <option value="$PROJECT_DIR$/Signals.py" />
-        <option value="$PROJECT_DIR$/LeaveManager/models.py" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140917.log" />
-        <option value="$PROJECT_DIR$/LeaveManager/urls.py" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140918.log" />
+        <option value="$PROJECT_DIR$/TaskManager/static/css/component.css" />
         <option value="$PROJECT_DIR$/TaskManager/templates/base.html" />
-        <option value="$PROJECT_DIR$/TaskManager/Signals.py" />
+        <option value="$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/profileDetail.html" />
         <option value="$PROJECT_DIR$/TaskManager/models.py" />
-        <option value="$PROJECT_DIR$/TaskManager/views.py" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/tasksDetail.html" />
-        <option value="$PROJECT_DIR$/TaskManager/templates/Tasks.html" />
-        <option value="$PROJECT_DIR$/TaskManager/templatetags/apptags.py" />
-        <option value="$PROJECT_DIR$/LeaveManager/templates/LeaveManagerHome.html" />
-        <option value="$PROJECT_DIR$/TaskManager/static/js/Dropzone.js" />
-        <option value="$PROJECT_DIR$/TeamTrack/urls.py" />
         <option value="$PROJECT_DIR$/TaskManager/urls.py" />
-        <option value="$PROJECT_DIR$/TeamTrack/settings.py" />
-        <option value="$PROJECT_DIR$/TaskManager/logs/teamTrack_20140927.log" />
-        <option value="$PROJECT_DIR$/TaskManager/static/css/Dropzone.css" />
-        <option value="$PROJECT_DIR$/BugTracker/urls.py" />
-        <option value="$PROJECT_DIR$/BugTracker/views.py" />
-        <option value="$PROJECT_DIR$/BugTracker/templates/bugs.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/home.html" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/taskTypeView.html" />
+        <option value="$PROJECT_DIR$/TaskManager/views.py" />
+        <option value="$PROJECT_DIR$/../../Others/saaramshaWS.py" />
+        <option value="$PROJECT_DIR$/TaskManager/templates/profileslist.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1363" />
-    <option name="height" value="766" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -221,6 +784,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,92 +845,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaskManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaskManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamTrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BugTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeamTrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BugTracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistory" value="view&#10;le&#10;taskde&#10;base&#10;sett&#10;settings&#10;urls&#10;ur&#10;url&#10;mode&#10;models&#10;lea&#10;app&#10;task&#10;bug&#10;calend&#10;cal&#10;cale&#10;ba&#10;for&#10;vie&#10;cha&#10;setti&#10;bas&#10;profi&#10;model&#10;projec&#10;tas&#10;ca&#10;form&#10;appli&#10;calender&#10;chat&#10;views&#10;vies&#10;profil&#10;urs&#10;sear&#10;proje&#10;projects&#10;modes&#10;se&#10;home&#10;tasks&#10;t&#10;calen&#10;calende&#10;hom&#10;signa&#10;sig" />
+    <property name="SearchEverywhereHistory" value="profil&#10;views&#10;url&#10;profile&#10;view&#10;vi&#10;mode&#10;home&#10;base.&#10;model&#10;projects&#10;tas&#10;cale&#10;urls&#10;vie&#10;projectsde&#10;mail&#10;calen&#10;projectsdet&#10;projects.html&#10;taskde&#10;proj&#10;bug&#10;cal&#10;tasks&#10;base&#10;profi&#10;bu&#10;ma&#10;calend&#10;projec&#10;project&#10;bugs&#10;ur&#10;proje&#10;compon&#10;chat&#10;task&#10;app&#10;se&#10;sett&#10;search&#10;pro&#10;chatr&#10;leave&#10;bas&#10;aut&#10;leav&#10;bugt&#10;lea" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LocusGuru" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Others/saaramshaWS.py" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -375,12 +903,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager" />
-      <recent name="D:\Work\Projects\Python\TeamTrack\BugTracker\Templates" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\css" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\fonts" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager" />
-      <recent name="D:\Work\Projects\Python\TeamTrack" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\images" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\templates" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\fonts" />
+      <recent name="D:\Work\Projects\Python\TeamTrack\TaskManager\static\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -508,6 +1042,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="eb878fdc-3042-4a57-8b35-6c63836520a5" name="Default" comment="" />
@@ -517,14 +1068,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1363" height="766" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4866562" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63206106" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25263953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25204462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -532,15 +1083,35 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48194662" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25244913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.json" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -560,279 +1131,274 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="4" selection-start="5114" selection-end="5172" vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="2380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/Maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="4980" selection-end="4980" vertical-scroll-proportion="1.0343915" vertical-offset="0" max-vertical-offset="493" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/sitemaps/tests/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="190" selection-end="190" vertical-scroll-proportion="0.11258278" vertical-offset="0" max-vertical-offset="604" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/auth/tests/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="410" column="23" selection-start="17555" selection-end="17555" vertical-scroll-proportion="0.0" vertical-offset="6970" max-vertical-offset="9860" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ongoingprojects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/MapLocationDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="8" selection-start="18" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="212" max-vertical-offset="884" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="837" column="8" selection-start="27707" selection-end="27707" vertical-scroll-proportion="0.33278146" vertical-offset="14028" max-vertical-offset="87567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="0" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/haystack/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="6" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.33333334" vertical-offset="1146" max-vertical-offset="2040" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="331" column="56" selection-start="14156" selection-end="14164" vertical-scroll-proportion="0.0" vertical-offset="5311" max-vertical-offset="6936" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="43" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-6.1153846" vertical-offset="1830" max-vertical-offset="4454" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/star-half.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/remote_search_small.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/remote_search.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/my.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/delete.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/cancel-on.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/cancel-off.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/images/bg_wood.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/font-awesome/less/icons.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7106" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ChatRoom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="13" selection-start="6904" selection-end="6904" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1224" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BugTracker/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="135" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Call.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BugTracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeaveManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Services.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="33" selection-start="1550" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1904" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeaveManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="76" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/calender.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="78" selection-start="1034" selection-end="1039" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="5287" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/Signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5610" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="41" selection-start="21334" selection-end="21539" vertical-scroll-proportion="0.0" vertical-offset="5547" max-vertical-offset="8058" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="16" selection-start="6426" selection-end="6426" vertical-scroll-proportion="0.0" vertical-offset="2033" max-vertical-offset="2652" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1397" selection-end="1406" vertical-scroll-proportion="0.0" vertical-offset="515" max-vertical-offset="2125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templatetags/apptags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="24" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="4131" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeaveManager/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="702" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/Dropzone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1862" column="14" selection-start="61576" selection-end="61576" vertical-scroll-proportion="0.610052" vertical-offset="31302" max-vertical-offset="31960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/Config/Applications.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/Dropzone.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="38" selection-start="17919" selection-end="17957" vertical-scroll-proportion="0.0" vertical-offset="6448" max-vertical-offset="15079">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TeamTrack/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="76" selection-start="870" selection-end="1105" vertical-scroll-proportion="0.45254236" vertical-offset="209" max-vertical-offset="799" />
+        <state line="29" column="47" selection-start="898" selection-end="913" vertical-scroll-proportion="0.7478849" vertical-offset="0" max-vertical-offset="799" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/bootswatch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="107" selection-start="14173" selection-end="14207" vertical-scroll-proportion="-2.4567902" vertical-offset="4646" max-vertical-offset="6069" />
+        <state line="14" column="29" selection-start="526" selection-end="526" vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="969" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BugTracker/urls.py">
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/searchresults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="94" selection-start="383" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1326" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/templates/tasksDetail.html">
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/modernizr_morph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="36" selection-start="6655" selection-end="6656" vertical-scroll-proportion="0.0" vertical-offset="3031" max-vertical-offset="6188">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/dialogFx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LeaveManager/templates/LeaveManagerHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1501" selection-end="1512" vertical-scroll-proportion="0.2983871" vertical-offset="532" max-vertical-offset="4760" />
+        <state line="174" column="0" selection-start="5234" selection-end="5234" vertical-scroll-proportion="-0.65384614" vertical-offset="2941" max-vertical-offset="4675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Projectslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.062606" vertical-offset="2401" max-vertical-offset="3043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="459" column="9" selection-start="8491" selection-end="8496" vertical-scroll-proportion="-21.781818" vertical-offset="6605" max-vertical-offset="10217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootstrap_BaseForUnited.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6335" column="1" selection-start="137593" selection-end="137593" vertical-scroll-proportion="0.0" vertical-offset="107139" max-vertical-offset="107797" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ChatRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="11" selection-start="14727" selection-end="15955" vertical-scroll-proportion="0.0" vertical-offset="5445" max-vertical-offset="6154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/pygments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="1" selection-start="3062" selection-end="3062" vertical-scroll-proportion="0.94237286" vertical-offset="634" max-vertical-offset="1292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1153" column="30494" selection-start="165596" selection-end="165596" vertical-scroll-proportion="0.0" vertical-offset="19045" max-vertical-offset="19703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootswatch_cyborg.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6482" column="1" selection-start="140154" selection-end="140154" vertical-scroll-proportion="0.0" vertical-offset="109638" max-vertical-offset="110296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootswatch_flatly.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="118601" selection-start="118814" selection-end="118814" vertical-scroll-proportion="0.17677642" vertical-offset="0" max-vertical-offset="577" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootswatch_superhero.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="117686" selection-start="117893" selection-end="117893" vertical-scroll-proportion="0.17677642" vertical-offset="0" max-vertical-offset="577" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootswatch_cerulean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="120132" selection-start="120273" selection-end="120273" vertical-scroll-proportion="0.17677642" vertical-offset="0" max-vertical-offset="577" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamTrack/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="73" selection-start="2400" selection-end="2459" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="4114">
-          <folding />
-        </state>
+        <state line="139" column="26" selection-start="4843" selection-end="4849" vertical-scroll-proportion="8.472727" vertical-offset="2829" max-vertical-offset="4131" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManager/logs/teamTrack_20140927.log">
+    <entry file="file://$PROJECT_DIR$/TaskManager/logs/teamTrack_20150111.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="540" column="0" selection-start="39324" selection-end="39324" vertical-scroll-proportion="0.0" vertical-offset="8760" max-vertical-offset="9350" />
+        <state line="11539" column="0" selection-start="1037019" selection-end="1037019" vertical-scroll-proportion="0.0" vertical-offset="196078" max-vertical-offset="196265" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BugTracker/views.py">
+    <entry file="file://$PROJECT_DIR$/BugTracker/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="20" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.0" vertical-offset="541" max-vertical-offset="1190">
-          <folding />
-        </state>
+        <state line="7" column="10" selection-start="504" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BugTracker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="68" selection-start="211" selection-end="220" vertical-scroll-proportion="0.1588785" vertical-offset="0" max-vertical-offset="535" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="91" selection-start="3276" selection-end="3276" vertical-scroll-proportion="-13.290909" vertical-offset="0" max-vertical-offset="1326" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BugTracker/templates/bugs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="12" selection-start="1694" selection-end="1694" vertical-scroll-proportion="1.4274809" vertical-offset="408" max-vertical-offset="3723">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="13" column="47" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="4301" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/TaskStatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="136" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="18" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3009" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/MailTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="267" selection-start="1036" selection-end="1087" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/calender.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="256" column="7" selection-start="9720" selection-end="9720" vertical-scroll-proportion="0.0" vertical-offset="4225" max-vertical-offset="5729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/tasksDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="71" selection-start="1580" selection-end="1582" vertical-scroll-proportion="0.0" vertical-offset="781" max-vertical-offset="6834" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/Projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="88" selection-start="8084" selection-end="8255" vertical-scroll-proportion="0.0" vertical-offset="2515" max-vertical-offset="3281" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="121" selection-end="123" vertical-scroll-proportion="-0.92727274" vertical-offset="0" max-vertical-offset="204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="317" column="8" selection-start="4783" selection-end="4785" vertical-scroll-proportion="-3.2727273" vertical-offset="5209" max-vertical-offset="99722" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="148" selection-end="149" vertical-scroll-proportion="0.2665505" vertical-offset="0" max-vertical-offset="5695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1001" column="17" selection-start="19577" selection-end="19577" vertical-scroll-proportion="0.0" vertical-offset="16711" max-vertical-offset="18394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/ProjectsDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="44" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="8194" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templatetags/apptags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="943" selection-end="952" vertical-scroll-proportion="-0.107563026" vertical-offset="574" max-vertical-offset="5202" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/userMiddleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="51" selection-start="690" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BugTracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="23" selection-start="843" selection-end="843" vertical-scroll-proportion="0.33888888" vertical-offset="55" max-vertical-offset="1190" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="85" selection-start="4478" selection-end="4478" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="10" selection-start="3394" selection-end="3400" vertical-scroll-proportion="0.0" vertical-offset="1311" max-vertical-offset="2227" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BugTracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="350" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="25" selection-start="659" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="186" max-vertical-offset="4607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="34" selection-start="505" selection-end="8876" vertical-scroll-proportion="0.0" vertical-offset="2567" max-vertical-offset="8041" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/taskTypeView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="34" selection-start="8873" selection-end="8873" vertical-scroll-proportion="-7.1923075" vertical-offset="2346" max-vertical-offset="4828" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/NodeModules/node_modules/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="497" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="17" selection-start="7116" selection-end="7116" vertical-scroll-proportion="0.0" vertical-offset="3179" max-vertical-offset="8993">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Others/cherryws.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="280" column="0" selection-start="11672" selection-end="11758" vertical-scroll-proportion="0.0" vertical-offset="4454" max-vertical-offset="5185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Others/saaramshaWS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="300" column="0" selection-start="13365" selection-end="13365" vertical-scroll-proportion="0.0" vertical-offset="4601" max-vertical-offset="5253">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/css/jquery.raty.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/static/js/jquery.raty.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13022">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="55" selection-start="1430" selection-end="1482" vertical-scroll-proportion="-6.5384617" vertical-offset="340" max-vertical-offset="12886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManager/templates/profileslist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="32" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.35157546" vertical-offset="1063" max-vertical-offset="1768">
+          <folding />
         </state>
       </provider>
     </entry>

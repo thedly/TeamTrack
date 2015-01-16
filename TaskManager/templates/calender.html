@@ -1,169 +1,149 @@
 {% extends "base.html" %}
 {% load static %}
+{% load apptags %}
 {% block extraHeaders %}
-<
+
   <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
 <link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
 <script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
 <script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
 <script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
 <script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+
+
+
 <script>
 
 	$(document).ready(function() {
 
 
 		var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
-		
-		$('#calendar_Home').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			editable: false,
-			events: [
+        var d = date.getDate();
+        var m = date.getMonth() + 1;
+        var y = date.getFullYear();
+        var CurrentDate = y+"/"+m+"/"+d
+        var Meetings = {% getMeetings %}
+        var Updates = {% getWeeklyUpdates %}
+        var Projects = {% getProjects %}
 
-			     {% for wup in WeeklyUpdates %}
-			     {
-			    	 title : '{{ wup.taskid.TaskTitle }}',
-			     	 start: new Date({{ wup.date|date:"Y" }}, {{ wup.date|date:"m" }}-1, {{ wup.date|date:"d" }}),
-			     	 url: '{% url "taskdetail" wup.taskid.id %}'
-			     },
-
-			     {% endfor %}
-
-			     {% for pro in Projects %}
-			     {
-			    	 title : '{{ pro.Title }}',
-			     	 start: new Date({{ pro.StartDate|date:"Y" }}, {{ pro.StartDate|date:"m" }}-1, {{ pro.StartDate|date:"d" }}),
-			     	 end: new Date({{ pro.EndDate|date:"Y" }}, {{ pro.EndDate|date:"m" }}-1, {{ pro.EndDate|date:"d" }}),
-			     	 url: '{% url "projectsdetail" pro.id %}'
-			     },
-
-			     {% endfor %}
+        $(".content-wrap,.menu-wrap-calendar").on("click",function(){
+           $(".CalendarDetailsExt").hide()
+        })
 
 
-
-			]
-		});
-
-
-        $('#calendar_Updates').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			defaultDate: '2014-06-12',
-			selectable: true,
-			selectHelper: true,
-			select: function(start, end) {
-            eventData = {
-                    title: 'title',
-    				start: start,
-					end: end
-				};
-
-             $('#calendar_Updates').fullCalendar('renderEvent', eventData, true); // stick? = true
-             $('#calendar_Updates').fullCalendar('unselect');
-			},
-			editable: true,
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2014-06-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2014-06-07',
-					end: '2014-06-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-16T16:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2014-06-12T10:30:00',
-					end: '2014-06-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2014-06-12T12:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2014-06-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2014-06-28'
-				}
-			]
-		});
+        $("#calendarTab").addClass("Active")
+        $("#calendarTab a").bind('click', false);
 
 
-        $('#calendar_Meetings').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			defaultDate: '2014-06-12',
-			editable: true,
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2014-06-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2014-06-07',
-					end: '2014-06-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2014-06-16T16:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2014-06-12T10:30:00',
-					end: '2014-06-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2014-06-12T12:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2014-06-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2014-06-28'
-				}
-			]
-		});
+        $("#closeModal").click(function(){
+            $('#calendar_QuickUpdate').fullCalendar('removeEvents', 'temp')
+        })
+
+        function getSource(meetings, projects, updates)
+        {
+
+            var newArr = []
+            if (meetings == true)
+            {
+                $.merge(newArr, Meetings);
+            }
+            if(projects == true)
+            {
+                $.merge(newArr, Projects);
+            }
+            if(updates == true)
+            {
+                $.merge(newArr, Updates);
+            }
+            return newArr
+        }
 
 
+        $("#MeetingsCheck, #ProjectsCheck, #UpdatesCheck").click(function(){
+           $('#calendar_QuickUpdate').fullCalendar('removeEvents')
+           $(".EventCheck").each(function(){
+               if($(this).is(":checked") == true)
+                {
+                    switch($(this).val())
+                    {
+                        case "meetings": $('#calendar_QuickUpdate').fullCalendar('addEventSource', getSource(true,false,false));
+                                         break;
+                        case "projects": $('#calendar_QuickUpdate').fullCalendar('addEventSource', getSource(false,true,false));
+                                         break;
+                        case "updates":  $('#calendar_QuickUpdate').fullCalendar('addEventSource', getSource(false,false,true));
+                                         break;
+                    }
+                }
+           })
+        })
+
+		$('#calendar_QuickUpdate').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: CurrentDate,
+                selectable: true,
+                selectHelper: true,
+
+                select: function(start, end) {
+
+
+
+                eventData = {
+                        id: 'temp',
+                        title: "Click to Edit",
+                        start: start,
+                        end: end
+                    };
+
+                    if($("#eventTitle").val() == "")
+                    {
+                        alert("Please provide the reason for your leave")
+                    }
+                    else
+                    {
+                            $('#calendar_QuickUpdate').fullCalendar('removeEvents', 'temp')
+                            $('#calendar_QuickUpdate').fullCalendar('renderEvent', eventData, true); // stick? = true
+
+                    }
+                    $('#calendar_QuickUpdate').fullCalendar('unselect');
+                },
+                editable: true,
+                eventDrop : function(event)
+                {
+
+
+                },
+                eventResize : function(event)
+                {
+
+
+                },
+                eventClick: function(calEvent, jsEvent, view) {
+                    if(calEvent.id == "temp")
+                    {
+                        $("#StartDate").val(moment(calEvent.start).format('YYYY/MM/DD HH:mm'))
+                        $("#EndDate").val(moment(calEvent.end).format('YYYY/MM/DD HH:mm'))
+                        $("#CallModal").click()
+                    }
+                    else
+                    {
+                        $(".CalendarDetailsExt").html(calEvent.title).fadeIn()
+                    }
+
+                    //alert('Event: ' + calEvent.title);
+
+                    //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                    //alert('View: ' + view.name);
+                    // change the border color just for fun
+                    //$(this).css('border-color', 'red');
+                },
+                events: getSource(false, false, false)
+
+
+            });
 
 
 	});
@@ -172,80 +152,65 @@
 
 {% endblock extraHeaders %}
 {% block MainBodyWrapper %}
+<br>
  <div id="page-wrapper">
 <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Events</h1>
+                     <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li class="active">Events</li>
+                    </ol>
                 </div>
+
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
  <div class="col-lg-12">
                 <div class="panel panel-default">
-
                     <!-- /.panel-heading -->
                     <div class="panel-body">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#home" data-toggle="tab">Home</a>
-                            </li>
-                            <li id="uodatesTab"><a href="#updates" data-toggle="tab">Updates</a>
-                            </li>
-                            <li><a href="#Meetings" data-toggle="tab">Meetings</a>
-                            </li>
 
-                        </ul>
 
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="home">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <h3 class="page-header"></h3>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div id='calendar_Home'></div>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
-                                </div>
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div id='calendar_QuickUpdate'></div>
                             </div>
 
-                            <div class="tab-pane fade in active" id="updates">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <h3 class="page-header"></h3>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
+                            <div class="col-lg-5">
+
+
+                                <div class="checkbox" style="display:inline-block;padding-left:2em;">
+                                    <label>
+                                        <input type="checkbox"class="EventCheck" id="MeetingsCheck" value="meetings">Meetings
+                                    </label>
+
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div id='calendar_Updates'></div>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
+
+                                <div class="checkbox" style="display:inline-block;padding-left:2em;">
+                                    <label>
+                                        <input type="checkbox" class="EventCheck" id="ProjectsCheck" value="projects">Projects
+                                    </label>
+
                                 </div>
+
+                                <div class="checkbox" style="display:inline-block;padding-left:2em;">
+                                    <label>
+                                        <input type="checkbox"  class="EventCheck" id="UpdatesCheck" value="updates">Updates
+                                    </label>
+
+                                </div>
+
+                                <button id="CallModal" style="display:none" data-toggle="modal" data-target="#myModal">Call modal</button>
+
+                            <a href="{% url 'CreateMeetingRequest' %}">Send Meeting request</a>
+
                             </div>
 
-                            <div class="tab-pane fade in active" id="Meetings">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <h3 class="page-header"></h3>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div id='calendar_Meetings'></div>
-                                    </div>
-                                    <!-- /.col-lg-12 -->
-                                </div>
-                            </div>
-
-
+                            <!-- /.col-lg-12 -->
                         </div>
+
                      </div>
                     <!-- /.panel-body -->
                 </div>
@@ -263,12 +228,73 @@
                             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                         </div>
                         <div class="modal-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+
+                                    <div class="form-group">
+                                      <label for="StartDate" class="col-lg-2 control-label">From</label>
+                                      <div class="col-lg-10">
+                                        <input type="text" id="StartDate" class="form-control" placeholder="Email">
+                                      </div>
+                                      <label for="EndDate" class="col-lg-2 control-label">To</label>
+                                      <div class="col-lg-10">
+                                        <input type="text" id="EndDate" class="form-control" placeholder="Email">
+                                      </div>
+                                    </div>
+
+
+                                    <ul class="nav nav-tabs">
+                                      <li class="active"><a href="#meeting" data-toggle="tab"><i style="margin-top:6px" class="fa fa-bookmark-o fa-2x"></i></a></li>
+                                      <li><a href="#social" data-toggle="tab"><i style="margin-top:6px" class="fa fa-beer fa-2x"></i></a></li>
+                                      <li><a href="#onLeave" data-toggle="tab"><i style="margin-top:6px" class="fa fa-h-square fa-2x"></i></a></li>
+
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                      <div style="text-align:center" class="tab-pane fade active in" id="meeting">
+                                        <p>Meeting</p>
+                                      </div>
+                                      <div style="text-align:center" class="tab-pane fade" id="social">
+                                        <p>Time For a Beer</p>
+                                      </div>
+                                      <div style="text-align:center" class="tab-pane fade" id="onLeave">
+                                        <p>Leave</p>
+                                      </div>
+                                    </div>
+                                    <select multiple="" class="form-control" id="Recepients">
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                       <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                       <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                       <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                    </select>
+
+
+
+
+
+
+
 
                         </div>
                         <input type="text" value="" id="okClicked">
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="closeModal" class="btn btn-default" data-dismiss="modal">Cancel</button>
                             <button id="SaveEventData" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
                         </div>
                     </div>

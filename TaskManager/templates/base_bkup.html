@@ -1,0 +1,439 @@
+<!doctype>
+{% load static %}
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "font-awesome/css/font-awesome.css" %}" rel="stylesheet">
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="{% static "css/plugins/morris/morris-0.4.3.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/plugins/timeline/timeline.css" %}" rel="stylesheet">
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="{% static "css/sb-admin.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-normalize.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-demo.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-font-awesome.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-menu_topside.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-component.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-ns-default.css" %}" rel="stylesheet">
+    <script src="{% static "js/snap.svg-min.js" %}"></script>
+
+    <title>{% block title %}{% endblock title %}</title>
+
+	{% block extraHeaders %}
+	{% endblock extraHeaders %}
+	</head>
+	<body>
+
+	<div class="container">
+			<div class="menu-wrap">
+				<nav class="menu-top">
+					<div class="profile"><img src="img/user1.png" alt="Matthew Greenberg"/><span>Matthew Greenberg</span></div>
+					<div class="icon-list">
+						<a href="#"><i class="fa fa-fw fa-star-o"></i></a>
+						<a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
+						<a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
+						<a href="#"><i class="fa fa-fw fa-comment-o"></i></a>
+					</div>
+				</nav>
+				<nav class="menu-side">
+					<a href="#">Recent Stories</a>
+					<a href="#">Reading List</a>
+					<a href="#">My Stories</a>
+					<a href="#">Categories</a>
+				</nav>
+				<button class="close-button" id="close-button">Close Menu</button>
+			</div>
+
+			<button class="menu-button" id="open-button">Open Menu</button>
+
+			<div class="content-wrap">
+				<div class="content">
+
+
+					<section>
+				<h2>Default progress button (success and error)</h2>
+				<div class="box">
+					<!-- progress button -->
+					<div class="progress-button">
+						<button><span>Submit</span></button>
+						<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+						<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+						<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+					</div><!-- /progress-button -->
+					<!-- progress button -->
+					<div class="progress-button">
+						<button><span>Submit</span></button>
+						<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+						<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+						<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+					</div><!-- /progress-button -->
+				</div>
+				<h2>Elastic version, with some easings (success, error)</h2>
+				<div class="box">
+					<!-- progress button -->
+					<div class="progress-button elastic">
+						<button><span>Submit</span></button>
+						<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+						<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+						<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+					</div><!-- /progress-button -->
+					<!-- progress button -->
+					<div class="progress-button elastic">
+						<button><span>Submit</span></button>
+						<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+						<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+						<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+					</div><!-- /progress-button -->
+				</div>
+			</section>
+
+				</div>
+			</div>
+		</div><!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'home' %}">Team Track</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+
+                                <div>
+                                    <p>
+                                        <strong>Upload payslips</strong>
+                                    </p>
+                                   <div>
+
+                                            <input type="file"  multiple accept="image/png, image/jpeg" />
+                                        </div>
+                                </div>
+
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <form method="get" action="{% url 'searchresults' %}">
+                            <div class="input-group custom-search-form">
+
+                                <input name="Search" type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+
+                            </div>
+                            </form>
+                            <!-- /input-group -->
+                        </li>
+
+                        <li>
+                            <a href="{% url 'projects' %}"><i class="fa fa-dashboard fa-fw"></i> Projects</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'profileslist' %}"><i class="fa fa-dashboard fa-fw"></i> Profiles</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'tasks' %}"><i class="fa fa-edit fa-fw"></i>Tasks</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Events' %}"><i class="fa fa-table fa-fw"></i>Events</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'LeaveManagerHome' %}"><i class="fa fa-table fa-fw"></i>Leave Manager</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'BugView' %}"><i class="fa fa-table fa-fw"></i>Bug Tracker</a>
+                        </li>
+
+                        <li>
+                            <div class="chat-panel panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-clock-o fa-fw"></i> Chat<a href="{% url 'ChatRoom' %}"><span class="fa arrow"></span></a>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div style="height:200px" class="panel-body" id="chatclients">
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+         <script src="{% static "NodeModules/node_modules/socket.io/node_modules/socket.io-client/socket.io.js" %}"></script>
+        <script>
+         var socket = io.connect("http://localhost:3000");//("http://192.168.1.2:3000");
+
+         socket.on('connect', function (data) {
+            socket.emit('storeClientInfo', { customId:"{{ request.user.id }}", customName:"{{ request.user }}" });
+         })
+
+
+
+         socket.on('Clients', function(msg){
+            $("#chatclients").children().remove()
+            $.each(msg, function( index, value ) {
+                $("#chatclients").append("<div><i class='fa fa-user fa-fw'></i><span>"+value.customName+"</span><ul class='nav navbar-top-links navbar-right'><a href='/TaskManager/profileslistdetail/"+value.customId+"'><li style='cursor:pointer'><i class='fa fa-bell fa-fw'></i></li></a><li style='cursor:pointer' class='ClientsList' id='"+value.customId+"'><i class='fa fa-bell fa-fw'></i></li></ul></div>")
+            });
+         })
+
+
+        socket.on('ReceiveFromAll', function(msg){
+            alert(msg)
+             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
+         })
+
+         socket.on('{{ request.user.id }}', function(msg){
+            alert(msg)
+             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
+         })
+
+	    </script>
+
+        {% block MainBodyWrapper %}
+        {% endblock MainBodyWrapper %}
+
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+
+    <script src="{% static "js/bootstrap.min.js"%}"></script>
+    <script src="{% static "js/plugins/metisMenu/jquery.metisMenu.js"%}"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="{% static "js/plugins/morris/raphael-2.1.0.min.js"%}"></script>
+    <script src="{% static "js/plugins/morris/morris.js" %}"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="{% static "js/sb-admin.js" %}"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="{% static "js/demo/dashboard-demo.js" %}"></script>
+
+	</body>
+
+</html>

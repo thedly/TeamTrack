@@ -7,99 +7,27 @@
     <meta charset="utf-8">
 
     <style>
-      html, body, #map-canvas {
-        height: 400px;
-      }
-    </style>
+          html, body, #map-canvas_OtherUsers {
+            height: 400px;
+          }
+        </style>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script>
-
-        function CreateMap(lat,lng)
-        {
-
-          var UserLatLng = new google.maps.LatLng(lat, lng)
-            var mapOptions = {
-            zoom: 18,
-            center: UserLatLng
-          };
-
-          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-          var marker = new google.maps.Marker({
-              position: UserLatLng,
-              map: map,
-              title: 'Hello World!'
-          });
-
-           var Secondmarker = new google.maps.Marker({
-              position: (-34.924868, 18.45),
-              map: map,
-              title: 'Hello World!'
-          });
-        }
-
-        function displayLocation(latitude,longitude){
-        var request = new XMLHttpRequest();
-
-        var method = 'GET';
-        var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
-        var async = true;
-
-        request.open(method, url, async);
-        request.onreadystatechange = function(){
-          if(request.readyState == 4 && request.status == 200){
-            var data = JSON.parse(request.responseText);
-            var address = data.results[0];
-            alert(address.formatted_address);
-            CreateMap(latitude,longitude)
-          }
-        };
-        request.send();
-      };
-
-      var successCallback = function(position){
-        var x = position.coords.latitude;
-        var y = position.coords.longitude;
-        displayLocation(x,y);
-      };
-
-      var errorCallback = function(error){
-        var errorMessage = 'Unknown error';
-        switch(error.code) {
-          case 1:
-            errorMessage = 'Permission denied';
-            break;
-          case 2:
-            errorMessage = 'Position unavailable';
-            break;
-          case 3:
-            errorMessage = 'Timeout';
-            break;
-        }
-        akert(errorMessage);
-      };
-
-      var options = {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 0
-      };
-    var map;
-    navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options);
-
-
-        </script>
-
 
 {% endblock extraHeaders %}
         {% block MainBodyWrapper %}
+
 
 
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Profile</h1>
+                    <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'profileslist' %}">Users</a></li>
+                      <li class="active">Profile</li>
+                    </ol>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -171,20 +99,22 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                 <div class="col-lg-12">
+                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Current tasks
+                            Last seen at
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                             <div id="map-canvas"></div>
+                             <div id="map-canvas_OtherUsers"></div>
+
+                        </div>
+                        <div class="panel-footer" id="MapFooter">
+
                         </div>
                     </div>
                  </div>
-            </div>
-             <div class="row">
-                 <div class="col-lg-6">
+                    <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Donut Chart Example
@@ -197,15 +127,16 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-6 -->
-                 </div>
-                 <!-- /.row -->
+
+            </div>
+
+                                 <!-- /.col-lg-6 -->
+
         </div>
         <!-- /#page-wrapper -->
 
 
     <!-- Core Scripts - Include with every page -->
-    <script src="{% static "js/jquery-1.10.2.js" %}"></script>
 
     <script src="{% static "js/plugins/dataTables/jquery.dataTables.js" %}"></script>
     <script src="{% static "js/plugins/dataTables/dataTables.bootstrap.js" %}"></script>
@@ -228,9 +159,87 @@
 
     <script>
     $(document).ready(function() {
+
+        $("#profilesTab").addClass("Active")
+        $("li#profilesTab").prop("disabled",true);
         $('#dataTables-example').dataTable();
+
+        var lastLoggedInFrom = "{{ userDetails.lastloggedinform }}"
+
+        if(lastLoggedInFrom == "")
+        {
+            $("#map-canvas_OtherUsers").css('height','auto')
+            $("#map-canvas_OtherUsers").html("<h2>Location details are not available</h2>")
+        }
+        else
+        {
+            var latitude = lastLoggedInFrom.split("|")[0]
+            var longitude = lastLoggedInFrom.split("|")[1]
+            displayLocation(latitude,longitude)
+        }
+
+
+
+
+        function CreateMap(lat,lng)
+        {
+
+          var UserLatLng = new google.maps.LatLng(lat, lng)
+            var mapOptions = {
+            zoom: 18,
+            center: UserLatLng
+          };
+
+          var map = new google.maps.Map(document.getElementById('map-canvas_OtherUsers'), mapOptions);
+
+          var marker = new google.maps.Marker({
+              position: UserLatLng,
+              map: map,
+              title: 'Hello World!'
+          });
+
+           var Secondmarker = new google.maps.Marker({
+              position: (-34.924868, 18.45),
+              map: map,
+              title: 'Hello World!'
+          });
+        }
+
+        function displayLocation(latitude,longitude){
+        var request = new XMLHttpRequest();
+
+        var method = 'GET';
+        var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+        var async = true;
+
+        request.open(method, url, async);
+        request.onreadystatechange = function(){
+          if(request.readyState == 4 && request.status == 200){
+            var data = JSON.parse(request.responseText);
+            var address = data.results[0];
+            $("#MapFooter").html("<b>Last logged in from</b> : <br> "+address.formatted_address)
+            CreateMap(latitude,longitude)
+          }
+        };
+        request.send();
+      };
+
+
+
+      var options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      };
+
+
+
+
+
     });
     </script>
+
+
 
 
 

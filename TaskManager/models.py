@@ -6,6 +6,11 @@ from django.contrib.auth.models import User
 class ExtendedUser(User):
     birthdate = models.DateField()
     rating = models.IntegerField()
+    Machinename = models.CharField(db_column='MachineName', max_length=50) # Field name made lowercase.
+    designation = models.CharField(db_column='Designation', max_length=100) # Field name made lowercase.
+    theme = models.CharField(max_length=300)
+    lastloggedinform = models.CharField(db_column='LastLoggedInForm', max_length=300) # Field name made lowercase.
+
     def __unicode__(self):
         return "%s"%self.username
     
@@ -97,6 +102,7 @@ class TaskmanagerTasktimeline(models.Model):
     project = models.ForeignKey(Projects, db_column='project')
     taskid = models.ForeignKey(Tasks, db_column='taskid')
     status = models.ForeignKey(TaskStatus, db_column='status')
+    title = models.CharField(db_column='Title', max_length=100)
     notes = models.TextField()
     owner = models.ForeignKey(ExtendedUser, db_column='owner')
     date = models.DateTimeField(auto_now=True)

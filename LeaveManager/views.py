@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from TaskManager.models import ExtendedUser
 import logging
 import datetime
+import redis
 from django.utils.html import strip_tags
 log = logging.getLogger(__name__)
 
@@ -27,6 +28,8 @@ def SendLeaveRequest(request):
     LeavemanagerLeavesObj = LeavemanagerLeaves(StartDate=StartDate, EndDate=EndDate, UserId=ExtendedUser.objects.get(pk=UserId), Purpose=Purpose, emergencyleave=False, approved=False )
 
     LeavemanagerLeavesObj.save()
+    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    r.publish('chat', "Redis notification : Leave was created")
     #send_mail('Subject here', message, 'tejashedly@achumen.com', ['tj.werewolf@gmail.com', 'tejas.240489@gmail.com'], fail_silently=False)
     return HttpResponse("successfully sent mail")
 

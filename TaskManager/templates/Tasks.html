@@ -5,33 +5,26 @@
         {% block MainBodyWrapper %}
 
 
-        <div id="page-wrapper">
+            <br>
+
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tasks</h1>
+                    <div >
+                        <h1 class="page-header">
+                            Tasks
+                        </h1>
+                        <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li class="active">Tasks</li>
+                    </ol>
+
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Create Task
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                    <form method="post" action="{% url 'CreateTask' %}">{% csrf_token %}
-                        {{ CreateTaskForm.as_p }}
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
-                    </form>
-                            </div>
 
-                </div>
-                </div>
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             To Do
@@ -46,7 +39,6 @@
                                             <th>Title</th>
                                             <th>Project</th>
                                             <th>Owner</th>
-                                            <th>Status</th>
                                             <th>Details</th>
                                             <th>progress</th>
                                         </tr>
@@ -58,7 +50,7 @@
                                             <td>{{ Task.TaskTitle }}</td>
                                            <td>{{ Task.ProjectId.Title }}</td>
                                             <td>{{ Task.Owner }}</td>
-                                            <td>{{ Task.Status }}</td>
+
 
 
                                            <td><a href="{% url 'tasksdetail' Task.id %}">View</a></td>
@@ -95,10 +87,36 @@
                 </div>
                 <!-- /.col-lg-12 -->
 
+
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Create Task
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                        {{ CreateTaskForm.as_p }}
+                       <div class="progress-button">
+                            <button id="CreateTaskBtn"><span>Create Task</span></button>
+                            <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+                            <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+                            <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+                        </div>
+                    </form>
+                            </div>
+
+                </div>
+                </div>
+
+
             </div>
             <!-- /.row -->
+
+
              <div class="row">
-                 <div class="col-lg-6">
+                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Donut Chart Example
@@ -114,17 +132,15 @@
                 <!-- /.col-lg-6 -->
                  </div>
                  <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+
+
 
 
     <!-- Core Scripts - Include with every page -->
-    <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
 
     <script src="{% static "js/plugins/dataTables/jquery.dataTables.js" %}"></script>
     <script src="{% static "js/plugins/dataTables/dataTables.bootstrap.js" %}"></script>
-
-
 
     <script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
      <script src='{% static 'js/plugins/morris/morris.js' %}'></script>
@@ -142,8 +158,13 @@
 
     <script>
     $(document).ready(function() {
+
+        $("#tasksTab").addClass("Active")
+        $("#tasksTab a").bind('click', false);
         $('#dataTables-example').dataTable();
 
+
+        "{% url 'CreateTask' %}"
 
 
     });

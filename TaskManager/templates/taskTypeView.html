@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% load apptags %}
+       {% block MainBodyWrapper %}
+
+
+        <div id="page-wrapper">
+       <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tasks</h1>
+                    <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li class="active">Tasks</li>
+                    </ol>
+                </div>
+
+
+                <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-blue">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-file-text-o fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ new }}</div>
+                                                <div>New</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=new">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-green">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-cogs fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ inv }}</div>
+                                                <div>Inspect</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=1">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-yellow">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-code fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ dev }}</div>
+                                                <div>Dev</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=2">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-bullseye fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ test }}</div>
+                                                <div>Testing</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=3">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-red">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-bug fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ bug }}</div>
+                                                <div>Bugs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=bug">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="panel panel-green">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <i class="fa fa-check fa-4x"></i>
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge">{{ dep }}</div>
+                                                <div>Deployed</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'TaskTypeView' %}?type=4">
+                                        <div class="panel-footer">
+                                            <span class="pull-left">View Details</span>
+                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="table-responsive">
+                                        <table class="table ">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>Amount</th>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>Amount</th>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+
+                                                {% if type == None %}
+                                                    <tr><h2>No data available</h2></tr>
+                                                {% elif type == "bug" %}
+                                                    {% for bug in tasks %}
+                                                    {% if bug.taskid.Status.id == 3 %}
+                                                        <tr>
+                                                            <td>{{ bug.taskid.id }}</td>
+                                                            <td>{{ bug.taskid.ProjectId }}</td>
+                                                            <td>{{ bug.taskid.TaskTitle }}</td>
+                                                            <td>{{ bug.taskid.Description }}</td>
+                                                            <td>{{ bug.taskid.Requirement }}</td>
+                                                            <td>{{ bug.taskid.Owner }}</td>
+                                                            <td>{{ bug.taskid.Developer }}</td>
+                                                            <td>{{ bug.taskid.Status }}</td>
+                                                            <td>{{ bug.taskid.StartDate }}</td>
+                                                            <td>{{ bug.taskid.EndDate }}</td>
+                                                            <td>{{ bug.taskid.modifieddate }}</td>
+                                                        </tr>
+                                                    {% endif %}
+                                                    {% endfor %}
+
+                                                {% elif type == "new" %}
+
+                                                    {% for newTask in tasks %}
+                                                        <tr>
+                                                            <td>{{ newTask.taskid.task.id }}</td>
+                                                            <td>{{ newTask.taskid.ProjectId }}</td>
+                                                            <td>{{ newTask.taskid.TaskTitle }}</td>
+                                                            <td>{{ newTask.taskid.Description }}</td>
+                                                            <td>{{ newTask.taskid.Requirement }}</td>
+                                                            <td>{{ newTask.taskid.Owner }}</td>
+                                                            <td>{{ newTask.taskid.Developer }}</td>
+                                                            <td>{{ newTask.taskid.Status }}</td>
+                                                            <td>{{ newTask.taskid.StartDate }}</td>
+                                                            <td>{{ newTask.taskid.EndDate }}</td>
+                                                            <td>{{ newTask.taskid.modifieddate }}</td>
+                                                        </tr>
+                                                    {% endfor %}
+
+
+                                                {% else %}
+
+                                                    {% for task in tasks %}
+                                                    <tr>
+                                                        <td>{{ task.id }}</td>
+                                                        <td>{{ task.ProjectId }}</td>
+                                                        <td>{{ task.TaskTitle }}</td>
+                                                        <td>{{ task.Description }}</td>
+                                                        <td>{{ task.Requirement }}</td>
+                                                        <td>{{ task.Owner }}</td>
+                                                        <td>{{ task.Developer }}</td>
+                                                        <td>{{ task.Status }}</td>
+                                                        <td>{{ task.StartDate }}</td>
+                                                        <td>{{ task.EndDate }}</td>
+                                                        <td>{{ task.modifieddate }}</td>
+                                                    </tr>
+                                                    {% endfor %}
+
+                                            {% endif %}
+
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+
+{% endblock MainBodyWrapper %}

@@ -1,0 +1,791 @@
+[2015-01-16 23:03:03,757] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:03:03,911] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:03:03,911] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:03:03,911] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:03:03,911] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:03:06,309] DEBUG [TaskManager.views:53] debug
+[2015-01-16 23:03:07,062] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-01-30
+[2015-01-16 23:03:07,062] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 14 days, 0:00:00
+[2015-01-16 23:03:07,282] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-12-31
+[2015-01-16 23:03:07,282] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -16 days, 0:00:00
+[2015-01-16 23:03:09,872] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:03:09,878] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:03:09,878] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:03:09,878] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:03:09,878] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:03:13,030] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:03:13,039] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:03:13,039] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:03:13,039] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:03:13,039] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:03:20,341] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:03:20,341] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:03:20,342] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:03:20,344] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:03:20,344] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:03:20,345] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,345] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,346] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,346] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,348] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,348] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,348] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,348] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,348] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,349] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,349] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,349] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,351] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,351] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,351] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,351] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,351] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,352] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,352] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,352] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,354] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,354] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:20,354] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:03:20,355] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:03:50,469] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:03:50,474] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:03:50,474] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:03:50,474] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:03:50,474] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:03:58,970] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:03:58,976] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:03:58,976] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:03:58,976] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:03:58,976] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:03,233] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:03,255] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:03,255] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:03,255] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:03,256] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:06,437] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:06,443] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:06,444] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:06,444] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:06,444] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:09,878] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:09,898] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:09,898] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:09,898] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:09,898] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:13,428] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:13,437] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:13,437] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:13,437] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:13,437] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:15,812] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:15,832] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:15,832] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:15,832] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:15,832] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:17,586] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:17,604] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:17,604] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:17,604] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:17,605] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:20,210] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:20,210] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:20,210] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:20,210] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:20,226] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:04:22,823] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:04:22,834] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:04:22,834] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:04:22,834] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:04:22,835] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:23:10,911] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:23:10,970] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:23:10,970] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:23:10,970] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:23:10,970] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:24:42,033] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:24:42,049] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:24:42,049] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:24:42,049] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:24:42,049] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:24:50,437] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:24:50,457] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:24:50,457] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:24:50,457] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:24:50,459] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:25:06,581] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:25:06,615] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:25:06,615] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:25:06,615] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:25:06,615] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:27:31,907] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:27:31,979] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:27:31,979] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:27:31,979] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:27:31,979] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:27:56,141] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:27:56,168] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:27:56,168] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:27:56,168] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:27:56,170] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:27:56,595] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:27:56,605] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:27:56,605] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:27:56,605] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:27:56,605] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:29:48,438] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:29:48,453] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:29:48,453] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:29:48,453] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:29:48,453] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:29:48,901] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:29:48,911] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:29:48,911] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:29:48,911] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:29:48,911] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:29:51,163] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:29:51,214] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:29:51,214] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:29:51,214] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:29:51,216] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:29:52,042] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:29:52,048] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:29:52,048] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:29:52,048] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:29:52,049] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:31:13,631] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:31:13,631] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:31:13,631] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:31:13,631] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:31:13,631] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:31:13,943] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:31:13,948] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:31:13,948] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:31:13,948] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:31:13,948] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:31:42,198] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:31:42,198] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:31:42,198] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:31:42,198] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:31:42,198] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:31:42,644] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:31:42,653] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:31:42,653] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:31:42,653] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:31:42,653] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:32:46,885] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:32:46,910] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:32:46,910] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:32:46,910] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:32:46,910] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:32:47,368] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:32:47,377] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:32:47,377] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:32:47,377] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:32:47,377] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:33:58,036] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:33:58,105] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:33:58,105] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:33:58,105] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:33:58,105] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:33:58,463] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:33:58,470] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:33:58,470] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:33:58,471] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:33:58,471] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:40:20,644] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:40:20,654] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:40:20,655] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:40:20,655] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:40:20,655] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:41:52,897] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:41:52,933] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:41:52,933] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:41:52,933] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:41:52,933] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:43:39,312] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:43:39,312] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:43:39,312] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:43:39,312] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:43:39,312] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:43:55,905] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:43:55,953] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:43:55,953] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:43:55,953] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:43:55,953] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:43:56,168] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:43:56,168] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:43:56,168] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:43:56,168] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:43:56,168] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:43:56,170] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:43:56,170] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,171] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,173] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,173] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,173] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,173] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,174] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,176] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,176] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:43:56,176] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:43:56,176] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:10,003] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:44:10,025] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:44:10,025] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:44:10,025] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:44:10,025] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:44:12,280] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:44:12,286] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:44:12,286] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:44:12,286] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:44:12,286] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:44:22,469] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:44:22,490] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:44:22,492] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:44:22,492] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:44:22,492] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:44:22,917] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:44:22,918] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:44:22,918] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:44:22,918] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:44:22,920] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:44:22,920] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,920] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,921] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,923] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,923] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,924] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,926] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,926] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,926] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,926] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,927] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,927] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:44:22,927] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:44:22,927] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:45:39,558] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:45:39,605] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:45:39,605] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:45:39,605] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:45:39,605] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:45:57,677] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:45:57,727] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:45:57,729] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:45:57,729] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:45:57,729] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:46:02,367] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:46:02,408] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:46:02,408] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:46:02,408] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:46:02,408] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:46:02,576] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Dashboard to end is -86
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -614.29
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for reports to end is -129
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -921.43
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Chat application to end is -138
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -985.71
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherNewTask to end is 97
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for asdfsdfg to end is 97
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdf to end is 97
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for someTask to end is 97
+[2015-01-16 23:46:02,578] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for ssdfsfdfd to end is 97
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsdfgd to end is 97
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:46:02,579] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToTestNotification to end is 97
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToCheckRedisResponse to end is 97
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:46:02,581] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:46:07,444] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:46:07,453] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:46:07,453] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:46:07,453] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:46:07,453] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:46:07,865] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:46:07,865] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:46:07,867] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:46:07,867] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:46:07,867] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:46:07,868] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:46:07,868] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:46:07,868] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:46:07,869] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:46:07,869] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,871] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,872] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,872] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,874] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,874] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,875] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,875] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,875] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,875] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,877] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,877] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:07,878] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:46:07,880] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:46:10,115] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:46:10,121] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:46:10,121] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:46:10,121] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:46:10,121] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:47:16,957] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:47:16,973] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:47:16,973] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:47:16,973] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:47:16,973] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:47:18,878] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:47:18,888] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:47:18,888] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:47:18,888] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:47:18,890] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:47:20,953] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:47:20,967] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:47:20,967] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:47:20,967] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:47:20,967] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:47:20,989] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-01-30
+[2015-01-16 23:47:20,990] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 14 days, 0:00:00
+[2015-01-16 23:47:21,005] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-12-31
+[2015-01-16 23:47:21,005] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -16 days, 0:00:00
+[2015-01-16 23:47:24,204] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:47:24,220] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:47:24,220] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:47:24,220] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:47:24,220] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:47:24,585] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:47:24,585] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:47:24,586] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:47:24,586] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:47:24,586] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:47:24,586] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,588] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,589] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,589] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,589] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,591] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,591] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,591] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,592] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,594] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,594] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,594] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,594] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:47:24,595] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:47:24,595] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:48:07,974] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:07,993] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:07,994] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:07,994] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:07,994] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:08,065] INFO [TaskManager.templatetags.apptags:53] tas
+[2015-01-16 23:48:08,069] INFO [TaskManager.templatetags.apptags:53] pro
+[2015-01-16 23:48:08,071] INFO [TaskManager.templatetags.apptags:53] usr
+[2015-01-16 23:48:08,072] INFO [TaskManager.templatetags.apptags:53] sta
+[2015-01-16 23:48:13,890] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:13,890] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:13,890] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:13,890] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:13,890] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Dashboard to end is -86
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -614.29
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for reports to end is -129
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -921.43
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Chat application to end is -138
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -985.71
+[2015-01-16 23:48:14,032] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherNewTask to end is 97
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for asdfsdfg to end is 97
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdf to end is 97
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,033] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for someTask to end is 97
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for ssdfsfdfd to end is 97
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsdfgd to end is 97
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,035] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToTestNotification to end is 97
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToCheckRedisResponse to end is 97
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:14,036] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:21,684] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:21,694] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:21,696] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:21,696] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:21,696] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:22,792] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:22,799] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:22,801] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:22,801] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:22,801] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:22,816] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-01-30
+[2015-01-16 23:48:22,816] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 14 days, 0:00:00
+[2015-01-16 23:48:22,832] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-12-31
+[2015-01-16 23:48:22,832] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -16 days, 0:00:00
+[2015-01-16 23:48:25,763] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:25,789] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:25,789] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:25,789] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:25,789] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:26,627] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:26,664] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:26,664] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:26,664] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:26,664] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Dashboard to end is -86
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -614.29
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for reports to end is -129
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -921.43
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Chat application to end is -138
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,765] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -985.71
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherNewTask to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for asdfsdfg to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdf to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for someTask to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for ssdfsfdfd to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsdfgd to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:48:26,766] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,767] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,767] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:48:26,767] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,767] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,767] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToTestNotification to end is 97
+[2015-01-16 23:48:26,769] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,769] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:26,769] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToCheckRedisResponse to end is 97
+[2015-01-16 23:48:26,769] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:48:26,769] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:48:28,394] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:48:28,436] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:48:28,437] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:48:28,437] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:48:28,444] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:21,272] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:21,329] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:21,331] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:21,331] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:21,331] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:21,342] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-01-30
+[2015-01-16 23:49:21,344] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 14 days, 0:00:00
+[2015-01-16 23:49:21,359] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-12-31
+[2015-01-16 23:49:21,359] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -16 days, 0:00:00
+[2015-01-16 23:49:24,447] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:24,460] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:24,460] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:24,460] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:24,460] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:25,278] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:25,288] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:25,288] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:25,288] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:25,288] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Dashboard to end is -86
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -614.29
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for reports to end is -129
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -921.43
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Chat application to end is -138
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -985.71
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherNewTask to end is 97
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for asdfsdfg to end is 97
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,384] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdf to end is 97
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for someTask to end is 97
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for ssdfsfdfd to end is 97
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsdfgd to end is 97
+[2015-01-16 23:49:25,385] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToTestNotification to end is 97
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:25,387] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToCheckRedisResponse to end is 97
+[2015-01-16 23:49:25,388] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:49:25,388] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:49:26,887] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:26,953] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:26,953] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:26,953] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:26,953] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:26,993] INFO [TaskManager.templatetags.apptags:53] tas
+[2015-01-16 23:49:27,000] INFO [TaskManager.templatetags.apptags:53] pro
+[2015-01-16 23:49:27,003] INFO [TaskManager.templatetags.apptags:53] usr
+[2015-01-16 23:49:27,006] INFO [TaskManager.templatetags.apptags:53] sta
+[2015-01-16 23:49:27,947] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:27,960] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:27,960] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:27,960] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:27,960] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:28,907] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:28,924] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:28,924] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:28,924] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:28,924] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:34,878] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:49:34,887] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:49:34,887] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:49:34,887] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:49:34,887] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:49:35,098] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-22
+[2015-01-16 23:49:35,098] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -86 days, 0:00:00
+[2015-01-16 23:49:35,098] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-24
+[2015-01-16 23:49:35,098] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -114 days, 0:00:00
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-09-09
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -129 days, 0:00:00
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-08-31
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -138 days, 0:00:00
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-10-29
+[2015-01-16 23:49:35,099] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -79 days, 0:00:00
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,101] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,102] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,104] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,104] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,104] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,104] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,105] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,105] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:49:35,105] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-04-23
+[2015-01-16 23:49:35,105] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 97 days, 0:00:00
+[2015-01-16 23:50:29,197] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:29,197] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:29,197] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:29,197] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:29,197] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:29,233] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2015-01-30
+[2015-01-16 23:50:29,233] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : 14 days, 0:00:00
+[2015-01-16 23:50:29,253] DEBUG [TaskManager.templatetags.apptags:16] parameter : 2014-12-31
+[2015-01-16 23:50:29,253] DEBUG [TaskManager.templatetags.apptags:18] SubtractedDate : -16 days, 0:00:00
+[2015-01-16 23:50:31,193] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:31,220] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:31,220] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:31,221] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:31,221] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:32,186] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:32,200] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:32,200] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:32,200] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:32,200] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:32,293] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Dashboard to end is -86
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -614.29
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for reports to end is -129
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -921.43
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for Chat application to end is -138
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:177] The division leads to -985.71
+[2015-01-16 23:50:32,295] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherNewTask to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for asdfsdfg to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdf to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for someTask to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for ssdfsfdfd to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsdfgd to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,296] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for sdfsfsfsd to end is 97
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToTestNotification to end is 97
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:174] The remaining days for AnotherTaskToCheckRedisResponse to end is 97
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:175] The remaining days for Leocon to end is 14
+[2015-01-16 23:50:32,298] DEBUG [TaskManager.templatetags.apptags:177] The division leads to 692.86
+[2015-01-16 23:50:33,773] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:33,782] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:33,782] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:33,782] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:33,782] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:33,812] INFO [TaskManager.templatetags.apptags:53] tas
+[2015-01-16 23:50:33,815] INFO [TaskManager.templatetags.apptags:53] pro
+[2015-01-16 23:50:33,818] INFO [TaskManager.templatetags.apptags:53] usr
+[2015-01-16 23:50:33,819] INFO [TaskManager.templatetags.apptags:53] sta
+[2015-01-16 23:50:34,780] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:34,788] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:34,788] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:34,788] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:34,788] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:36,421] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:36,421] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:36,421] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:36,421] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:36,421] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:37,983] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:37,990] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:37,990] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:37,990] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:37,990] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:38,009] INFO [TaskManager.templatetags.apptags:53] tas
+[2015-01-16 23:50:38,013] INFO [TaskManager.templatetags.apptags:53] pro
+[2015-01-16 23:50:38,013] INFO [TaskManager.templatetags.apptags:53] usr
+[2015-01-16 23:50:38,016] INFO [TaskManager.templatetags.apptags:53] sta
+[2015-01-16 23:50:40,032] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:40,085] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:40,086] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:40,086] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:40,086] DEBUG [TaskManager.userMiddleware:24] userTheme exists
+[2015-01-16 23:50:40,683] DEBUG [TaskManager.userMiddleware:10] SetThemeForUser called
+[2015-01-16 23:50:40,683] DEBUG [TaskManager.userMiddleware:13] request.user exists
+[2015-01-16 23:50:40,683] DEBUG [TaskManager.userMiddleware:14] tejas
+[2015-01-16 23:50:40,683] DEBUG [TaskManager.userMiddleware:15] 1
+[2015-01-16 23:50:40,683] DEBUG [TaskManager.userMiddleware:24] userTheme exists

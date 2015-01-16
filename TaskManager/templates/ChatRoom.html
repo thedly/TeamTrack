@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load apptags %}
 {% block MainBodyWrapper %}
+
+
+
+        <div id="ChatAppWrapper" style="float:left;right:1.2em;bottom:0em;height:20em;position:fixed;z-index:1000;">
+       </div>
+
+
 
         <div id="page-wrapper">
             <div class="row">
@@ -9,6 +17,33 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+
+
+            <div class="row">
+                <div class="modal fade" id="EmailAddressBook" style="z-index:2000;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                {% getAddressBook %}
+                            </div>
+                            <div class="modal-footer">
+                                <input type="text" id="RecipientType">
+                                <button id="ModelClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button id="ModelSave" type="button" class="btn btn-primary">ok</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+            </div>
+
+
 <div class="row">
     <div class="col-lg-12">
 <div class="chat-panel panel panel-default">
@@ -49,6 +84,9 @@
                                 </ul>
                             </div>
                         </div>
+
+
+
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <ul class="chat" id="ChatUl">
@@ -118,9 +156,9 @@
                         <!-- /.panel-body -->
                         <div class="panel-footer">
                             <div class="input-group">
-                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <input type="text" class="form-control input-sm" placeholder="Type your message here..." />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                    <button class="btn btn-warning btn-sm">
                                         Send
                                     </button>
                                 </span>
@@ -135,16 +173,185 @@
             <!-- /.row -->
 </div>
          <!-- /.page-wrapper -->
-         <script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
+         {% block extraHeaders %}
+
+  <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
+<link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
+
+
+<style>
+    .EmailAddressBook{
+        width:100%;
+    }
+
+
+    .EmailAddressBook td, .EmailAddressBook th{
+        border-bottom: thin black solid;
+        text-align: center;
+        padding:5px;
+    }
+</style>
+
+
+{% endblock extraHeaders %}
+<script src="{% static "js/jquery-1.10.2.js" %}"></script>
+
+<script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery.min.js' %}'></script>
+<script src='{% static 'fullcalendar/lib/jquery-ui.custom.min.js' %}'></script>
+<script src='{% static 'fullcalendar/fullcalendar.min.js' %}'></script>
+<script src='{% static 'js/plugins/morris/raphael-2.1.0.min.js' %}'></script>
+<script src='{% static 'js/plugins/morris/morris.js' %}'></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
          <script>
-            $('#btn-chat').click(function(){
-            //socket.emit('chat message', {"clientId":"2","message":$('#btn-input').val()});
-            socket.emit('chatMessageToAll', $('#btn-input').val());
 
-            $('#btn-input').val('');
-          });
+          $(function(){
 
 
+            $("#ModelSave").click(function(){
+                var RecipientType = $("#RecipientType").val()
+                var checkArr = []
+                $(".EmailAddressBookCheck").each(function(){
+                    if($(this).is(":checked"))
+                    {
+                        checkArr.push($(this).val())
+                    }
+                })
+                $("#"+RecipientType).val(checkArr)
+                $("#ModelClose").click()
 
+            })
+
+            $(".ChooseRecipients").click(function(){
+                $("#RecipientType").val($(this).prev().attr("id"))
+            })
+
+
+            $("#MessageSend").click(function(){
+                var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}","MessageEmailList":$("#EmailList").val(), "MessageSubject":$("#MessageSubject").val(), "MessageText":$("#MessageText").val()}
+                $.ajax({
+                    url: "{% url 'SendMail' %}",
+                    data: dat,
+                    method:"post",
+                    success: function(res){},
+                    error: function(res){alert(JSON.stringify(res))}
+                })
+                $("#resetMailForm").click();$("#CloseMessageForm").click()
+            })
+
+
+
+            /* Chat */
+
+
+
+             if(!socket)
+             {
+               var socket = io.connect("http://localhost:3000");//("http://192.168.1.2:3000");
+             }
+
+             socket.on('RedisChatMessage_{{ request.user }}', function (data) {
+                if(!$("#chatUI_"+data.From).length)
+                {
+                    createChatElement(data.From)
+                }
+
+
+
+                $("#cha_"+data.From).append("<div>"+data.From+" : "+data.Message+"</div>")
+                $("#fromProfile_"+data.From).val(data.From)
+                //alert($("#chatUI_"+data.From).css("margin-top"))
+                if($("#chatUI_"+data.From).css("margin-top") == "280px")
+                {
+                    $("#chatUI_"+data.From).show().animate({"margin-top":"0em"},200)
+                }
+             })
+
+
+               $("#ChatAppWrapper").on('click','.closeBtn',function(){
+                $(this).parent().parent().animate({"margin-top":"20em"},200,function(){$(this).hide()})
+
+              })
+
+
+              $("#ChatAppWrapper").on('click','.MinimizeBtn',function(){
+                var elm = $(this).parent().parent()
+                if(elm.css("margin-top") == "224px")
+                {
+                    elm.animate({"margin-top":"0em"})
+                    elm.find("#minimizeImg").removeClass().addClass("fa fa-chevron-down")
+                }
+                else
+                {
+                    elm.animate({"margin-top":"16em"})
+                    elm.find("#minimizeImg").removeClass().addClass("fa fa-chevron-up")
+                }
+
+
+              })
+
+              $("#chatclients").on("click",".ProvokeChatClient",function(){
+                  elmId = $(this).attr("id")
+
+                  $(".content-wrap").click()
+                  if(!$("#chatUI_"+elmId).length)
+                  {
+                    createChatElement(elmId)
+                  }
+                  if($("#chatUI_"+elmId).css("margin-top") == "280px")
+                  {
+                    $("#chatUI_"+elmId).show().animate({"margin-top":"0em"},200)
+                  }
+              })
+
+
+              $('#ChatAppWrapper').on('click','.btnChat', function(){
+                var notify = $(this).parent().prev().prev().children("input").val()
+                var msg = $(this).prev().val()
+                ChatElem = $(this).parent().prev()
+                TextElem = $(this).prev()
+                dat = {"Message":msg, "Notify":notify}
+                $.ajax({
+                    url:"{% url 'chatMessage' %}",
+                    data:dat,
+                    dataType:"json",
+                    contentType:"Application/json",
+                    type:"get",
+                    success:function(){alert("success")},
+                    error:function(res){ChatElem.append("<div>{{ request.user }} : "+msg+"</div>");TextElem.val("")}
+                })
+
+              });
+
+
+         $("[data-toggle=popover]").popover()
+
+
+          function createChatElement(id)
+          {
+            $("#ChatAppWrapper").append('<div id="chatUI_'+id+'" style="margin-top:20em;background:pink;border:thin black solid;width:20em;height:20em;float:left;"><div id="profile_'+id+'" style="height:4em;width:100%;background:yellow;"><div class="profile" style="padding-left:8px;padding-top:8px;"><img src="{% static "img/user1.png" %}" alt="Matthew Greenberg"/><span style="padding-left:10px;">'+id+'</span></div><input type="hidden" id="fromProfile_'+id+'" value="'+id+'"><button style="margin-left:75%;margin-top:-13%" class="MinimizeBtn btn btn-primary btn-circle" id="Minimize_'+id+'"><i class="fa fa-list"></i></button><button style="position:relative;margin-left:87%;margin-top:-13%" class="btn btn-warning btn-circle closeBtn" id="Close'+id+'"><i class="fa fa-times"></i></button></div><div id="cha_'+id+'" style="overflow:auto;height:12em;width:100%;background:#FFFFFF;padding-left:5px;padding-top:5px;"></div><div><textarea id="btn-input_'+id+'" style="float:left;width:17.85em;height:4em;resize:none"></textarea><button class="btnChat" id="btn-chat_'+id+'" style="float:left;width:2em;height:4em;"><i class="fa fa-fw fa-comment-o"></i></button></div></div>')
+          }
+
+          socket.on('Clients', function(msg){
+            $("#chatclients").children().remove()
+            $.each(msg, function( index, value ) {
+                if(value.customName != "{{ request.user }}")
+                {
+                    $("#chatclients").append("<div><i class='fa fa-user fa-fw'></i><span>"+value.customName+"</span><ul class='nav navbar-top-links navbar-right'><li class='ProvokeChatClient' id='"+value.customName+"' style='cursor:pointer'><i class='fa fa-fw fa-comment-o'></i></li><li style='cursor:pointer' class='ClientsList' id='"+value.customId+"'><i class='fa fa-bell fa-fw'></i></li></ul></div>")
+                }
+            });
+            if($("#chatclients").children().length == 0)
+            {
+                $("#chatclients").append("<h4>Where is Everyone ?</h4>")
+            }
+         })
+
+         socket.on('connect', function (data) {
+            socket.emit('storeClientInfo', { customId:"{{ request.user.id }}", customName:"{{ request.user }}" });
+         })
+
+            /* End Chat */
+        });
          </script>
 {% endblock MainBodyWrapper %}

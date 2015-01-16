@@ -53,4 +53,15 @@ urlpatterns = patterns('',
       url('^ChatRoom/$', login_required(ChatRoom.as_view()), name="ChatRoom"),
       url('^logout/$','django.contrib.auth.views.logout',name='logout'),
       url('^Call/$', login_required(CallView.as_view()), name="Call"),
+    url('^chatMessage/$', 'TaskManager.views.chatMessage', name="chatMessage"),
+    url('^SendMail/$', 'TaskManager.views.SendMail', name="SendMail"),
+    url('^ChangeTheme/$', 'TaskManager.views.ChangeTheme', name="ChangeTheme"),
+    url('^getTaskStatus/$', 'TaskManager.views.getTaskStatus', name="getTaskStatus"),
+    url('^CreateMeetingRequest/$', 'TaskManager.views.CreateMeetingRequest', name="CreateMeetingRequest"),
+    url('^getRSSFeed/$', 'TaskManager.views.getRSSFeed', name="getRSSFeed"),
+    url('^setSessionMap/$', 'TaskManager.views.setSessionMap', name="setSessionMap"),
+
+    url('^TaskTypeView/$', login_required(TaskTypeView.as_view()), name="TaskTypeView"),
+
+
 )

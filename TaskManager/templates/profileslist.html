@@ -1,32 +1,94 @@
 {% extends "base.html" %}
+        {% load static %}
 {% block MainBodyWrapper %}
+
+         <link rel="stylesheet" href="{% static "css/jquery.raty.css" %}">
+
+
+<script src="{% static "js/jquery.raty.js" %}"></script>
+<script>
+    $(function(){
+        $("#profilesTab").addClass("Active")
+        $("#profilesTab a").bind('click', false);
+
+        $('.ratyRating').raty({
+             readOnly : true,
+             half  : true,
+             cancelOff  : "cancel-off.png",
+              cancelOn   : "cancel-on.png",
+              path       : "{%static "images" %}",
+              starHalf   : "star-half.png",
+              starOff    : "star-off.png",
+              starOn     : "star-on.png",
+             score: function() {
+                      return $(this).attr('data-rating');
+                     },
+              space : false
+         });
+
+    })
+</script>
+<br>
  <div id="page-wrapper">
 <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Events</h1>
+                    <h1 class="page-header">Users</h1>
+                      <ol class="breadcrumb">
+                      <li><a href="{% url 'home' %}">Home</a></li>
+                      <li class="active">Users</li>
+                    </ol>
+
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
  <div class="col-lg-12">
-        <table>
-	{% for profile in Profiles_list %}
+    <div class="table-responsive">
+        <table class="table" id="dataTables-example">
+            <thead>
 
-	<tr>
-		<td>
-			{{ profile.username }}
-		</td>
-		<td>
-			<a href="{% url 'profilesdetail' profile.id %}">View profile</a>
-		</td>
-		<td>
-			<a href="{% url 'userUpdates' profile.id %}">updates</a>
-		</td>
-	</tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Project</th>
+                    <th>Task</th>
+                    <th>Progress</th>
+                    <th></th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                {% for profile in Profiles_list %}
+
+                    <tr>
+                        <td>
+                            {{ profile.first_name }} {{ profile.last_name }}
+                        </td>
+                        <td>
+                            {{ profile.Machinename }}
+                        </td>
+                        <td>
+                            {{ profile.designation }}
+                        </td>
+                        <td>
+                            <div class="ratyRating" data-rating="{{ profile.rating }}">
+                                
+                            </div>
+
+                        </td>
+                        <td>
+                            <a href="{% url 'profilesdetail' profile.id %}">View profile</a>
+                        </td>
+
+                    </tr>
 
 
-{% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
 
 
 </table>

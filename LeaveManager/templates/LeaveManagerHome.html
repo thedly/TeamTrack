@@ -3,7 +3,6 @@
 {% load static %}
 {% load humanize %}
 {% block extraHeaders %}
-<
   <link href='{% static 'fullcalendar/fullcalendar.css' %}' rel='stylesheet' />
 <link href='{% static 'fullcalendar/fullcalendar.print.css' %}' rel='stylesheet' media='print' />
 <script src='{% static 'fullcalendar/lib/moment.min.js' %}'></script>
@@ -14,13 +13,7 @@
 
 	$(document).ready(function() {
 
-        window.setInterval(function(){
-            $('#calendar_Updates').fullCalendar('removeEvents')
-            $('#calendar_Updates').fullCalendar('removeEventSource', getEvents())
-            $('#calendar_Updates').fullCalendar('refetchEvents')
-            $('#calendar_Updates').fullCalendar('addEventSource', getEvents())
-            $('#calendar_Updates').fullCalendar('refetchEvents');
-        },3000)
+
 		var date = new Date();
 		var d = date.getDate();
 
@@ -49,6 +42,8 @@
                error:function(res){alert(JSON.stringify(res))}
             })
         })
+
+
 
         $("#ResetEvent").click(function(){
             $('#calendar_Updates').fullCalendar( 'removeEvents' , 'temp' )
@@ -177,6 +172,7 @@
 
 {% endblock extraHeaders %}
 {% block MainBodyWrapper %}
+
  <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -208,8 +204,7 @@
                 </div>
             </div>
             <div class="row">
-                <input type="hidden" id="StartDate" class="form-control">
-                <input type="hidden" id="EndDate" class="form-control">
+
             </div>
             <!-- /.row -->
             <div class="row">
@@ -222,7 +217,7 @@
                         <div class="panel-body">
 
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-12" style="padding-right:50px;">
                                      <div id='calendar_Updates'></div>
                                 </div>
                                 <!-- /.col-lg-12 -->

@@ -1,351 +1,752 @@
 <!doctype>
 {% load static %}
+{% load apptags %}
 <html>
 	<head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="{% static "font-awesome/css/font-awesome.css" %}" rel="stylesheet">
+    <h1></h1>
+    <link id="dynamicStyleSheet" href="{{ request.session.userTheme }}" rel="stylesheet">
 
-    <!-- Page-Level Plugin CSS - Dashboard -->
     <link href="{% static "css/plugins/morris/morris-0.4.3.min.css" %}" rel="stylesheet">
     <link href="{% static "css/plugins/timeline/timeline.css" %}" rel="stylesheet">
+    <!--<link href="{% static "css/sb-admin.css" %}" rel="stylesheet">-->
 
-    <!-- SB Admin CSS - Include with every page -->
-    <link href="{% static "css/sb-admin.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+    <!--<link href="{% static "css/menu_topside.css" %}" rel="stylesheet">-->
+    <link href="{% static "css/component.css" %}" rel="stylesheet">
+    <link href="{% static "css/ns-default.css" %}" rel="stylesheet">
+    <link href="{% static "css/ns-style-bar.css" %}" rel="stylesheet">
+    <!--<link href="{% static "css/menu_cornerbox_nestedCalendar.css" %}" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="{% static "css/content.css" %}" />
+    <!--<link rel="stylesheet" type="text/css" href="{% static "css/menu_cornermorph.css" %}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{% static "css/tabs.css" %}" />-->
+	<!--<link rel="stylesheet" type="text/css" href="{% static "css/tabstyles.css" %}" />-->
+    <!--<script src="{% static "js/snap.svg-min.js" %}"></script>-->
 
-	{% block extraHeaders %}
-	{% endblock extraHeaders %}
+
+
+
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootswatch.js" %}"></script>
+
+
+
+
+
+
+
+
 	</head>
 	<body>
-		 <div id="wrapper">
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+    {% block extraHeaders %}
+    {% endblock extraHeaders %}
+
+    <div class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <a href="{% url 'home' %}" class="navbar-brand">ANT</a>
+                  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'home' %}">Team Track</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-
-                                <div>
-                                    <p>
-                                        <strong>Upload payslips</strong>
-                                    </p>
-                                   <div>
-
-                                            <input type="file"  multiple accept="image/png, image/jpeg" />
-                                        </div>
-                                </div>
-
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default navbar-static-side" role="navigation">
-                <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <form method="get" action="{% url 'searchresults' %}">
-                            <div class="input-group custom-search-form">
-
-                                <input name="Search" type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-
-                            </div>
-                            </form>
-                            <!-- /input-group -->
-                        </li>
-
-                        <li>
-                            <a href="{% url 'projects' %}"><i class="fa fa-dashboard fa-fw"></i> Projects</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'profileslist' %}"><i class="fa fa-dashboard fa-fw"></i> Profiles</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'tasks' %}"><i class="fa fa-edit fa-fw"></i>Tasks</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'Events' %}"><i class="fa fa-table fa-fw"></i>Events</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'LeaveManagerHome' %}"><i class="fa fa-table fa-fw"></i>Leave Manager</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'BugView' %}"><i class="fa fa-table fa-fw"></i>Bug Tracker</a>
-                        </li>
-
-                        <li>
-                            <div class="chat-panel panel panel-default">
-                                <div class="panel-heading">
-                                    <i class="fa fa-clock-o fa-fw"></i> Chat<a href="{% url 'ChatRoom' %}"><span class="fa arrow"></span></a>
-                                </div>
-                                <!-- /.panel-heading -->
-                                <div style="height:200px" class="panel-body" id="chatclients">
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- /#side-menu -->
+                  </button>
                 </div>
-                <!-- /.sidebar-collapse -->
+
+
+                <div class="navbar-collapse collapse" id="navbar-main">
+
+
+
+                  <ul class="nav navbar-nav pull-right">
+                    <!--<li class="dropdown">-->
+                      <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>-->
+                      <!--<ul class="dropdown-menu" aria-labelledby="themes">-->
+                        <!--<li><a href="../default/">Default</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="../cerulean/">Cerulean</a></li>-->
+                        <!--<li><a href="../cosmo/">Cosmo</a></li>-->
+                        <!--<li><a href="../cyborg/">Cyborg</a></li>-->
+                        <!--<li><a href="../darkly/">Darkly</a></li>-->
+                        <!--<li><a href="../flatly/">Flatly</a></li>-->
+                        <!--<li><a href="../journal/">Journal</a></li>-->
+                        <!--<li><a href="../lumen/">Lumen</a></li>-->
+                        <!--<li><a href="../paper/">Paper</a></li>-->
+                        <!--<li><a href="../readable/">Readable</a></li>-->
+                        <!--<li><a href="../sandstone/">Sandstone</a></li>-->
+                        <!--<li><a href="../simplex/">Simplex</a></li>-->
+                        <!--<li><a href="../slate/">Slate</a></li>-->
+                        <!--<li><a href="../spacelab/">Spacelab</a></li>-->
+                        <!--<li><a href="../superhero/">Superhero</a></li>-->
+                        <!--<li><a href="../united/">United</a></li>-->
+                        <!--<li><a href="../yeti/">Yeti</a></li>-->
+                      <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="../help/">Help</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://news.bootswatch.com">Blog</a>-->
+                    <!--</li>-->
+
+
+
+
+                    <li class="navMenu" id="projectsTab" >
+                    <a href="{% url 'projects' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-tasks"></i></a>
+					</li>
+					<li class="navMenu" id="profilesTab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Profiles">
+					<a href="{% url 'profileslist' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-users"></i></a>
+					</li>
+					<li class="navMenu" id="tasksTab">
+					<a href="{% url 'tasks' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-file-code-o"></i></a>
+					</li>
+					<li class="navMenu" id="bugsTab">
+					<a href="{% url 'BugView' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-bug"></i></a>
+                    </li>
+                    <li class="navMenu" id="mailTab">
+                        <a href="{% url 'mail' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-envelope-o"></i></a>
+                    </li>
+                     <li class="navMenu" id="calendarTab">
+                        <a href="{% url 'Events' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px"><i class="fa fa-calendar"></i></a>
+                     </li>
+
+                     <li class="navMenu" id="chatTab">
+                        <button id="showRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks"  style="font-size:25px" ><i class="fa fa-comments "></i></button>
+                     </li>
+                     <li>
+                        <a href="{% url 'logout' %}" rel="tab" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tasks" style="font-size:25px" ><i class="fa fa-power-off"></i></a>
+                     </l>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Themes <span class="caret"></span></a>
+                      <ul class="dropdown-menu" aria-labelledby="Theme">
+                        <li><a class="themes" id="bootswatch_Ubuntu.css" href="">ubuntu</a></li>
+                        <li><a class="themes" id="bootswatch_cyborg.css" href="">cyborg</a></li>
+                        <li><a class="themes" id="bootswatch_cerulean.css" href="">cerulean</a></li>
+                        <li><a class="themes" id="bootswatch_superhero.css" href="">superhero</a></li>
+                        <li><a class="themes" id="bootswatch_flatly.css" href="">flatly</a></li>
+
+                      </ul>
+                    </li>
+
+
+
+
+                  </ul>
+                    <div id="sb-search" class="sb-search">
+                        <form action="{% url 'searchresults' %}">
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="Search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+
+
+                            <span class="sb-icon-search"></span>
+                        </form>
+                    </div>
+                  <!--<ul style="width:50%" class="nav navbar-nav navbar-right">-->
+
+
+
+                    <!--<button data-dialog="mainDialog" class="trigger navbar-right">Mail</button>-->
+
+
+
+
+
+
+
+                    <!--<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">-->
+                    <!--<button type="button" style="font-size:30px"><i class="fa fa-envelope-o"></i></button>-->
+                    <!--<div class="morph-content">-->
+                        <!--<div>-->
+                            <!--<div class="content-style-form content-style-form-1">-->
+                                <!--<span id="CloseMessageForm" class="icon icon-close">Close the dialog</span>-->
+                                <!--<h2>Leave a Message</h2>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>&lt;!&ndash; morph-button &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+                  <!--</ul>-->
+
+                </div>
+
+
+
+
+              </div>
             </div>
-            <!-- /.navbar-static-side -->
-        </nav>
-         <script src="{% static "NodeModules/node_modules/socket.io/node_modules/socket.io-client/socket.io.js" %}"></script>
+
+
+
+	<div class="container">
+        {% block MainBodyWrapper %}
+                    {% endblock MainBodyWrapper %}
+	</div>
+
+
+
+
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="chatclients">
+                <h3></h3>
+
+            </nav>
+
+
+
+
+        <div id="ChatAppWrapper" style="float:left;right:1.2em;bottom:0em;height:30em;position:fixed;z-index:1000;">
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="{% static "js/modernizr.custom.js" %}"></script>
+
+
+
+		<script src="{% static "js/classie.js" %}"></script>
+
+
+
+
+        <script src="{% static "js/notificationFx.js" %}"></script>
+
+        <script src="{% static "js/uiProgressButton.js" %}"></script>
+        <script src="{% static "js/uisearch.js" %}"></script>
+
+        <script src="{% static "js/uiMorphingButton_fixed.js" %}"></script>
+
+		<script>
+			(function() {
+
+
+        function CreateMap(lat,lng)
+        {
+
+          var UserLatLng = new google.maps.LatLng(lat, lng)
+            var mapOptions = {
+            zoom: 18,
+            center: UserLatLng
+          };
+
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+          var marker = new google.maps.Marker({
+              position: UserLatLng,
+              map: map,
+              title: 'Hello World!'
+          });
+
+           var Secondmarker = new google.maps.Marker({
+              position: (-34.924868, 18.45),
+              map: map,
+              title: 'Hello World!'
+          });
+        }
+
+        function displayLocation(latitude,longitude){
+            var request = new XMLHttpRequest();
+
+            var method = 'GET';
+            var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+            var async = true;
+
+            request.open(method, url, async);
+            request.onreadystatechange = function(){
+              if(request.readyState == 4 && request.status == 200){
+                var data = JSON.parse(request.responseText);
+                var address = data.results[0];
+                //alert(address.formatted_address);
+                CreateMap(latitude,longitude)
+              }
+            };
+            request.send();
+          };
+
+          var successCallback = function(position){
+            var x = position.coords.latitude;
+            var y = position.coords.longitude;
+            dat = {"lat":x, "lon":y, "csrfmiddlewaretoken":"{{ csrf_token }}"}
+            $.ajax({
+                url: "{% url 'setSessionMap' %}",
+                type: "post",
+                data: dat,
+                success: function(res){
+                    displayMap(x,y)
+                },
+                error: function(res){
+                    alert("Could not get location details")
+                }
+
+            })
+
+
+
+          };
+
+          var errorCallback = function(error){
+            var errorMessage = 'Unknown error';
+            switch(error.code) {
+              case 1:
+                errorMessage = 'Permission denied';
+                break;
+              case 2:
+                errorMessage = 'Position unavailable';
+                break;
+              case 3:
+                errorMessage = 'Timeout';
+                break;
+            }
+            akert(errorMessage);
+          };
+
+          var options = {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+          };
+        var map;
+        var sessionLat = "{{ request.session.lat|default:'' }}"
+        var sessionLon = "{{ request.session.lon|default:'' }}"
+        if(sessionLat == "" && sessionLon == "")
+        {
+            navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options);
+        }
+        else
+        {
+            displayMap(sessionLat, sessionLon);
+        }
+
+
+         function displayMap(lat, lon)
+        {
+
+            if($("#map-canvas").length != 0)
+            {
+                displayLocation(lat ,lon);
+            }
+        }
+
+
+               var menuRight = document.getElementById( 'chatclients' ),
+
+				showRight = document.getElementById( 'showRight' ),
+				body = document.body;
+
+				showRight.onclick = function() {
+                    classie.toggle( this, 'active' );
+                    classie.toggle( menuRight, 'cbp-spmenu-open' );
+
+                };
+
+
+                [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+
+				// for demo purposes only
+				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+				} );
+
+
+
+				$("#ModelSave").click(function(){
+                var RecipientType = $("#RecipientType").val()
+                var checkArr = []
+                $(".EmailAddressBookCheck").each(function(){
+                    if($(this).is(":checked"))
+                    {
+                        checkArr.push($(this).val())
+                    }
+                })
+                $("#"+RecipientType).val(checkArr)
+                $("#ModelClose").click()
+
+            })
+
+            $(".ChooseRecipients").click(function(){
+                $("#RecipientType").val($(this).prev().attr("id"))
+            })
+
+            $(".themes").click(function(){
+                var themeToBeApplied = $(this).attr("id")
+                var dat = {"themeToBeApplied" : themeToBeApplied, "csrfmiddlewaretoken":"{{ csrf_token }}"}
+
+                $.ajax({
+                    url: "{% url 'ChangeTheme' %}",
+                    data: dat,
+                    method:"post",
+                    success: function(res){alert("Your theme has been changed. please refresh page")},
+                    error: function(res){alert(JSON.stringify(res));alert("There was an error changing the theme of your page");}
+                })
+
+            })
+            $("#MessageSend").click(function(){
+                var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}","MessageEmailList":$("#EmailList").val(), "MessageSubject":$("#MessageSubject").val(), "MessageText":$("#MessageText").val()}
+                $.ajax({
+                    url: "{% url 'SendMail' %}",
+                    data: dat,
+                    method:"post",
+                    success: function(res){},
+                    error: function(res){alert(JSON.stringify(res))}
+                })
+                $("#resetMailForm").click();$("#CloseMessageForm").click()
+            })
+
+
+			})();
+		</script>
         <script>
-         var socket = io.connect("http://localhost:3000");//("http://192.168.1.2:3000");
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
 
-         socket.on('connect', function (data) {
-            socket.emit('storeClientInfo', { customId:"{{ request.user.id }}", customName:"{{ request.user }}" });
+
+     <script src="{% static "NodeModules/node_modules/socket.io/node_modules/socket.io-client/socket.io.js" %}"></script>
+        <script>
+
+
+
+
+
+
+
+
+
+
+            $(".fc-border-separate").on("click",".fc-event-inner",function(){
+                alert("hi")
+            })
+
+
+
+
+
+            function popitup(url) {
+
+                LeftPosition = (screen.width) ? (screen.width - 800) / 2 : 0;
+                TopPosition = (screen.height) ? (screen.height - 700) / 2 : 0;
+                var sheight = 640;
+                var swidth = 480;
+
+                settings = 'height='+ sheight + ',width='+ swidth + ',top=' + TopPosition + ',left=' + LeftPosition + ', fullscreen=yes,scrollbars=yes,resizable=no,toolbar=no,status=no,menubar=no,  directories=no,titlebar=no,location=no,addressbar=no'
+
+                newwindow = window.open(url, '', settings);
+                if (window.focus) { newwindow.focus() }
+                return false;
+            }
+
+
+
+            function SetData()
+            {
+                var endDateTime = new Date( $("#EndDate").val())
+                var endDate_d = endDateTime.getDate()
+                var endDate_m = endDateTime.getMonth()
+                var endDate_y = endDateTime.getFullYear()
+
+                var startDateTime = new Date( $("#StartDate").val())
+                var startDate_d = startDateTime.getDate()
+                var startDate_m = startDateTime.getMonth()
+                var startDate_y = startDateTime.getFullYear()
+
+                var timeDiff = Math.abs(endDateTime.getTime() - startDateTime.getTime())
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24))
+
+
+
+                $("#EndDateRequest").html(""+endDate_d+"/"+endDate_m+"/"+endDate_y+"")
+                $("#StartDateRequest").html(""+startDate_d+"/"+startDate_m+"/"+startDate_y+"")
+                $("#NoOfdays").html(""+diffDays+"")
+            }
+
+                 [].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
+
+                    new UIProgressButton( bttn, {
+                        callback : function( instance ) {
+                            var progress = 0,
+                            interval = setInterval( function() {
+                                progress = Math.min( progress - Math.random() * 0.1, 1 );
+                                instance.setProgress( progress );
+                            }, 50 );
+
+
+                            switch(instance.button.id)
+                            {
+                                case "CreateTimelineBtn" :
+                                         setTimeout(function(){
+                                            var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}","taskid":$("#taskid").val(),"status":$("#TaskStatus").val(),"Title":$("#id_Title").val(),"notes":$("#id_notes").val()}
+                                            $.ajax({
+                                                url : "{% url 'CreateTimelineEvent' %}",
+                                                type: "post",
+                                                data: dat,
+                                                success: function(data){instance.stop(1);},
+                                                error: function(){instance.stop(-1); clearInterval( interval );},
+                                            })
+                                        },1000)
+                                     break;
+                                case "CreateTaskBtn":
+                                    setTimeout(function(){
+                                        var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}", "ProjectId" : $("#id_ProjectId").val(), "TaskTitle":$("#id_TaskTitle").val(),"Description":$("#id_Description").val(),"Requirement":$("#id_Requirement").val(),"UserId":$("#id_UserId").val(), "EndDate":$("#id_EndDate").val()}
+                                        $.ajax({
+                                            url : "{% url 'CreateTask' %}",
+                                            type: "post",
+                                            data: dat,
+                                            success: function(data){instance.stop(1);},
+                                            error: function(data){instance.stop(-1); clearInterval( interval );},
+                                        })
+                                    },1000)
+
+                                    break;
+
+                                case "CreateBug" :
+                                   setTimeout(function(){
+                                        var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}", "Title" : $("#id_Title").val(), "TaskId":$("#id_TaskId").val(),"Description":$("#id_Description").val(),"UserId":$("#id_UserId").val()}
+                                        $.ajax({
+                                            url : "{% url 'CreateBug' %}",
+                                            type: "post",
+                                            data: dat,
+                                            success: function(data){instance.stop(1);},
+                                            error: function(data){instance.stop(-1); clearInterval( interval );},
+                                        })
+                                    },1000)
+                                    break;
+
+                            }
+
+
+                        }
+                    });
+                 });
+
+				function Notify(msg)
+				{
+
+
+						var notification = new NotificationFx({
+							message : '<span class="icon icon-megaphone"></span><p>'+msg.Message+' Go <a href="'+msg.Link+'">check it out</a> now.</p>',
+							layout : 'bar',
+							effect : 'slidetop',
+							type : 'notice', // notice, warning or error
+							onClose : function() {}
+						});
+						notification.show();
+
+
+				}
+
+
+
+        $("#ModelSave").click(function(){
+                var RecipientType = $("#RecipientType").val()
+                var checkArr = []
+                $(".EmailAddressBookCheck").each(function(){
+                    if($(this).is(":checked"))
+                    {
+                        checkArr.push($(this).val())
+                    }
+                })
+                $("#"+RecipientType).val(checkArr)
+                $("#ModelClose").click()
+
+            })
+
+            $(".ChooseRecipients").click(function(){
+                $("#RecipientType").val($(this).prev().attr("id"))
+            })
+
+
+            $("#MessageSend").click(function(){
+                var dat = {"csrfmiddlewaretoken":"{{ csrf_token }}","MessageEmailList":$("#EmailList").val(), "MessageSubject":$("#MessageSubject").val(), "MessageText":$("#MessageText").val()}
+                $.ajax({
+                    url: "{% url 'SendMail' %}",
+                    data: dat,
+                    method:"post",
+                    success: function(res){},
+                    error: function(res){alert(JSON.stringify(res))}
+                })
+                $("#resetMailForm").click();$("#CloseMessageForm").click()
+            })
+
+
+
+          if(!socket)
+             {
+               var socket = io.connect("http://localhost:3000");//("http://192.168.1.2:3000");
+             }
+
+         //var socket = io.connect("http://localhost:3000");//("http://192.168.1.2:3000");
+
+
+
+          socket.on('RedisMessage_{{ request.user }}', function (data) {
+            Notify(data)
+
+
          })
 
 
-
-         socket.on('Clients', function(msg){
-            $.each(msg, function( index, value ) {
-                $("#chatclients").append("<div><i class='fa fa-user fa-fw'></i><span>"+value.customName+"</span><ul class='nav navbar-top-links navbar-right'><a href='/TaskManager/profileslistdetail/"+value.customId+"'><li style='cursor:pointer'><i class='fa fa-bell fa-fw'></i></li></a><li style='cursor:pointer' class='ClientsList' id='"+value.customId+"'><i class='fa fa-bell fa-fw'></i></li></ul></div>")
-            });
-         })
+        /* Chat */
 
 
-        socket.on('ReceiveFromAll', function(msg){
-            alert(msg)
-             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
-         })
 
-         socket.on('{{ request.user.id }}', function(msg){
-            alert(msg)
-             $("#ChatUl").append('<li class="right clearfix"><span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span><div class="chat-body clearfix"><div class="header"><small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small><strong class="pull-right primary-font">Bhaumik Patel</strong></div><p>'+msg+'</p></div></li>')
-         })
+
+
+             socket.on('RedisChatMessage_{{ request.user }}', function (data) {
+                if(!$("#chatUI_"+data.From).length)
+                {
+                    createChatElement(data.From)
+                }
+
+
+
+                $("#cha_"+data.From).append("<div>"+data.From+" : "+data.Message+"</div>")
+                $("#fromProfile_"+data.From).val(data.From)
+
+                if($("#chatUI_"+data.From).css("margin-top") == "30px")
+                {
+                    $("#chatUI_"+data.From).show().animate({"margin-top":"0em"},200)
+                }
+             })
+
+
+               $("#ChatAppWrapper").on('click','.closeBtn',function(){
+                $(this).parent().parent().parent().parent().parent().parent().parent().animate({"margin-top":"30em"},200,function(){$(this).hide()})
+
+              })
+
+
+              $("#ChatAppWrapper").on('click','.MinimizeBtn',function(){
+                var elm = $(this).parent().parent().parent().parent().parent().parent().parent()
+                if(elm.css("margin-top") == "350px")
+                {
+                    elm.animate({"margin-top":"0em"})
+                    elm.find("#minimizeImg").removeClass().addClass("fa fa-chevron-down")
+                }
+                else
+                {
+                    elm.animate({"margin-top":"25em"})
+                    elm.find("#minimizeImg").removeClass().addClass("fa fa-chevron-up")
+                }
+
+
+              })
+
+              $("#chatclients").on("click",".ProvokeChatClient",function(){
+                  elmId = $(this).attr("id")
+
+                  $(".content-wrap").click()
+                  if(!$("#chatUI_"+elmId).length)
+                  {
+                    createChatElement(elmId)
+                  }
+                  if($("#chatUI_"+elmId).css("margin-top") == "420px")
+                  {
+                    $("#chatUI_"+elmId).show().animate({"margin-top":"0em"},200)
+                    $("#chatUI_"+elmId).find("#minimizeImg").removeClass().addClass("fa fa-chevron-down")
+                  }
+
+
+              })
+
+
+              $('#ChatAppWrapper').on('click','.btnChat', function(){
+                var notify = $(this).prev().prev().val()
+                var msg = $(this).prev().val()
+                ChatElem = $(this).parent().prev()
+                TextElem = $(this).prev()
+                dat = {"Message":msg, "Notify":notify}
+                $.ajax({
+                    url:"{% url 'chatMessage' %}",
+                    data:dat,
+                    dataType:"json",
+                    contentType:"Application/json",
+                    type:"get",
+                    success:function(){alert("success")},
+                    error:function(res){ChatElem.append("<div>{{ request.user }} : "+msg+"</div>");TextElem.val("")}
+                })
+
+              });
+
+              socket.on('Clients', function(msg){
+                $("#chatclients").children().remove()
+                $.each(msg, function( index, value ) {
+                    if(value.customName != "{{ request.user }}")
+                    {
+                        $("#chatclients").append("<div><i class='fa fa-user fa-fw'></i><span>"+value.customName+"</span><ul><li class='ProvokeChatClient' id='"+value.customName+"' style='cursor:pointer'><i class='fa fa-fw fa-comment-o'></i></li><li style='cursor:pointer' class='ClientsList' id='"+value.customId+"'><i class='fa fa-bell fa-fw'></i></li></ul></div>")
+                    }
+                });
+                if($("#chatclients").children().length == 0)
+                {
+                    $("#chatclients").append("<h4>Where is Everyone ?</h4>")
+                }
+             })
+
+             socket.on('connect', function (data) {
+                socket.emit('storeClientInfo', { customId:"{{ request.user.id }}", customName:"{{ request.user }}" });
+             })
+
+
+            function createChatElement(id)
+              {
+                $("#ChatAppWrapper").append('<div id="chatUI_'+id+'" class="modal-dialog" style="width:300px;">'+
+                            '<div class="modal-content">'+
+                              '<div class="modal-header">'+
+                                   '<div class="navbar navbar-default">'+
+                                      '<ul class="nav navbar-nav">'+
+                                        '<li><img src="{% static "img/user1.png" %}" alt="Matthew Greenberg"/></li>'+
+                                        '<li><a href="#">'+id+'</a></li>'+
+                                      '</ul>'+
+
+                                     '<div class="navbar-collapse collapse navbar-responsive-collapse" >'+
+
+                                         '<ul class="nav navbar-nav navbar-right" style="margin-top:7px;">'+
+                                            '<li><button class="MinimizeBtn btn btn-primary btn-circle" style="font-size:20px" id="Minimize_'+id+'"><i id="minimizeImg" class="fa fa-chevron-down"></i></button></li>'+
+                                             '<li><button class="btn btn-primary btn-circle closeBtn" id="Close'+id+'"><i class="fa fa-times"></i></button></li>'+
+                                         '</ul>'+
+                                    '</div>'+
+                                   '</div>'+
+                                   '<div id="cha_'+id+'" class="modal-body" style="height:200px;overflow:auto;">'+
+
+                                        '</div>'+
+
+                                        '<div class="modal-footer">'+
+                                            '<input type="hidden" id="fromProfile_'+id+'" value="'+id+'">'+
+                                            '<textarea id="btn-input_'+id+'" rows="3" class="pull-left" style="width:70%;resize:none"></textarea>'+
+                                            '<button id="btn-chat_'+id+'" type="button" class="btnChat btn btn-primary pull-right" style="margin:10px;width:45px;height:45px;">go</button>'+
+                                        '</div>'+
+                                    '</div>')
+              }
+
+
+
+
+
+
 
 	    </script>
-
-        {% block MainBodyWrapper %}
-        {% endblock MainBodyWrapper %}
-
-    <!-- /#wrapper -->
-
-    <!-- Core Scripts - Include with every page -->
-
-    <script src="{% static "js/bootstrap.min.js"%}"></script>
-    <script src="{% static "js/plugins/metisMenu/jquery.metisMenu.js"%}"></script>
-
-    <!-- Page-Level Plugin Scripts - Dashboard -->
-    <script src="{% static "js/plugins/morris/raphael-2.1.0.min.js"%}"></script>
-    <script src="{% static "js/plugins/morris/morris.js" %}"></script>
-
-    <!-- SB Admin Scripts - Include with every page -->
-    <script src="{% static "js/sb-admin.js" %}"></script>
-
-    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
-    <script src="{% static "js/demo/dashboard-demo.js" %}"></script>
 
 	</body>
 
